@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+5d9844d886969.site123.me	TRUE	/	FALSE	1999999999	2630165-wishList	deleted
+5d9844d886969.site123.me	TRUE	/	FALSE	1999999999	AWSALB	D1MlJrCjIuNx1a1igsmCwKHUpbaEfrNmGk1WgJHyDC5CVa+33P56z5xhlFh/dSDRvCPrbH8qbysuIyHRGjke06bceIys52lP9dbQyImY7FukiHY3kWcSRUF5tBtW
+
