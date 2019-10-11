@@ -30447,6 +30447,20 @@ html[dir=rtl] #popupCart .cartActionButtons {
         nav#mainNav.affix{
             box-shadow:0 6px 20px rgba(0,0,0,0.3);
         }
+        /* .cust-ul li:hover{
+            color:white !important;
+            background-color:#0366d6;
+        }
+        .cust-ul li:hover a{
+            color:white !important;
+            /* background-color:#0366d6; */
+        /* }
+        .cust-ul li{
+            text-align:center;
+        }  */
+        /* .cust-ul li{
+            padding: 10px;
+        } */
 		.cust-ul{
             display:none;
             list-style: none;
@@ -30454,11 +30468,12 @@ html[dir=rtl] #popupCart .cartActionButtons {
             left: -182%;
             top: 100%;
             background-color: white;
+            padding:10px;
             top: calc((100%) + 10px);
             border: 0.5px solid rgba(0,0,0,0.3);
             /* box-shadow: 0 3px 8px rgba(0,0,0,0.30), 0 6px 18px rgba(0,0,0,0.22); */
             box-shadow:0 15px 20px rgba(0,0,0,0.4); 
-            padding: 10px;
+            
             border-radius: 5px;
             opacity:0;
             transition: all 500ms;

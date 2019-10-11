@@ -1232,6 +1232,8 @@ window.$sectiontit=$('#section--title');
 			},
 			errorPlacement: function (error, element) {
 				error.addClass('help-block');
+				// console.log(error);
+				// console.log(element);
 				if( element.is('input[type=checkbox]') || element.is('input[type=radio]') ) {
 					var controls = element.closest('div[class*="col-"]');
 					if( controls.find(':checkbox,:radio').length > 1 ) controls.append(error);
@@ -1258,6 +1260,7 @@ window.$sectiontit=$('#section--title');
 				var $mailServer = $('#mailServer');
 				// prevent the form submit action
 				event.preventDefault();
+				// console.log($form.serialize());
 				// disable the submit button to prevent multiple submit
 				$clientEmailForm.find('button:submit').prop('disabled',true);
 				// create an Ajax request for sending the email with the password
@@ -1267,9 +1270,40 @@ window.$sectiontit=$('#section--title');
 					data: $form.serialize(),
 					success: function( response ) {
 						// get response
-						// var response = $.parseJSON(response);
-						console.log(response);
-						resss=response;
+						var response = $.parseJSON(response);
+						// console.log(response);
+						// resss=response;
+						
+						if(response.c){
+							if(response.ee){
+								$('#clientLoginForm .form-group').eq(0).addClass('has-error');
+								$('#clientLoginForm .form-group').eq(0).append("<div id='clientEmail-error' class='help-block'>Email format is not valid.</div>");
+							}else{
+								if(response.g){
+									bootbox.alert({
+										title:"Success!",
+										message:"Successfully logged in. Redirecting you...",
+										backdrop:true
+									});
+								}else{
+									if(response.ie){
+								$('#clientLoginForm .form-group').eq(0).addClass('has-error');
+								$('#clientLoginForm .form-group').eq(0).append("<div id='clientEmail-error' class='help-block'>Invalid Email.</div>");
+									}else{
+								$('#clientLoginForm .form-group').eq(1).addClass('has-error');
+								$('#clientLoginForm .form-group').eq(1).append("<div id='clientPassword-error' class='help-block'>Invalid Password.</div>");
+									}
+								}
+							}
+						}else{
+							bootbox.alert({
+										title:"Error",
+										message:"It seems there is an internal error. Please login after some time. Thank you.",
+										backdrop:true
+									});
+						}
+						$clientEmailForm.find('button:submit').prop('disabled',false);
+						console.log("complete");
 						// if success show the client the password form
 						// if ( response.status === 'Success') {
 							
@@ -1290,7 +1324,7 @@ window.$sectiontit=$('#section--title');
 						// 	});
 						// }
 						// enable the submit button to prevent multiple submit
-						// $clientEmailForm.find('button:submit').prop('disabled',false);
+						
 					}
 				});
 				// prevent the form submit action
