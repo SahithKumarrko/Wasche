@@ -166,15 +166,15 @@
 								<!-- Client Zone --> 
 <li style="display:none;" class="header-client-zone-wrapper" onclick="return false;" >
 	<a class="client-zone-link" href="#"  data-close-location="right" onclick="return false;"><i class="fa fa-user" aria-hidden="true"></i></a>
-	<ul  class="cust-ul cust-ul1 active">
+	<!-- <ul  class="cust-ul cust-ul1 active">
 
 			<li style="padding-bottom: 4px;padding-top:0px; border-bottom: 1px solid rgba(0,0,0,0.5);">
-				<i class="fa fa-user"></i>
+				<i class="fa fa-user" style="padiing-top:6px;"></i>
 				<a style="font-size:16px;text-decoration: none;padding:7px !important;padding-top:4px !important;" href="#" class="gotoLogin">Singn In</a></li>
 				<li style="padding-top: 10px;padding-bottom:4px;">
 					<i class="fa fa-user-plus"></i>
 					<a href="#" class="gotoRegister" style="text-decoration: none;font-size:16px;padding:7px !important;padding-top:0px !important;padding-bottom:0px !important;">Register</a></li></ul>
-			
+			 -->
 	
 	 <ul  class="cust-ul cust-ul2">
 

@@ -159,16 +159,16 @@
                             <!-- Client Zone -->
                             <li class="header-client-zone-wrapper" style="display:none;" onclick="return false;">
                                 <a class="client-zone-link" data-close-location="right" href="#" onclick="return false;"><i class="fa fa-user" aria-hidden="true"></i></a>
-                                <ul  class="cust-ul cust-ul1 active">
+                                <!-- <ul  class="cust-ul cust-ul1 active">
 
                                         <li style="padding-bottom: 4px; padding-top:0px;border-bottom: 1px solid rgba(0,0,0,0.5);">
-                                            <i class="fa fa-user"></i>
+                                            <i class="fa fa-user" style="padding-top:6px;"></i>
                                             <a style="font-size:16px;text-decoration: none;padding:7px !important;padding-top:4px !important;" href="index4cd7.php#login">Singn In</a></li>
                                             <li style="padding-top: 10px;padding-bottom:4px;">
                                                 <i class="fa fa-user-plus"></i>
                                                 <a href="index4cd7.php#register" style="text-decoration: none;font-size:16px;padding:7px !important;padding-top:0px !important;padding-bottom:0px !important;">Register</a></li></ul>
                                         
-                                
+                                 -->
                                 <ul  class="cust-ul cust-ul2">
 
                             <li style="padding-bottom: 4px; padding-top:0px;border-bottom: 1px solid rgba(0,0,0,0.5);">
@@ -424,6 +424,7 @@
                                     <ol class="carousel-indicators">
                                         <li data-slide-to="0" class="active"></li>
                                         <li data-slide-to="1" class=""></li>
+                                        <li data-slide-to="2" class=""></li>
                                     </ol>
                                     <!-- Carousel Slides / Quotes -->
                                     <div class="carousel-inner">
@@ -435,6 +436,18 @@
                                                     </div>
                                                     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-9">
                                                         <p>Testing Testimonial. Need to add something</p><small><strong>Sahith:&nbsp;</strong><span>Developer</span></small>
+                                                    </div>
+                                                </div>
+                                            </blockquote>
+                                        </div>
+                                        <div class="item ">
+                                            <blockquote>
+                                                <div class="row">
+                                                    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-3 text-center">
+                                                        <img alt="Abrar" class="img-circle" src="./cdn-cms-s.f-static.com/versions/2/wizard/clientZone/images/noImage.png">
+                                                    </div>
+                                                    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-9">
+                                                        <p>Testimonial 2.</p><small><strong>Abrar:&nbsp;</strong><span>Dont Know</span></small>
                                                     </div>
                                                 </div>
                                             </blockquote>

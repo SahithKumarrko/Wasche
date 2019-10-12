@@ -30556,9 +30556,12 @@ a#home_buttonText:hover{
             border: 1px solid rgba(0,0,0,0.5);
             transform: rotate(45deg);
             border-right: 0;
-            top: -6%;
+            top: -4%;
             border-bottom: 0;
             right: 23%;
+        }
+        .mobcustul.cust-ul1{
+            left:-204%;
         }
         .cust-ul a:hover{
             color:#019875;
