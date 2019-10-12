@@ -30465,7 +30465,7 @@ html[dir=rtl] #popupCart .cartActionButtons {
             display:none;
             list-style: none;
             position: absolute;
-            left: -182%;
+            left: -90%;
             top: 100%;
             background-color: white;
             padding:10px;
@@ -30480,6 +30480,9 @@ html[dir=rtl] #popupCart .cartActionButtons {
             width:110px;
             /* right:0; */
             
+        }
+        #mainNavMobile{
+        box-shadow:0 5px 16px rgba(0,0,0,0.2);
         }
         
       .cust-ul i{
@@ -30499,6 +30502,9 @@ html[dir=rtl] #popupCart .cartActionButtons {
     padding-bottom:4px !important;
     display: flex;
 } */
+.cust-ul{
+    margin-left:-4px;
+}
 @media(max-width:991px){
     .cust-ul{
         margin-left:-4px;
@@ -30557,9 +30563,9 @@ a#home_buttonText:hover{
         .cust-ul a:hover{
             color:#019875;
         }
-        .mobcustul{
+        /* .mobcustul{
             left:-202%;
-        }
+        } */
         .formh3{
             /* width: fit-content; */
             /* margin: 0; */

@@ -14,8 +14,18 @@ if($con){
 // mysqli_query($con,"create table if not exists users(email varchar(30) PRIMARY KEY,pswd varchar(30),first_name varchar(20),lastName varchar(20),phno int,college varchar(60),address varchar(40) Default 'None')");
 
 try{
-$email="sahiht@gmail.com";
+$email="shhahiht@gmail.com";
 $pswd="1234";
+
+$fn="shith";
+$ln="kumat";
+$phno="1234567895";
+$addr="455698";
+$gender="Male";
+echo strlen(md5("123sdsdsasdds@23231212dddaddd"));
+$col="589";
+// mysqli_query($con,"insert into users values('$email','$pswd','$fn','$ln','$phno','$gender','$col','$addr')");
+// // mysqli_commit($con);
     $q=mysqli_query($con,"select email from users where email='$email' and pswd='$pswd'");
     echo "yup";
     print_r(mysqli_fetch_all($q,MYSQLI_ASSOC));

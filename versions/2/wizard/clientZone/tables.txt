@@ -1,0 +1,3 @@
+create table if not exists users(email varchar(40) PRIMARY KEY,pswd varchar(30),first_name varchar(20),lastName varchar(20),phno varchar(20),gender varchar(7),college varchar(60),address varchar(40) Default 'None');
+create table user_images(email varchar(40),image longblob);
+create table colleges(name varchar(100) primary key);

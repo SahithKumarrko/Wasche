@@ -1,0 +1,21 @@
+<?php
+$con=mysqli_connect("localhost","root","19101972","wasche","3306");
+$result=["c"=>true,"s"=>true];
+if(!$con){
+    $result['c']=false;
+}else{
+    $q=mysqli_query($con,"select * from colleges");
+    if(!$q){
+        $result["s"]=false;
+    }else{
+        $res=array();
+        while($row=mysqli_fetch_assoc($q)){
+            $res[]=$row["name"];
+        }
+        $result["res"]=$res;
+    }
+}
+mysqli_close($con);
+$result=json_encode($result);
+print_r($result);
+?>

@@ -125,7 +125,7 @@
                         </a>
                     </div>
                     <div id="top-menu">
-                        <ul class="navPages nav navbar-nav">
+                        <ul class="navPages nav navbar-nav lt1">
                             <li class="moduleMenu active">
                                 <a class="page-unique homepageMenu" href="index.php">Home</a>
                             </li>
@@ -136,7 +136,7 @@
                             <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8">
                                 <a class="page-unique" onclick="MoveFirstSection(2);" href="#"><span class="txt-container">About</span></a></li>
                             <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a href="#" class="page-unique" onclick="MoveFirstSection(6);"><span class="txt-container">Contact</span></a></li>
-                            <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a class="page-unique" href="index4cd7.php#login">Login</a></li>
+                            <li class="moduleMenu loginbt" data-menu-module-id="5b0a4ba521825"><a class="page-unique" href="index4cd7.php#login">Login</a></li>
                             <li class="moduleMenu signup" data-menu-module-id="5b0a4ba521825" ><a class="page-unique" href="index4cd7.php#register" style="color:white !important;">Sign Up</a></li>
                             <!-- <li class="moduleMenu" data-menu-module-id="5d985dca46598"><a class="page-unique" href="tracker.php"><span class="txt-container">Tracker</span></a></li> -->
                         </ul>
@@ -159,22 +159,22 @@
                             <!-- Client Zone -->
                             <li class="header-client-zone-wrapper" style="display:none;" onclick="return false;">
                                 <a class="client-zone-link" data-close-location="right" href="#" onclick="return false;"><i class="fa fa-user" aria-hidden="true"></i></a>
-                                <!-- <ul  class="cust-ul cust-ul1 active">
+                                <ul  class="cust-ul cust-ul1 active">
 
-                                        <li style="padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.5);">
+                                        <li style="padding-bottom: 4px; padding-top:0px;border-bottom: 1px solid rgba(0,0,0,0.5);">
                                             <i class="fa fa-user"></i>
-                                            <a style="font-size:16px;text-decoration: none;" href="index4cd7.php#login">Singn In</a></li>
-                                            <li style="padding-top: 5px;">
+                                            <a style="font-size:16px;text-decoration: none;padding:7px !important;padding-top:4px !important;" href="index4cd7.php#login">Singn In</a></li>
+                                            <li style="padding-top: 10px;padding-bottom:4px;">
                                                 <i class="fa fa-user-plus"></i>
-                                                <a href="index4cd7.php#register" style="text-decoration: none;font-size:16px">Register</a></li></ul> -->
+                                                <a href="index4cd7.php#register" style="text-decoration: none;font-size:16px;padding:7px !important;padding-top:0px !important;padding-bottom:0px !important;">Register</a></li></ul>
                                         
                                 
-                                <ul  class="cust-ul cust-ul2 active">
+                                <ul  class="cust-ul cust-ul2">
 
-                            <li style="padding-bottom: 4px; padding-top:4px;border-bottom: 1px solid rgba(0,0,0,0.5);">
-                                <a style="font-size:16px;text-decoration: none;">Profile</a></li>
-                                <li style="padding-top: 6px;padding-bottom:4px;">
-                                    <a class="top-logout-btn" style="text-decoration: none;font-size:16px">Logout</a></li></ul>
+                            <li style="padding-bottom: 4px; padding-top:0px;border-bottom: 1px solid rgba(0,0,0,0.5);">
+                                <a style="font-size:16px;text-decoration: none;padding:7px !important;padding-top:4px !important;" href="#" onclick="window.location.href='index4cd7.php';return false;">Profile</a></li>
+                                <li style="padding-top: 10px;padding-bottom:4px;">
+                                    <a class="top-logout-btn" style="text-decoration: none;font-size:16px;padding:7px !important;padding-top:0px !important;padding-bottom:0px !important;">Logout</a></li></ul>
                             </li>
                             <!-- Menu Action Buttons -->
                         </ul>
@@ -193,9 +193,9 @@
             </div>
             <div class="navPagesRight">
                 <ul class="navActions nav navbar-nav">
-                    <li style="display:none;" class="header-phone-wrapper">
+                    <!-- <li style="display:none;" class="header-phone-wrapper">
                         <a data-close-location="right" class="actionButton" role="button" data-container="body" data-toggle="phone_menuCallActionIcons"><i class="fa fa-phone"></i></a></li>
-                    <li style="display:none;" class="header-address-wrapper"><a data-close-location="right" class="actionButton" role="button" data-container="body" data-toggle="address_menuCallActionIcons"><i class="fa fa-location-arrow"></i></a></li>
+                    <li style="display:none;" class="header-address-wrapper"><a data-close-location="right" class="actionButton" role="button" data-container="body" data-toggle="address_menuCallActionIcons"><i class="fa fa-location-arrow"></i></a></li> -->
                     <!-- <li class="header-social-wrapper hidden">
                         <a data-close-location="right" class="actionButton" role="button" data-container="body" data-toggle="social_menuCallActionIcons">
                             <i class="fa fa-share-alt"></i></a></li> -->
@@ -218,10 +218,10 @@
                                 <ul  class="cust-ul mobcustul cust-ul2" >
 
                                 <li style="padding-bottom: 4px;padding-top:4px; border-bottom: 1px solid rgba(0,0,0,0.5); display:flex;justify-content:space-evenly;margin:0 !important;padding-top:0 !important;padding-bottom:4px !important;">
-                                        <i class="fa fa-user" style="font-size: 1.2rem;padding-top:2px"></i>
+                                        <!-- <i class="fa fa-user" style="font-size: 1.2rem;padding-top:2px"></i> -->
                                     <a  href="index4cd7.php" style="font-size:16px;text-decoration: none;padding-top:0 !important;">Profile</a></li>
                                     <li style="padding-top: 10px; padding-bottom:4px;display:flex;margin:0 !important;padding-top:10px !important;justify-content:space-evenly">
-                                            <i class="fa fa-user-plus" style="font-size: 1.2rem;padding-top:2px"></i>
+                                            <!-- <i class="fa fa-user-plus" style="font-size: 1.2rem;padding-top:2px"></i> -->
                                         <a onclick="return false;" href="#" class="top-logout-btn" style="text-decoration: none;font-size:16px;padding-top:0 !important;padding-bottom:0 !important;">Logout</a></li></ul>
                                 
                         
@@ -230,14 +230,14 @@
             </div>
         </nav>
         <div id="top-menu-mobile" style="display:none;">
-            <ul>
+            <ul class="lm1">
                 <li class="moduleMenu active">
                     <a class="page-unique homepageMenu" href="index.php">Home</a></li>
                 <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" onclick="MoveFirstSection(1);" href="#"><span class="txt-container">Services</span></a></li>
                 <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a href="#" class="page-unique s123-fast-page-load" onclick="MoveFirstSection(2);"><span class="txt-container">About</span></a></li>
                 <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a href="#" class="page-unique" onclick="MoveFirstSection(6);"><span class="txt-container">Contact</span></a></li>
                 <!-- <li class="moduleMenu" data-menu-module-id="5d985dca46598"><a href="#" class="page-unique" href="tracker.php"><span class="txt-container">Tracker</span></a></li> -->
-                <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a style="margin-right: 7px;font-weight: bold;" class="page-unique" href="#" onclick="setTimeout(function(){document.location.href='index4cd7.php#login';},1500);">Login</a></li>
+                <li class="moduleMenu loginbt" data-menu-module-id="5b0a4ba521825"><a style="margin-right: 7px;font-weight: bold;" class="page-unique" href="#" onclick="setTimeout(function(){document.location.href='index4cd7.php#login';},1500);">Login</a></li>
                 <li class="moduleMenu signup" data-menu-module-id="5b0a4ba521825" style="padding:6px !important;padding-top:4px !important;padding-bottom:4px !important;width:50%;margin:auto;"><a style="color:white !important;" class="page-unique" onclick="document.location.href='index4cd7.php#register'" href="#">Sign Up</a></li>
                     
             </ul>
@@ -337,8 +337,7 @@
                                         <div class="separateImages text-center">
                                             <img src="./cdn-cms.f-static.com/uploads/2630165/800_5d0a171177656.jpg" class="img-rounded img-responsive" style="max-height:400px;max-width:80%;display:inline-block;" alt="About" />
                                         </div>
-                                    </div>The About page is the core description of your website. Here is where you let clients know what your website is about. You can edit all of this text and replace it with what you want to write. For example you can let
-                                    them know how long you have been in business, what makes your company special, what are its core values and more.<br></div>
+                                    </div>Still Need to write.<br></div>
                             </div>
                         </div>
                     </div>
@@ -432,11 +431,10 @@
                                             <blockquote>
                                                 <div class="row">
                                                     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-3 text-center">
-                                                        <img alt="Amy Warmouth" class="img-circle" src="./cdn-cms.f-static.com/uploads/2031/400_5a16a9848fdd0.jpg">
+                                                        <img alt="Sahith" class="img-circle" src="./cdn-cms.f-static.com/uploads/2031/sahith.jpg">
                                                     </div>
                                                     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-9">
-                                                        <p>This is one of the testimonials you can use for adding customer feedback / satisfaction on your website. You can edit all of this text and replace it with anything your customer has had to say about
-                                                            you or your company or services. Edit your Testimonials from the Pages tab by clicking the edit button.</p><small><strong>Amy Warmouth:&nbsp;</strong><span>Visualiser of Interiors</span></small>
+                                                        <p>Testing Testimonial. Need to add something</p><small><strong>Sahith:&nbsp;</strong><span>Developer</span></small>
                                                     </div>
                                                 </div>
                                             </blockquote>
@@ -445,11 +443,10 @@
                                             <blockquote>
                                                 <div class="row">
                                                     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-3 text-center">
-                                                        <img alt="Julia Western" class="img-circle" src="./cdn-cms.f-static.com/uploads/2031/400_5a15adf4c6469.jpg">
+                                                        <img alt="Abrar" class="img-circle" src="./cdn-cms-s.f-static.com/versions/2/wizard/clientZone/images/noImage.png">
                                                     </div>
                                                     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-9">
-                                                        <p>This is one of the testimonials you can use for adding customer feedback / satisfaction on your website. You can edit all of this text and replace it with anything your customer has had to say about
-                                                            you or your company or services. Edit your Testimonials from the Pages tab by clicking the edit button.</p><small><strong>Julia Western:&nbsp;</strong><span>Senior Designer</span></small>
+                                                        <p>Testimonial 2.</p><small><strong>Abrar:&nbsp;</strong><span>Dont Know</span></small>
                                                     </div>
                                                 </div>
                                             </blockquote>
@@ -482,16 +479,34 @@
                         <div style="display:flex;flex-wrap:wrap;justify-content: center;" class="row text-center team-category" data-categories-filter="s123-g-show-all">
                             <div style="margin: auto;width:auto;" class="col-md-3 col-sm-6 team-member-wrap col-centered">
                                 <div style="width: 300px;" class="team-member">
-                                    <div class="team-image" style="background-image:url(./cdn-cms.f-static.com/uploads/2031/400_5a15a9b2d0271.jpg);"></div>
+                                    <div class="team-image" style="background-image:url(./cdn-cms-s.f-static.com/versions/2/wizard/clientZone/images/noImage.png);">
+                                    </div>
                                     <div class="team-details">
                                         <div>
-                                            <h4 class="member-name">Jack Hendrix</h4>
+                                            <h4 class="member-name">Abrar</h4>
                                         </div>
                                         <div>
                                             <p class="position">President</p>
                                         </div>
                                         <div>
-                                            <p>This is one of the team member slots you can have for your company. You can replace their picture and add any text you want here for describing your employees.</p>
+                                            <p>Dont know.</p>
+                                        </div>
+                                        <ul class="social"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin: auto;width:auto;" class="col-md-3 col-sm-6 team-member-wrap col-centered">
+                                <div style="width: 300px;" class="team-member">
+                                    <div class="team-image" style="background-image:url(./cdn-cms.f-static.com/uploads/2031/sahith.jpg);"></div>
+                                    <div class="team-details">
+                                        <div>
+                                            <h4 class="member-name">Sahith Kumar</h4>
+                                        </div>
+                                        <div>
+                                            <p class="position">Developer</p>
+                                        </div>
+                                        <div>
+                                            <p>Need to add.</p>
                                         </div>
                                         <ul class="social">
 
@@ -500,41 +515,23 @@
                                 </div>
                             </div>
                             <div style="margin: auto;width:auto;" class="col-md-3 col-sm-6 team-member-wrap col-centered">
-                                <div style="width: 300px;" class="team-member">
-                                    <div class="team-image" style="background-image:url(./cdn-cms.f-static.com/uploads/2031/400_5a2816abd9044.jpg);">
-                                    </div>
-                                    <div class="team-details">
-                                        <div>
-                                            <h4 class="member-name">Elizabeth Newman</h4>
-                                        </div>
-                                        <div>
-                                            <p class="position">Partner</p>
-                                        </div>
-                                        <div>
-                                            <p>This is one of the team member slots you can have for your company. You can replace their picture and add any text you want here for describing your employees.</p>
-                                        </div>
-                                        <ul class="social"></ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="margin: auto;width:auto;" class="col-md-3 col-sm-6 team-member-wrap col-centered">
                                 <div class="team-member" style="width: 300px;">
-                                    <div class="team-image" style="background-image:url(./cdn-cms.f-static.com/uploads/2031/400_5a2817ee48957.jpg);"></div>
+                                    <div class="team-image" style="background-image:url(./cdn-cms-s.f-static.com/versions/2/wizard/clientZone/images/noImage.png);"></div>
                                     <div class="team-details">
                                         <div>
-                                            <h4 class="member-name">Lucy Lennon</h4>
+                                            <h4 class="member-name">Sarvesh Rayter</h4>
                                         </div>
                                         <div>
                                             <p class="position">Office manager</p>
                                         </div>
                                         <div>
-                                            <p>This is one of the team member slots you can have for your company. You can replace their picture and add any text you want here for describing your employees.</p>
+                                            <p>Dont Know</p>
                                         </div>
                                         <ul class="social"></ul>
                                     </div>
                                 </div>
                             </div>
-                            <div style="margin: auto;width:auto;" class="col-md-3 col-sm-6 team-member-wrap col-centered">
+                            <!-- <div style="margin: auto;width:auto;" class="col-md-3 col-sm-6 team-member-wrap col-centered">
                                 <div class="team-member" style="width: 300px;">
                                     <div class="team-image" style="background-image:url(./cdn-cms.f-static.com/uploads/2031/400_5a15a987cc8c1.jpg);"></div>
                                     <div class="team-details">
@@ -550,7 +547,7 @@
                                         <ul class="social"></ul>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </section>

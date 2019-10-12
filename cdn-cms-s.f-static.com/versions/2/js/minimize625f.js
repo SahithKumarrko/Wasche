@@ -32522,19 +32522,34 @@ var ClientZone = function() {
         console.log("!");
         if (!$client) return;
         console.log("creatingicon");
+        console.log($client);
         $clientZoneLink.removeAttr('data-image');
         $clientZoneLink.removeAttr('data-letters');
-        if ($client.profile_image) {
+        if ($client.client.profile_image) {
             $clientZoneLink.attr('data-image', 'true');
             $clientZoneLink.css('background-image', 'url(' + getImageWR(100, $client.profile_image) + ')');
-        } else if ($client.name) {
-            $clientZoneLink.attr('data-letters', $client.name[0]);
+        } else if ($client.client.first_name) {
+            $clientZoneLink.attr('data-letters', $client.client.first_name[0]);
             $clientZoneLink.css('background-image', '');
-        } else if ($client.email) {
-            $clientZoneLink.attr('data-letters', $client.email[0]);
+        } else if ($client.client.email) {
+            $clientZoneLink.attr('data-letters', $client.client.email[0]);
             $clientZoneLink.css('background-image', '');
         }
-        if ($client.name !== 0) $clientZoneLink.attr('title', $client.name);
+        if ($client.client.first_name !== 0) $clientZoneLink.attr('title', $client.client.first_name);
+console.log("completed adding icon");
+$('.header-client-zone-wrapper').eq(0).css("display","inline-block");
+var custmodulem=$('.lt1 .moduleMenu .txt-container');
+custmodulem.eq(0).html('Dashboard');
+custmodulem.eq(1).html('Billing');
+custmodulem.eq(0).parent().attr('href','dashboard.php')
+custmodulem.eq(1).parent().attr('href','billing.php');
+$('.loginbt').css('display','none');
+$('.signup').css('display','none');
+custmodulem=$('.lm1 .moduleMenu .txt-container');
+custmodulem.eq(0).html('Dashboard');
+custmodulem.eq(1).html('Billing');
+custmodulem.eq(0).parent().attr('href','dashboard.php');
+custmodulem.eq(1).parent().attr('href','billing.php');
     }
     };
     /**

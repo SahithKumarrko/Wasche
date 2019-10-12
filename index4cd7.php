@@ -117,7 +117,7 @@
 						</a> 
 					</div> 
 					<div id="top-menu"> 
-						<ul class="navPages nav navbar-nav"> 
+						<ul class="navPages nav navbar-nav lt1"> 
 							<li class="moduleMenu active">
 								<a class="page-unique homepageMenu" href="index.php">Home</a>
 							</li>
@@ -141,7 +141,7 @@
 									<span class="txt-container">Tracker</span>
 								</a>
 							</li>  -->
-							<li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a class="page-unique gotoLogin" href="#" onclick="return false;">Login</a></li>
+							<li class="moduleMenu loginbt" data-menu-module-id="5b0a4ba521825"><a class="page-unique gotoLogin" href="#" onclick="return false;">Login</a></li>
                             <li class="moduleMenu signup" data-menu-module-id="5b0a4ba521825" ><a class="page-unique gotoRegister" href="#" onclick="return false;" style="color:white !important;">Sign Up</a></li>
              
 						</ul> 
@@ -166,22 +166,22 @@
 								<!-- Client Zone --> 
 <li style="display:none;" class="header-client-zone-wrapper" onclick="return false;" >
 	<a class="client-zone-link" href="#"  data-close-location="right" onclick="return false;"><i class="fa fa-user" aria-hidden="true"></i></a>
-	<!-- <ul  class="cust-ul cust-ul1 active">
+	<ul  class="cust-ul cust-ul1 active">
 
-			<li style="padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.5);">
+			<li style="padding-bottom: 4px;padding-top:0px; border-bottom: 1px solid rgba(0,0,0,0.5);">
 				<i class="fa fa-user"></i>
-				<a style="font-size:16px;text-decoration: none;" href="#" class="gotoLogin">Singn In</a></li>
-				<li style="padding-top: 5px;">
+				<a style="font-size:16px;text-decoration: none;padding:7px !important;padding-top:4px !important;" href="#" class="gotoLogin">Singn In</a></li>
+				<li style="padding-top: 10px;padding-bottom:4px;">
 					<i class="fa fa-user-plus"></i>
-					<a href="#" class="gotoRegister" style="text-decoration: none;font-size:16px">Register</a></li></ul>
+					<a href="#" class="gotoRegister" style="text-decoration: none;font-size:16px;padding:7px !important;padding-top:0px !important;padding-bottom:0px !important;">Register</a></li></ul>
 			
-	 -->
-	 <ul  class="cust-ul cust-ul2 active">
+	
+	 <ul  class="cust-ul cust-ul2">
 
-		<li style="padding-bottom: 4px; padding-top:4px;border-bottom: 1px solid rgba(0,0,0,0.5);">
-			<a style="font-size:16px;text-decoration: none;">Profile</a></li>
-			<li style="padding-top: 6px;padding-bottom:4px;">
-				<a class="top-logout-btn" style="text-decoration: none;font-size:16px">Logout</a></li></ul>
+		<li style="padding-bottom: 4px; padding-top:0px;border-bottom: 1px solid rgba(0,0,0,0.5);">
+			<a style="font-size:16px;text-decoration: none;padding:7px !important;padding-top:4px !important;" href="#" onclick="window.location.href='index4cd7.php';return false;">Profile</a></li>
+			<li style="padding-top: 10px;padding-bottom:4px;">
+				<a class="top-logout-btn" style="text-decoration: none;font-size:16px;padding:7px !important;padding-top:0px !important;padding-bottom:0px !important;">Logout</a></li></ul>
 	   
 </li>
 <!-- Menu Action Buttons --> </ul> </div> </div> </nav> </div> 
@@ -214,27 +214,28 @@
 						<ul  class="cust-ul mobcustul cust-ul2" >
 
 						<li style="padding-bottom: 4px;padding-top:4px; border-bottom: 1px solid rgba(0,0,0,0.5); display:flex;justify-content:space-evenly;margin:0 !important;padding-top:0 !important;padding-bottom:4px !important;">
-								<i class="fa fa-user" style="font-size: 1.2rem;padding-top:2px"></i>
+								<!-- <i class="fa fa-user" style="font-size: 1.2rem;padding-top:2px"></i> -->
 						<a href="index4cd7.php"  style="font-size:16px;text-decoration: none;padding-top:0 !important;">Profile</a></li>
 						<li style="padding-top: 10px; padding-bottom:4px;display:flex;margin:0 !important;padding-top:10px !important;justify-content:space-evenly">
-								<i class="fa fa-user-plus" style="font-size: 1.2rem;padding-top:2px"></i>
+								<!-- <i class="fa fa-user-plus" style="font-size: 1.2rem;padding-top:2px"></i> -->
 							<a href="#" onclick="return false;" class="top-logout-btn" style="text-decoration: none;font-size:16px;padding-top:0 !important;padding-bottom:0 !important;">Logout</a></li></ul>
 				
 		</li>
       </ul>
    </div>
 </nav>
-<div id="top-menu-mobile" style="display:none;">
-   <ul>
+<div id="top-menu-mobile"  style="display:none;">
+   <ul class="lm1">
       <li class="moduleMenu active"><a class="page-unique homepageMenu" href="index.php">Home</a></li>
       <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" href="services.php"><span class="txt-container">Services</span></a></li>
       <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8"><a class="page-unique" href="about.php"><span class="txt-container">About</span></a></li>
       <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a class="page-unique" href="contact.php"><span class="txt-container">Contact</span></a></li>
       <!-- <li class="moduleMenu" data-menu-module-id="5d985dca46598"><a class="page-unique" href="tracker.php"><span class="txt-container">Tracker</span></a></li> -->
-	  <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a style="margin-right: 7px;font-weight: bold;" class="page-unique gotoLogin" href="#" onclick="gotoL(event);">Login</a></li>
+	  <li class="moduleMenu loginbt" data-menu-module-id="5b0a4ba521825"><a style="margin-right: 7px;font-weight: bold;" class="page-unique gotoLogin" href="#" onclick="gotoL(event);">Login</a></li>
 	  <li class="moduleMenu signup" data-menu-module-id="5b0a4ba521825" style="padding:6px !important;padding-top:4px !important;padding-bottom:4px !important;width:50%;margin:auto;"><a style="color:white !important;" class="page-unique gotoRegister" onclick="gotoRe(event);" href="#">Sign Up</a></li>
 	  
 	</ul>
+	
 </div>
 <div id="s123PjaxMainContainer">
    <div class="s123-client-zone-page s123-content-area bg-primary">
@@ -242,7 +243,7 @@
          <div class="row">
             <div class="container">
                <div class="row modulesTitle">
-                  <div class="col-xs-12 text-center">
+                  <div class="col-xs-12 text-center" style="display:none;">
                      <H1 id="section--title" class="s123-page-header">Login</H1>
                      <hr class="small">
                      <h4 id="section--slogan"></h4>
@@ -253,7 +254,7 @@
       </div>
       <div class="container">
          <!-- page is loading icon --> 
-         <div class="row page-loading-icon text-center" style="display: none;"> <i class="ace-icon fa fa-spinner fa-spin blue fa-4x"></i> </div>
+         <div class="row page-loading-icon text-center" style="display: block;" id="pgload"> <i class="ace-icon fa fa-spinner fa-spin blue fa-4x"></i> </div>
          <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-3">
                <!-- profile image --> 
@@ -287,18 +288,35 @@
                      <form id="clientProfile" enctype="multipart/form-data">
                         <div class="row">
                            <div class="col-xs-12 col-md-5">
-                              <!-- First name --> 
-                              <div class="form-group"> <label for="first_name">First Name</label> <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name"/> </div>
+							<!-- email --> 
+							<div class="form-group forum-property"> <label for="email">Email</label> <input type="email" id="pemail" name="email" class="form-control" placeholder="Nickname"/> </div>
+                              	  
+						   <!-- First name --> 
+                              <div class="form-group"> <label for="first_name">First Name</label> <input type="text" id="pfirst_name" name="first_name" class="form-control" placeholder="First Name"/> </div>
                               <!-- Last name --> 
-                              <div class="form-group"> <label for="last_name">Last Name</label> <input type="text" id="last_name" name="last_name" class="form-control"  placeholder="Last Name"/> </div>
-                              <!-- nickname --> 
-                              <div class="form-group forum-property hidden"> <label for="nickname">Nickname</label> <input type="text" id="nickname" name="nickname" class="form-control" placeholder="Nickname"/> </div>
+                              <div class="form-group"> <label for="last_name">Last Name</label> <input type="text" id="plast_name" name="last_name" class="form-control"  placeholder="Last Name"/> </div>
                               <!-- Phone --> 
 							  <div class="form-group"> <label for="phone">Phone</label> 
-								<input type="text" id="phone" name="phone" class="form-control" placeholder="Phone Number"/> 
+								<input type="text" id="pphno" name="phno" class="form-control" placeholder="Phone Number"/> 
+							</div>
+							<div class="form-group">
+							<label for="country">Gender</label>
+                                 <select id="pgender" name="gender" class="form-control">
+									 <option value="Male">Male</option>
+									 <option value="Female">Female</option>
+                                 </select>
+							</div>
+							
+							<div class="form-group"> <label for="address">Address</label> 
+								<input type="text" id="paddress" name="address" class="form-control" placeholder="Address"/> 
+							</div>
+							<div class="form-group">
+							<label for="country">College</label>
+                                 <select id="pcollege" name="college" class="form-control">
+                                 </select>
 							</div>
                               <!-- Country --> 
-                              <div class="form-group">
+                              <!-- <div class="form-group">
                                  <label for="country">Country</label> 
                                  <select id="country" name="country" class="form-control country">
                                     <option value="AFG">Afghanistan</option>
@@ -550,7 +568,7 @@
                                     <option value="ZMB">Zambia</option>
                                     <option value="ZWE">Zimbabwe</option>
                                  </select>
-                              </div>
+                              </div> -->
                               <!-- Subscribe --> 
                               <div class="form-group">
                                  <div class="checkbox"> 
@@ -583,10 +601,16 @@
          <div id="loginFormsContainer" class="row login-forms box box-primary s123-box-top-primary-border" style="display: none;">
             <!-- Send password to email --> 
             
+			<div class="row page-loading-icon text-center" id="logload" style="display: none;background: transparent;"> <i class="ace-icon fa fa-spinner fa-spin blue fa-4x"></i> </div>
+		<div id="efmsglog" style="display:none">
+			<h2>It seems there is an error.<br>Please try again later.<br></h2><h1>Thank you</h1>
+		</div>
             <!-- Password form --> 
-            <form id="clientLoginForm" class="text-center" style="display:none">
+			<form id="clientLoginForm" class="text-center" style="display:none">
+			
 					<!-- <h2 style="margin-top:0;margin-bottom:0;">Login</h2>
 					<hr class="form-hr"> -->
+					<div class="row page-loading-icon text-center" style="display: none;background: transparent;position: absolute;top: 50%;left: 53%;transform: translate(-50%,-50%);"> <i class="ace-icon fa fa-spinner fa-spin blue fa-4x"></i> </div>
                <div class="form-group">
 				   <h3 class="formh3">Email</h3>
 				   <hr class="form3hr">
@@ -621,26 +645,71 @@
 			   <input type="hidden" name="websiteID" class="websiteID" value="2630165"> 
 			   <input type="hidden" name="email" class="clientEmail" value=""> 
 			</form>
+			<div id="efmsg" style="display:none">
+			<h2>It seems there is an error.<br>Please try again later.<br></h2><h1>Thank you</h1>
+		</div>
 			<form id="clientRegisterForm" class="text-center" style="display:none">
 					<!-- <h2 style="margin-top:0;margin-bottom:0;">Register</h2>
 					<hr class="form-hr"> -->
-					<div class="form-group">
-							<h3 class="formh3">Email</h3>
-							<hr class="form3hr">
-						<input type="email" id="rclientEmail" name="rclientEmail" value="" class="form-control" placeholder="example@example.com" style="max-width:310px;margin: 0 auto;" required data-msg-required="Please enter your email"/> 
-					 </div>
+					<div class="row page-loading-icon text-center" style="display: none;background: transparent;position: absolute;top: 50%;left: 53%;transform: translate(-50%,-50%);"> <i class="ace-icon fa fa-spinner fa-spin blue fa-4x"></i> </div>
+		
 					 <div class="form-group">
 							<h3 class="formh3">First Name</h3>
 							<hr class="form3hr">
-						 <input type="text" id="rclienFirsttName" name="rclientFirstName" value="" class="form-control" placeholder="First Name" style="max-width:310px;margin:auto;margin-top:10px;" required data-msg-required="Please fill this field"/> 
+						 <input type="text" id="rclienFirsttName" name="first_name" value="" class="form-control" placeholder="First Name" style="max-width:310px;margin:auto;margin-top:10px;" required data-msg-required="Please fill this field"/> 
 					  </div>
 					  
 					  <div class="form-group">
 							<h3 class="formh3">Last Name</h3>
 							<hr class="form3hr">
-							 <input type="email" id="rclientLastName" name="rclientLastName" value="" class="form-control" placeholder="Last Name" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please fill this field"/> 
+							 <input type="text" id="rclientLastName" name="last_name" value="" class="form-control" placeholder="Last Name" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please fill this field"/> 
 						  </div>
+						  <div class="form-group">
+							<h3 class="formh3">Email</h3>
+							<hr class="form3hr">
+						<input type="email" id="rclientEmail" name="email" value="" class="form-control" placeholder="example@example.com" style="max-width:310px;margin: 0 auto;" required data-msg-required="Please enter your email"/> 
+					 </div>
+					<div class="form-group">
+					<h3 class="formh3">Password</h3>
+					<hr class="form3hr">
+						<input type="password" id="rclientPassword" name="pswd" value="" class="form-control" placeholder="Password" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please fill this field."/> 
+					</div>
+						  
+					<div class="form-group">
+						<h3 class="formh3">Confirm Password</h3>
+						<hr class="form3hr">
+							<input type="password" id="rclientConfirmPassword" name="cpswd" value="" class="form-control" placeholder="Confirm Password" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please fill this field."/> 
+						</div>
 						   
+						   
+					  <div class="form-group">
+							<h3 class="formh3">Gender</h3>
+							<hr class="form3hr">
+							<select class="form-control" style="width:40%;margin:auto;" name="gender">
+								<option value="Male">Male</option>
+								<option value="Female">Female</option>
+							</select>
+					</div>
+							  
+						  <div class="form-group">
+							<h3 class="formh3">Phone Number</h3>
+							<hr class="form3hr">
+						<input type="text" name="phno" id="phno" value="" class="form-control" placeholder="Phone Number" style="max-width:310px;margin: 0 auto;" required data-msg-required="Please enter your email"/> 
+					 </div>
+					<div class="form-group">
+						<h3 class="formh3">Address</h3>
+						<hr class="form3hr">
+							<input type="text" name="address" value="" class="form-control" placeholder="Address" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please fill this field."/> 
+						</div>
+						   
+					<div class="form-group">
+						<h3 class="formh3">College</h3>
+						<hr class="form3hr">
+						<select class="form-control" style="margin:auto;" id="colleges" name="college">
+							
+						</select>
+					</div>
+
 					 <div class="form-group">
 						 <div class="checkbox"> <label> <input type="checkbox" id="agreeToTerms" name="agreeToTerms" checked> I agree to the <a href="terms.php"" target="_blank">Terms of Service</a>.                            </label> </div>
 						 </div>
@@ -906,10 +975,15 @@ Secret Key  : 6LetKrwUAAAAAGVxX7baURxBVM54KZfRypv8JZZR
 		window.$resendPasswordBtn = $('#resendPasswordBtn');
 		window.$resendPasswordLoading = $('#resendPasswordLoading');
 		window.$resendPasswordEmailSent = $('#resendPasswordEmailSent');
+		window.$coptions="";
+		
+	window.$modtit=$('.modulesTitle .text-center');
 		// $clientPasswordForm.slideUp();
 		// Check if the client is logged in
 		if ( window.localStorage.getItem("wasche-services")) {
 			// handler the client details (get & show them)
+			$('.s123-page-header').html('Profile');
+			$modtit.show();
 			ClientDetailsHandler();
 		} else {
 			// handler the client login
@@ -1015,19 +1089,25 @@ Secret Key  : 6LetKrwUAAAAAGVxX7baURxBVM54KZfRypv8JZZR
 
 		// Show a loading message
 		$('.page-loading-icon').show();
-
+		var tema=$.parseJSON(window.localStorage.getItem('wasche-services'));
+		tema=tema.client.email;
+		console.log(tema);
+		// window.location.getItem()
 		// Create an Ajax request for the orders
 		$.ajax({
 			type: "POST",
-			url: '/versions/2/wizard/clientZone/clientsZoneO.php',
-			data: {
-				websiteID : "2630165",
-				w : ""			},
+			url: '/versions/2/wizard/clientZone/retrieveDetails.php',
+
+			data: "email="+tema,
 			success: function( response ) {
 				// convert from string to JSON
 				response = JSON.parse(response);
+				var response2=response;
 				// check response status
-				if ( response.status === 'Success' ) {
+				console.log(response);
+				console.log(response.client);
+				if ( response.c === true ) {
+					console.log('recieved');
 					// on mobile show the tabs after the client login
 					$('#clientZone-select-tabs').addClass('visible-xs');
 					// on mobile we display select-box to choose tabs
@@ -1042,7 +1122,7 @@ Secret Key  : 6LetKrwUAAAAAGVxX7baURxBVM54KZfRypv8JZZR
 							var $selectTabs = $(this);
 							var $option = $selectTabs.find('[value="' + $selectTabs.val() + '"]');
 							// display the correct tabs
-							SelectTab($selectTabs.val(),true);
+							SelectTab($selectTabs.val(),false);
 							// hide all orders tables
 							$('.client-zone-orders-table tbody tr').hide();
 							// display the correct orders table
@@ -1057,73 +1137,166 @@ Secret Key  : 6LetKrwUAAAAAGVxX7baURxBVM54KZfRypv8JZZR
 						// select tab event
 						$('.clientZoneTabs').on('click','.tab',function() {
 							// display the correct tabs
-							SelectTab($(this).data('tab'),true);
+							SelectTab($(this).data('tab'),false);
 						});
 					}
 					// generate the user orders
-					ShowOrders(response);
+					// ShowOrders(response);
 					// set the user profile details
-					SetProfile(response.client);
+					if(!response.ec){
+					if($coptions==''){
+						// getCollegeOptions();
+						
+						$.ajax({
+					type: "POST",
+					url: './versions/2/wizard/clientZone/colleges.php',
+					success: function( response ) {
+						var resp=$.parseJSON(response);
+						console.log('coll');
+						if(resp.c){
+							if(!resp.s){
+								bootbox.alert({
+										title:"Error",
+										message:"Could not able to load data. Please retry after some time. Thank you.",
+										backdrop:true
+									});
+								// $('#logload').hide();
+								// $('#efmsg').show();
+							}else{
+								var cres=resp.res,
+								ostr="<option value='Select College'>Select College</option>";
+								for(var i=0;i<cres.length;i++){
+									ostr=ostr+"<option value='"+cres[i]+"'>"+cres[i]+"</option>";
+								}
+								$coptions=ostr;
+								$('#pcollege').html($coptions);
+								$('#pcollege option').eq(0).remove();
+								console.log(response2.client);
+								SetProfile(response2.client);
+								// $('#colleges').html($(ostr));
+								// $('#logload').hide();
+								// $clientPasswordForm.fadeIn();
+							}
+						}else{
+							bootbox.alert({
+										title:"Error",
+										message:"It seems there is an internal error. Please retry after some time. Thank you.",
+										backdrop:true
+									});
+							// $('#logload').hide();
+							// $('#efmsg').show();
+						}
+
+						// window.$resp=resp;
+						// $('#regload').hide();
+					},
+					error:function (jqXHR, exception) {
+								var msg = '';
+								if (jqXHR.status === 0) {
+									msg = 'Not connect.\n Verify Network.';
+								} else if (jqXHR.status == 404) {
+									msg = 'Requested page not found. [404]';
+								} else if (jqXHR.status == 500) {
+									msg = 'Internal Server Error [500].';
+								} else if (exception === 'parsererror') {
+									msg = 'Requested JSON parse failed.';
+								} else if (exception === 'timeout') {
+									msg = 'Time out error.';
+								} else if (exception === 'abort') {
+									msg = 'Ajax request aborted.';
+								} else {
+									msg = 'Uncaught Error.\n' + jqXHR.responseText;
+								}
+								
+							bootbox.alert({
+										title:"Error",
+										message:msg+" Please Try again later. Thank you.",
+										backdrop:true
+									});
+								
+							// $('#logload').hide();
+							// $('#efmsg').show();
+						}
+				});
+		
+					}else{
+						
+						$('#pcollege').html($coptions);
+						$('#pcollege option').eq(0).remove();
+						SetProfile(response.client);
+					}
+				}else{
+					console.log("could not found email");
+				}
+					// $.ajax({
+					// 	type: "POST",
+					// 	url: '/versions/2/wizard/clientZone/retrieveDetails.php'
+
+					// })
+					// SetProfile(response.client);
 					// set the client addresses
 					// Addresses.Init(response.client.addresses);
 					// hide the loading message
-					$('.page-loading-icon').hide();
+
+				
 
 					/**
 					 * In case the website don't have any module that need ORDERS and
 					 * the client don't have any orders we'll hide the orders tab.
 					 */
 					// website don't have any module that using orders
-					if ( !response.hasModulesUsingOrders ) {
-						// hide the addresses tab
-						$('.clientZoneTabs .tab[data-tab="addresses"]').removeClass('active').hide();
-						$('.addresses.tab-content').hide();
+					// if ( !response.hasModulesUsingOrders ) {
+					// 	// hide the addresses tab
+					// 	$('.clientZoneTabs .tab[data-tab="addresses"]').removeClass('active').hide();
+					// 	$('.addresses.tab-content').hide();
 
-						// client don't have any orders yet
-						if ( response.orders.noOrders ) {
-							// hide the orders tab
-							$('.clientZoneTabs .tab[data-tab^="orders"]').removeClass('active').hide();
-							$('.orders.tab-content').hide();
-							// display the profile tab
-							$('.clientZoneTabs .tab[data-tab="profile"]').addClass('active');
-							$('.profile.tab-content').show();
-						}
-					}
+					// 	// client don't have any orders yet
+					// 	if ( response.orders.noOrders ) {
+					// 		// hide the orders tab
+					// 		$('.clientZoneTabs .tab[data-tab^="orders"]').removeClass('active').hide();
+					// 		$('.orders.tab-content').hide();
+					// 		// display the profile tab
+					// 		$('.clientZoneTabs .tab[data-tab="profile"]').addClass('active');
+					// 		$('.profile.tab-content').show();
+					// 	}
+					// }
 					// generate orders modules tabs
-					$.each(response.modulesOrders, function( moduleTypeNUM, data ){
-						// check if the user have orders for this module by module type number
-						if ( $('.client-zone-orders-table tbody tr[data-moduletypenum="' + moduleTypeNUM + '"]').length === 0 ) return;
-						// on mobile we build option HTML for select-box
-						if ( $('#clientZone-select-tabs').is(":visible") ) {
-							// get object
-							var html = '<option value="orders-' + moduleTypeNUM + '" data-moduleTypeNUM="' + moduleTypeNUM + '">' + data.title + '</option>';
-							// convert the html to a jquery object.
-							var $html = $(html);
-						// build regular HTML tabs	
-						} else {
-							// get object
-							var html = '<div data-tab="orders-' + moduleTypeNUM + '" data-moduleTypeNUM="' + moduleTypeNUM + '" class="col-xs-12 tab">';
-	                        	html += '<div>';
-									html += '<i class="' + data.icon + ' fa-1x"></i> <span>' + data.title + '</span>';
-	                            html += '</div>';
-	                        html += '</div>';
-	                        // convert the html to a jquery object.
-	                        var $html = $(html);
-	                        // add click event
-							$html.click(function(){
-	                        	$('.client-zone-orders-table tbody tr').hide();
-								$('.client-zone-orders-table tbody tr[data-moduletypenum="' + moduleTypeNUM + '"]').show();
-							});
-						}
-						// add the tab html
-                        $('.clientZoneTabs').append($html);
-                        $('.orders.tab-content').addClass('orders-'+moduleTypeNUM);
-					});
-					// display forum properties - website have forum module
-					if ( response.hasForumModule || $('#nickname').val().length > 0 ) {
-						// display forum nickname field
-						$('.forum-property').removeClass('hidden');
-					}
+					// $.each(response.modulesOrders, function( moduleTypeNUM, data ){
+					// 	// check if the user have orders for this module by module type number
+					// 	if ( $('.client-zone-orders-table tbody tr[data-moduletypenum="' + moduleTypeNUM + '"]').length === 0 ) return;
+					// 	// on mobile we build option HTML for select-box
+					// 	if ( $('#clientZone-select-tabs').is(":visible") ) {
+					// 		// get object
+					// 		var html = '<option value="orders-' + moduleTypeNUM + '" data-moduleTypeNUM="' + moduleTypeNUM + '">' + data.title + '</option>';
+					// 		// convert the html to a jquery object.
+					// 		var $html = $(html);
+					// 	// build regular HTML tabs	
+					// 	} else {
+					// 		// get object
+					// 		var html = '<div data-tab="orders-' + moduleTypeNUM + '" data-moduleTypeNUM="' + moduleTypeNUM + '" class="col-xs-12 tab">';
+	                //         	html += '<div>';
+					// 				html += '<i class="' + data.icon + ' fa-1x"></i> <span>' + data.title + '</span>';
+	                //             html += '</div>';
+	                //         html += '</div>';
+	                //         // convert the html to a jquery object.
+	                //         var $html = $(html);
+	                //         // add click event
+					// 		$html.click(function(){
+	                //         	$('.client-zone-orders-table tbody tr').hide();
+					// 			$('.client-zone-orders-table tbody tr[data-moduletypenum="' + moduleTypeNUM + '"]').show();
+					// 		});
+					// 	}
+					// 	// add the tab html
+                    //     $('.clientZoneTabs').append($html);
+                    //     $('.orders.tab-content').addClass('orders-'+moduleTypeNUM);
+					// });
+					// // display forum properties - website have forum module
+					// if ( response.hasForumModule || $('#nickname').val().length > 0 ) {
+					// 	// display forum nickname field
+					// 	$('.forum-property').removeClass('hidden');
+					// }
+				}else{
+					console.log("connection errror");
 				}
 			}	
 		});
@@ -1136,6 +1309,10 @@ Secret Key  : 6LetKrwUAAAAAGVxX7baURxBVM54KZfRypv8JZZR
 window.$sectiontit=$('#section--title');
 	$('.gotoRegister').on('click',function(event){
 		event.preventDefault();
+		removeRegister();
+		$modtit.show();
+		$('#efmsg').hide();
+		$('#efmsglog').hide();
 		if($sectiontit.html()!="Register"){
 		$sectiontit.fadeOut(fadeInterval,function(){
 			$sectiontit.html('Register');
@@ -1143,12 +1320,104 @@ window.$sectiontit=$('#section--title');
 		});
 	}
 		$clientEmailForm.fadeOut(fadeInterval,function(){
+			if($('#colleges option').length==0){
+				$('#logload').show();
+				getCollegeOptions();
+			}else{
 			$clientPasswordForm.fadeIn();
+			}
 		});
 	});
+
+function removeLogin(){
+	$clientEmailForm.trigger('reset');
+	$('#clientLoginForm .form-group').removeClass('has-error');
+	$('#clientLoginForm .form-group').find('.help-block').remove();
+}
+
+function removeRegister(){
+	$clientPasswordForm.trigger('reset');
+	$('#clientPasswordForm .form-group').removeClass('has-error');
+	$('#clientPasswordForm .form-group').find('.help-block').remove();
+}
+
+
+	function getCollegeOptions(){
+		$.ajax({
+					type: "POST",
+					url: './versions/2/wizard/clientZone/colleges.php',
+					success: function( response ) {
+						var resp=$.parseJSON(response);
+						if(resp.c){
+							if(!resp.s){
+								bootbox.alert({
+										title:"Error",
+										message:"Could not able to load data. Please retry after some time. Thank you.",
+										backdrop:true
+									});
+								$('#logload').hide();
+								$('#efmsg').show();
+							}else{
+								var cres=resp.res,
+								ostr="<option value='Select College'>Select College</option>";
+								for(var i=0;i<cres.length;i++){
+									ostr=ostr+"<option value='"+cres[i]+"'>"+cres[i]+"</option>";
+								}
+								$('#colleges').html($(ostr));
+								$('#logload').hide();
+								$clientPasswordForm.fadeIn();
+							}
+						}else{
+							bootbox.alert({
+										title:"Error",
+										message:"It seems there is an internal error. Please retry after some time. Thank you.",
+										backdrop:true
+									});
+							$('#logload').hide();
+							$('#efmsg').show();
+						}
+
+						// window.$resp=resp;
+						// $('#regload').hide();
+					},
+					error:function (jqXHR, exception) {
+								var msg = '';
+								if (jqXHR.status === 0) {
+									msg = 'Not connect.\n Verify Network.';
+								} else if (jqXHR.status == 404) {
+									msg = 'Requested page not found. [404]';
+								} else if (jqXHR.status == 500) {
+									msg = 'Internal Server Error [500].';
+								} else if (exception === 'parsererror') {
+									msg = 'Requested JSON parse failed.';
+								} else if (exception === 'timeout') {
+									msg = 'Time out error.';
+								} else if (exception === 'abort') {
+									msg = 'Ajax request aborted.';
+								} else {
+									msg = 'Uncaught Error.\n' + jqXHR.responseText;
+								}
+								
+							bootbox.alert({
+										title:"Error",
+										message:msg+" Please Try again later. Thank you.",
+										backdrop:true
+									});
+								
+							$('#logload').hide();
+							$('#efmsg').show();
+						}
+				});
+				
+	}
+
 	$('.gotoLogin').on('click',function(event){
 
 		event.preventDefault();
+		$modtit.show();
+		$('#efmsg').hide();
+		$('#efmsglog').hide();
+		removeLogin();
 		if($sectiontit.html()!="Login"){
 		$sectiontit.fadeOut(fadeInterval,function(){
 			$sectiontit.html('Login');
@@ -1162,6 +1431,8 @@ window.$sectiontit=$('#section--title');
 	
 	function gotoL(evt){
 		evt.preventDefault();
+		removeLogin();
+		$modtit.show();
 		if($sectiontit.html()!="Login"){
 			$sectiontit.fadeOut(fadeInterval,function(){
 				$sectiontit.html('Login');
@@ -1176,6 +1447,8 @@ window.$sectiontit=$('#section--title');
 	function gotoRe(evt){
 		
 		evt.preventDefault();
+		$modtit.show();
+		removeRegister();
 			if($sectiontit.html()!="Register"){
 			$sectiontit.fadeOut(fadeInterval,function(){
 				$sectiontit.html('Register');
@@ -1191,21 +1464,30 @@ window.$sectiontit=$('#section--title');
 	function ClientLoginHandler() {
 
 		// Show the login container
+		$('#pgload').hide();
 		$loginFormsContainer.show();
+		
+		$('#efmsg').hide();
+		$('#efmsglog').hide();
 
 		// Show the password step if the user browse to the URL with it
 		if ( window.location.hash === '#register' ) {
 			$clientEmailForm.hide();
+			
 			$sectiontit.html('Register');
+			$modtit.show();
 			// $clientsignUpForm.hide();
 			$clientPasswordForm.show();
 		}
 		else if( window.location.hash === '#login'){
 			$clientEmailForm.show();
 			$sectiontit.html('Login');
+			$modtit.show();
 			$clientPasswordForm.hide();
 		}else{
+			$modtit.show();
 			$clientEmailForm.show();
+
 			$clientPasswordForm.slideUp();
 		}
 
@@ -1257,7 +1539,7 @@ window.$sectiontit=$('#section--title');
 			submitHandler: function( form ) {
 				// get objects 
 				var $form = $(form);
-				var $mailServer = $('#mailServer');
+				$('#clientLoginForm .page-loading-icon').show();
 				// prevent the form submit action
 				event.preventDefault();
 				// console.log($form.serialize());
@@ -1270,7 +1552,9 @@ window.$sectiontit=$('#section--title');
 					data: $form.serialize(),
 					success: function( response ) {
 						// get response
+						var res2=response;
 						var response = $.parseJSON(response);
+						// window.$jres=response;
 						// console.log(response);
 						// resss=response;
 						
@@ -1285,6 +1569,10 @@ window.$sectiontit=$('#section--title');
 										message:"Successfully logged in. Redirecting you...",
 										backdrop:true
 									});
+								window.localStorage.setItem('wasche-services',res2);
+								setTimeout(function(){
+									location.reload();
+								},1500);
 								}else{
 									if(response.ie){
 								$('#clientLoginForm .form-group').eq(0).addClass('has-error');
@@ -1303,6 +1591,7 @@ window.$sectiontit=$('#section--title');
 									});
 						}
 						$clientEmailForm.find('button:submit').prop('disabled',false);
+						$('#clientLoginForm .page-loading-icon').hide();
 						console.log("complete");
 						// if success show the client the password form
 						// if ( response.status === 'Success') {
@@ -1325,7 +1614,34 @@ window.$sectiontit=$('#section--title');
 						// }
 						// enable the submit button to prevent multiple submit
 						
-					}
+					},
+					error:function (jqXHR, exception) {
+								var msg = '';
+								if (jqXHR.status === 0) {
+									msg = 'Not connect.\n Verify Network.';
+								} else if (jqXHR.status == 404) {
+									msg = 'Requested page not found. [404]';
+								} else if (jqXHR.status == 500) {
+									msg = 'Internal Server Error [500].';
+								} else if (exception === 'parsererror') {
+									msg = 'Requested JSON parse failed.';
+								} else if (exception === 'timeout') {
+									msg = 'Time out error.';
+								} else if (exception === 'abort') {
+									msg = 'Ajax request aborted.';
+								} else {
+									msg = 'Uncaught Error.\n' + jqXHR.responseText;
+								}
+								
+							bootbox.alert({
+										title:"Error",
+										message:msg+" Please Try again later. Thank you.",
+										backdrop:true
+									});
+								
+							$('#logload').hide();
+							$('#efmsglog').show();
+						}
 				});
 				// prevent the form submit action
 				return false;
@@ -1363,7 +1679,16 @@ window.$sectiontit=$('#section--title');
 			// 	});
 			// 	return;
 			// }
+			if($('#colleges').val()!='Select College'){
+			if($('#clientRegisterForm .form-group').eq(8).hasClass('has-error')){
+				
+				$('#clientRegisterForm .form-group').eq(8).removeClass('has-error');
+				$('#clientRegisterForm .form-group').eq(8).find('.help-block').remove()
+				console.log('y');
+			}
+		}
 			console.log("checking");
+			
 				if( element.is('input[type=checkbox]') || element.is('input[type=radio]') ) {
 					var controls = element.closest('div[class*="col-"]');
 					console.log("checking");
@@ -1397,52 +1722,31 @@ window.$sectiontit=$('#section--title');
 		$clientsignUpForm.submit(function( event ) {
 			// get objects
 			var $mailServer = $('#mailServer');
-			var $signupForm = $('#signupForm');
-			var wm = $clientsignUpForm.data('wm');
-			var messageAfterRegistration = $clientsignUpForm.data('pending-msg');
+			$('#clientLoginForm .page-loading-icon').show();
+			// var messageAfterRegistration = $clientsignUpForm.data('pending-msg');
 			// prevent the form submit action
 			event.preventDefault();
 			// sign up form not valid
-			if ( !$clientsignUpForm.valid() ) return false;
+			// if ( !$clientsignUpForm.valid() ) return false;
 			// set client email address
-			$clientsignUpForm.find('.clientEmail').val($('#clientEmail').val());
+			// $clientsignUpForm.find('.clientEmail').val($('#clientEmail').val());
 			// disable the submit button to prevent multiple submit
-			$clientsignUpForm.find('button:submit').prop('disabled',true);
+			$clientPasswordForm.find('button:submit').prop('disabled',true);
 			// create an Ajax request for sending the email with the password
 			$.ajax({
 				type: "POST",
-				url: '/versions/2/wizard/clientZone/sendPassword.php',
+				url: '/versions/2/wizard/clientZone/register.php',
 				data: $(this).serialize(),
 				success: function( response ) {
 					// get response
 					var response = $.parseJSON(response);
 					// if success show the client the password form
-					if ( response.status === 'Success' && response.msg === 'Password' && wm == '3' ) {
-						$clientsignUpForm.fadeOut(fadeInterval,function(){
-							$clientPasswordForm.fadeIn();
-						});
-						// set the hidden email input value
-						$clientPasswordForm.find('.clientEmail').val($('#clientEmail').val());
-						// resend password success - show a message sent notify
-						if ( $mailServer.val() == '5' ) {
-							$resendPasswordLoading.hide();
-							$resendPasswordEmailSent.show();
-							// reset mail server (if the user browse back we need it reset)
-							$mailServer.val('1');
-						} else {
-							// add an history point
-							SaveStepToHistory('passwordStep');
-						}
-					// display pending message
-					} else {
-						// add an history point
-						SaveStepToHistory('pendingStep');
-						$clientsignUpForm.fadeOut(fadeInterval,function(){
-							$messageAfterRegistration.fadeIn();
-						});
-					}
+					
 					// enable the submit button to prevent multiple submit
-					$clientEmailForm.find('button:submit').prop('disabled',false);
+					// $clientEmailForm.find('button:submit').prop('disabled',false);
+					
+			$clientPasswordForm.find('button:submit').prop('disabled',true);
+			$('#clientLoginForm .page-loading-icon').hide();
 				}
 			});
 		});
@@ -1478,7 +1782,75 @@ window.$sectiontit=$('#section--title');
 			// prevent the form submit action
 			event.preventDefault();
 			console.log("submitting");
+			if(!$clientPasswordForm.valid()){
+				console.log("no data");
+				return false;
+			}
+			var crt=false;
 			// get objects 
+			if($('#rclientPassword').val()!=$('#rclientConfirmPassword').val()){
+				$('#clientRegisterForm .form-group').eq(4).find('.help-block').remove();
+				// $('#clientRegisterForm .form-group').eq(3).addClass('has-error');
+				// $('#clientRegisterForm .form-group').eq(3).append("<div id='clientEmail-error' class='help-block'>Password does not match.</div>");
+				$('#clientRegisterForm .form-group').eq(4).addClass('has-error');
+				$('#clientRegisterForm .form-group').eq(4).append("<div class='help-block'>Password does not match.</div>");
+				
+				crt=true;
+
+				var offset = findBootstrapEnvironment() != 'xs' ? menuScrollOffset : menuScrollOffset_mobile;
+				$('html, body').stop().animate({
+					scrollTop: ($('#clientRegisterForm .form-group').eq(2).offset().top - offset)
+				}, 1250, 'easeInOutExpo');
+				// return false;
+			}
+			if($('#phno').val().length!=10){
+				// $('#clientRegisterForm .form-group').eq(3).addClass('has-error');
+				// $('#clientRegisterForm .form-group').eq(3).append("<div id='clientEmail-error' class='help-block'>Password does not match.</div>");
+				
+				$('#clientRegisterForm .form-group').eq(6).find('.help-block').remove();
+				$('#clientRegisterForm .form-group').eq(6).addClass('has-error');
+				$('#clientRegisterForm .form-group').eq(6).append("<div class='help-block'>Phone number does not have 10 numbers.</div>");
+				// console.log('sadsa');
+				
+				if(!crt){
+				var offset = findBootstrapEnvironment() != 'xs' ? menuScrollOffset : menuScrollOffset_mobile;
+				$('html, body').stop().animate({
+					scrollTop: ($('#clientRegisterForm .form-group').eq(4).offset().top - offset)
+				}, 1250, 'easeInOutExpo');
+				
+				crt=true;
+
+				// return false;
+			}
+		}
+			if($('#colleges').val()=='Select College'){
+				
+				$('#clientRegisterForm .form-group').eq(8).find('.help-block').remove();
+				$('#clientRegisterForm .form-group').eq(8).addClass('has-error');
+				$('#clientRegisterForm .form-group').eq(8).append("<div class='help-block'>Please select a College</div>");
+				
+				if(!crt){
+				var offset = findBootstrapEnvironment() != 'xs' ? menuScrollOffset : menuScrollOffset_mobile;
+				$('html, body').stop().animate({
+					scrollTop: ($('#clientRegisterForm .form-group').eq(4).offset().top - offset)
+				}, 1250, 'easeInOutExpo');
+				crt=true;
+			}
+				// return false;
+			}
+			if(crt){
+				
+				return;
+				
+			}
+			// if(!(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test($clientPasswordForm.find('.form-control').eq(2).val()))){
+			// 	$('#clientRegisterForm .form-group').eq(2).addClass('has-error');
+			// 	$('#clientRegisterForm .form-group').eq(2).append("<div id='clientEmail-error' class='help-block'>Email format is wrong.</div>");
+			// 	crt=false;
+			// }
+			// if(crt){
+				
+			// }
 			var $agreeToTerms = $('#agreeToTerms');
 			var $agreeToPrivacy = $('#agreeToPrivacy');
 			// if the user have Terms or Privacy the client must agree to them
@@ -1487,6 +1859,8 @@ window.$sectiontit=$('#section--title');
 					message: "You must agree to the Terms of Service to login.",
 					backdrop: true
 				});
+				
+			// $('#clientRegisterForm .page-loading-icon').hide();
 				return;
 			} else if ( $agreeToPrivacy.length !== 0 && !$agreeToPrivacy.prop('checked') ) {
 				// alert the user about incorrect login credentials
@@ -1494,6 +1868,8 @@ window.$sectiontit=$('#section--title');
 					message: "You must agree to the Privacy Policy to login.",
 					backdrop: true
 				});
+				
+			// $('#clientRegisterForm .page-loading-icon').hide();
 				return;
 			}
 			// captcha security - if the captcha security is active we check if it valid
@@ -1507,6 +1883,7 @@ window.$sectiontit=$('#section--title');
 			// }
 			// disable the submit button to prevent multiple submit
 			$clientPasswordForm.find('button:submit').prop('disabled',true);
+			$('#clientRegisterForm .page-loading-icon').show();
 			// create an Ajax request for the login and show the orders
 			$.ajax({
 				type: "POST",
@@ -1514,31 +1891,80 @@ window.$sectiontit=$('#section--title');
 				data: $(this).serialize(),
 				success: function( response ) {
 					// convert from string to JSON
-					response = JSON.parse(response);
-					// check if the user enter the correct login credentials
-					if ( response.isLoggedIn ) {
-						// redirect the client to the sent path (if needed)
-						// if ( loginRedirectPath ) {
-						// 	location.href = loginRedirectPath;
-						// 	return;
-						// }
-						// hide the password form
-						$clientPasswordForm.parent().fadeOut(fadeInterval, function() {
-							// set the client logged in flag
-							czIsLoggedIn = true;
-							// handler the client details (get & show them).
-							ClientDetailsHandler();
-						});
-						// update the client icon related to the client settings
-						ClientZone.updateClientIcon();
-						// refresh the wish list after logging in
-						// WishList.refresh();
-					// incorrect login credentials
-					} 
-					// enable the submit button to let the user try again
-					$clientPasswordForm.find('button:submit').prop('disabled',false);
-				}	
+					var resp2=response;
+					var resp=$.parseJSON(response);
+						if(resp.c){
+							if(resp.ee){
+								bootbox.alert({
+										title:"Error",
+										message:"Invalid Email Format. Cannot able to validate it.",
+										backdrop:true
+									});
+							}else{
+								if(resp.inve){
+									$('#clientRegisterForm .form-group').eq(2).addClass('has-error');
+									$('#clientRegisterForm .form-group').eq(2).append("<div class='help-block'>Email is already taken.</div>");
+									var offset = findBootstrapEnvironment() != 'xs' ? menuScrollOffset : menuScrollOffset_mobile;
+									$('html, body').stop().animate({
+										scrollTop: ($('#clientRegisterForm .form-group').eq(1).offset().top - offset)
+									}, 1250, 'easeInOutExpo');
+								}else{
+								console.log('success');
+								bootbox.alert({
+										title:"Success!",
+										message:"Thank you for registering with us. You will be redirected...... ",
+										backdrop:true
+									});
+									
+									window.localStorage.setItem("wasche-services",resp2);
+								setTimeout(function(){
+									location.reload();
+								},1500);
+								}
+							}
+						}else{
+							bootbox.alert({
+										title:"Error",
+										message:"It seems there is an internal error. Please retry after some time. Thank you.",
+										backdrop:true
+									});
+						}
+
+						window.$resp=resp;
+						// $('#regload').hide();
+					},
+					error:function (jqXHR, exception) {
+								var msg = '';
+								if (jqXHR.status === 0) {
+									msg = 'Not connect.\n Verify Network.';
+								} else if (jqXHR.status == 404) {
+									msg = 'Requested page not found. [404]';
+								} else if (jqXHR.status == 500) {
+									msg = 'Internal Server Error [500].';
+								} else if (exception === 'parsererror') {
+									msg = 'Requested JSON parse failed.';
+								} else if (exception === 'timeout') {
+									msg = 'Time out error.';
+								} else if (exception === 'abort') {
+									msg = 'Ajax request aborted.';
+								} else {
+									msg = 'Uncaught Error.\n' + jqXHR.responseText;
+								}
+								
+							bootbox.alert({
+										title:"Error",
+										message:msg+" Please Try again later. Thank you.",
+										backdrop:true
+									});
+								$clientPasswordForm.hide();
+							$('#logload').hide();
+							$('#efmsg').show();
+						}
+						
 			});
+			$clientPasswordForm.find('button:submit').prop('disabled',false);
+			
+			$('#clientRegisterForm .page-loading-icon').hide();
 		});
 	}
 
@@ -1549,24 +1975,34 @@ window.$sectiontit=$('#section--title');
 	 * @param {string} client - JSON with all of the profile data.
 	 */
 	 function SetProfile( client ) {
-	 	// secure parameters
+		 // secure parameters
+		 console.log(client);
 	 	if ( typeof client !== "object" ) return;
-	 	// set values
+		 // set values
+		 console.log("camr");
 	 	if ( client.profile_image ) {
 	 		$('#profileImagePreview').attr('src',client.profile_image.replace('normal_','400_'));
 	 		$('#profileImagePreview').data('src',client.profile_image.replace('normal_','400_'));
 	 		$('#profile_image').val(client.profile_image);
 	 	}
-	 	$('#first_name').val(client.first_name);
-	 	$('#last_name').val(client.last_name);
-	 	$('#phone').val(client.phone);
-	 	$('#address').val(client.address);
-	 	if ( $('#country option[value="'+client.country+'"]').length !== 0 ) {
-	 		$('#country').val(client.country);
-	 	}
+	 	$('#pfirst_name').val(client.first_name);
+	 	$('#plast_name').val(client.lastName);
+	 	$('#pphno').val(client.phno);
+	 	$('#paddress').val(client.address);
+	 	// if ( $('#country option[value="'+client.country+'"]').length !== 0 ) {
+			 $('#pcollege').val(client.college);
+			 $('#pgender').val(client.gender);
+		 // }
+		 $('#pemail').val(client.email);
+		 
 	 	$('#unsubscribe').prop('checked',client.unsubscribe != '1');
 	 	$('.c-z-log-out-email').html(client.email);
-	 	$('#nickname').val(client.nickname);
+		 $('#nickname').val(client.nickname);
+		 $('.page-loading-icon').hide();
+		 $('.profile').show();
+		$('.clientZoneTabs').show();
+		$('.clientZoneProfileImage').show();
+		$('.client-zone-log-out').show();
 	 }
 
 	/**
