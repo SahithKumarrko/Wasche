@@ -12062,9 +12062,12 @@ function ModuleLayoutCategories(settings) {
  * The function initialize the Jobs Module.
  */
 
+
 jQuery(function($) {
     TestimonialsModuleInitialize_Layout1();
 });
+
+
 /**
  * The function initialize the Testimonials Module.
  */
@@ -32494,6 +32497,7 @@ function homepageRandomTextAction(t, hasStop) {
         holdChangeTextIntervals.push(inst);
     }
 }
+
 /**
  * Client Zone Class.
  */
@@ -32546,6 +32550,11 @@ custmodulem.eq(1).parent().attr('href','billing.php');
 $('.loginbt').css('display','none');
 $('.signup').css('display','none');
 custmodulem=$('.lm1 .moduleMenu .txt-container');
+custmodulem.eq(0).html('Dashboard');
+custmodulem.eq(1).html('Billing');
+custmodulem.eq(0).parent().attr('href','dashboard.php');
+custmodulem.eq(1).parent().attr('href','billing.php');
+custmodulem=$('.lf1 .moduleMenu .txt-container');
 custmodulem.eq(0).html('Dashboard');
 custmodulem.eq(1).html('Billing');
 custmodulem.eq(0).parent().attr('href','dashboard.php');

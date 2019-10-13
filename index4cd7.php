@@ -121,14 +121,14 @@
 							<li class="moduleMenu active">
 								<a class="page-unique homepageMenu" href="index.php">Home</a>
 							</li>
-							<li class="moduleMenu" data-menu-module-id="5d0a0f53588b1">
-								<a class="page-unique" href="services.php">
-									<span class="txt-container">Services</span>
-								</a>
-							</li>
 							<li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8">
 								<a class="page-unique" href="about.php">
 									<span class="txt-container">About</span>
+								</a>
+							</li>
+							<li class="moduleMenu" data-menu-module-id="5d0a0f53588b1">
+								<a class="page-unique" href="services.php">
+									<span class="txt-container">Services</span>
 								</a>
 							</li>
 							<li class="moduleMenu" data-menu-module-id="5b0a4ba521825">
@@ -215,7 +215,7 @@
 
 						<li style="padding-bottom: 4px;padding-top:4px; border-bottom: 1px solid rgba(0,0,0,0.5); display:flex;justify-content:space-evenly;margin:0 !important;padding-top:0 !important;padding-bottom:4px !important;">
 								<!-- <i class="fa fa-user" style="font-size: 1.2rem;padding-top:2px"></i> -->
-						<a href="index4cd7.php"  style="font-size:16px;text-decoration: none;padding-top:0 !important;">Profile</a></li>
+						<a href="#"  style="font-size:16px;text-decoration: none;padding-top:0 !important;" onclick="window.location.href='index4cd7.php';return false;">Profile</a></li>
 						<li style="padding-top: 10px; padding-bottom:4px;display:flex;margin:0 !important;padding-top:10px !important;justify-content:space-evenly">
 								<!-- <i class="fa fa-user-plus" style="font-size: 1.2rem;padding-top:2px"></i> -->
 							<a href="#" onclick="return false;" class="top-logout-btn" style="text-decoration: none;font-size:16px;padding-top:0 !important;padding-bottom:0 !important;">Logout</a></li></ul>
@@ -227,8 +227,8 @@
 <div id="top-menu-mobile"  style="display:none;">
    <ul class="lm1">
       <li class="moduleMenu active"><a class="page-unique homepageMenu" href="index.php">Home</a></li>
-      <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" href="services.php"><span class="txt-container">Services</span></a></li>
       <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8"><a class="page-unique" href="about.php"><span class="txt-container">About</span></a></li>
+      <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" href="services.php"><span class="txt-container">Services</span></a></li>
       <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a class="page-unique" href="contact.php"><span class="txt-container">Contact</span></a></li>
       <!-- <li class="moduleMenu" data-menu-module-id="5d985dca46598"><a class="page-unique" href="tracker.php"><span class="txt-container">Tracker</span></a></li> -->
 	  <li class="moduleMenu loginbt" data-menu-module-id="5b0a4ba521825"><a style="margin-right: 7px;font-weight: bold;" class="page-unique gotoLogin" href="#" onclick="gotoL(event);">Login</a></li>
@@ -610,7 +610,7 @@
 			
 					<!-- <h2 style="margin-top:0;margin-bottom:0;">Login</h2>
 					<hr class="form-hr"> -->
-					<div class="row page-loading-icon text-center" style="display: none;background: transparent;position: absolute;top: 50%;left: 53%;transform: translate(-50%,-50%);"> <i class="ace-icon fa fa-spinner fa-spin blue fa-4x"></i> </div>
+					<div class="row page-loading-icon text-center" style="display: none;z-index:1000;background: transparent;position: absolute;top: 50%;left: 53%;transform: translate(-50%,-50%);"> <i class="ace-icon fa fa-spinner fa-spin blue fa-4x"></i> </div>
                <div class="form-group">
 				   <h3 class="formh3">Email</h3>
 				   <hr class="form3hr">
@@ -620,7 +620,13 @@
 				 <div class="form-group">
 						<h3 class="formh3">Password</h3>
 						<hr class="form3hr">
-						<input type="password" id="clientPassword" name="clientPassword" value="" class="form-control" placeholder="*************" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please enter your password"/> 
+						<div class="input-group" id="show_hide_password" style="margin: 0 auto;">
+							<input type="password" id="clientPassword" name="clientPassword" value="" class="form-control" placeholder="Password" style="max-width: 270px;/* margin: 0 auto; */margin: 0;/* margin-left: auto; */margin-top:10px;" required data-msg-required="Please enter your password"/>
+							<div class="input-group-addon" style="background:transparent;">
+									<a href=""><i class="fa fa-eye-slash" aria-hidden="true" style="color:rgba(0,0,0,0.82);"></i></a>
+								</div>
+						</div>
+						<!-- <input type="password" id="clientPassword" name="clientPassword" value="" class="form-control" placeholder="*************" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please enter your password"/>  -->
 					 </div>
                <!-- <div class="form-group"> <input type="text" id="login_code" name="login_code" class="form-control" placeholder="Code" style="max-width:280px;margin: 0 auto;" required data-msg-required="Please enter the personal code that has been sent to your mailbox."/> </div> -->
                <!-- Terms -->
@@ -656,13 +662,13 @@
 					 <div class="form-group">
 							<h3 class="formh3">First Name</h3>
 							<hr class="form3hr">
-						 <input type="text" id="rclienFirsttName" name="first_name" value="" class="form-control" placeholder="First Name" style="max-width:310px;margin:auto;margin-top:10px;" required data-msg-required="Please fill this field"/> 
+						 <input type="text" id="rclienFirsttName" name="first_name" value="" class="form-control" placeholder="First Name" style="max-width:310px;margin:auto;margin-top:10px;" required data-msg-required="Please fill this field."/> 
 					  </div>
 					  
 					  <div class="form-group">
 							<h3 class="formh3">Last Name</h3>
 							<hr class="form3hr">
-							 <input type="text" id="rclientLastName" name="last_name" value="" class="form-control" placeholder="Last Name" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please fill this field"/> 
+							 <input type="text" id="rclientLastName" name="last_name" value="" class="form-control" placeholder="Last Name" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please fill this field."/> 
 						  </div>
 						  <div class="form-group">
 							<h3 class="formh3">Email</h3>
@@ -672,13 +678,25 @@
 					<div class="form-group">
 					<h3 class="formh3">Password</h3>
 					<hr class="form3hr">
-						<input type="password" id="rclientPassword" name="pswd" value="" class="form-control" placeholder="Password" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please fill this field."/> 
+					<div class="input-group" id="show_hide_password1" style="margin: 0 auto;">
+							<input type="password" id="rclientPassword" name="pswd" value="" class="form-control" placeholder="Password" style="max-width: 270px;/* margin: 0 auto; */margin: 0;/* margin-left: auto; */margin-top:10px;" required data-msg-required="Please fill this field"/>
+							<div class="input-group-addon" style="background:transparent;">
+									<a href=""><i class="fa fa-eye-slash" aria-hidden="true" style="color:rgba(0,0,0,0.82);"></i></a>
+								</div>
+					</div>
+					<!-- <input type="password" id="rclientPassword" name="pswd" value="" class="form-control" placeholder="Password" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please fill this field."/>  -->
 					</div>
 						  
 					<div class="form-group">
 						<h3 class="formh3">Confirm Password</h3>
 						<hr class="form3hr">
-							<input type="password" id="rclientConfirmPassword" name="cpswd" value="" class="form-control" placeholder="Confirm Password" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please fill this field."/> 
+						<div class="input-group" id="show_hide_password2" style="margin: 0 auto;">
+							<input type="password" id="rclientConfirmPassword" name="cpswd" value="" class="form-control" placeholder="Confirm Password" style="max-width: 270px;/* margin: 0 auto; */margin: 0;/* margin-left: auto; */margin-top:10px;" required data-msg-required="Please fill this field"/>
+							<div class="input-group-addon" style="background:transparent;">
+									<a href=""><i class="fa fa-eye-slash" aria-hidden="true" style="color:rgba(0,0,0,0.82);"></i></a>
+								</div>
+					</div>
+						<!-- <input type="password" id="rclientConfirmPassword" name="cpswd" value="" class="form-control" placeholder="Confirm Password" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please fill this field."/>  -->
 						</div>
 						   
 						   
@@ -694,7 +712,7 @@
 						  <div class="form-group">
 							<h3 class="formh3">Phone Number</h3>
 							<hr class="form3hr">
-						<input type="text" name="phno" id="phno" value="" class="form-control" placeholder="Phone Number" style="max-width:310px;margin: 0 auto;" required data-msg-required="Please enter your email"/> 
+						<input type="text" name="phno" id="phno" value="" class="form-control" placeholder="Phone Number" style="max-width:310px;margin: 0 auto;" required data-msg-required="Please fill this field."/> 
 					 </div>
 					<div class="form-group">
 						<h3 class="formh3">Address</h3>
@@ -724,6 +742,10 @@
 					<input type="hidden" name="w" value=""> 
 					<input type="hidden" name="websiteID" value="2630165"> 
 					<input type="hidden" id="mailServer" name="mailServer" value="1"> 
+					
+			<!-- <div id="efmsg" style="display:none">
+			<h2>It seems there is an error.<br>Please try again later.<br></h2><h1>Thank you</h1>
+		</div> -->
 				 </form>
          </div>
       </div>
@@ -738,10 +760,10 @@
                <div style="margin:5px 0;"><a href="terms.php" class="">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacy.php" class="">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
             </div>
             <div class="side2 col-xs-12 col-sm-6 col-md-6">
-               <ul class="navPages nav navbar-nav hidden-xs">
+               <ul class="navPages nav navbar-nav hidden-xs lf1">
                   <li class="moduleMenu active"><a class="page-unique homepageMenu" href="index.php">Home</a></li>
-                  <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" href="services.php"><span class="txt-container">Services</span></a></li>
                   <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8"><a class="page-unique" href="about.php"><span class="txt-container">About</span></a></li>
+                  <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" href="services.php"><span class="txt-container">Services</span></a></li>
                   <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a class="page-unique" href="contact.php"><span class="txt-container">Contact</span></a></li>
                </ul>
                <div class="mailing">
@@ -979,6 +1001,42 @@ Secret Key  : 6LetKrwUAAAAAGVxX7baURxBVM54KZfRypv8JZZR
 		
 	window.$modtit=$('.modulesTitle .text-center');
 		// $clientPasswordForm.slideUp();
+		$("#show_hide_password a").on('click', function(event) {
+    event.preventDefault();
+    if($('#show_hide_password input').attr("type") == "text"){
+        $('#show_hide_password input').attr('type', 'password');
+        $('#show_hide_password i').addClass( "fa-eye-slash" );
+        $('#show_hide_password i').removeClass( "fa-eye" );
+    }else if($('#show_hide_password input').attr("type") == "password"){
+        $('#show_hide_password input').attr('type', 'text');
+        $('#show_hide_password i').removeClass( "fa-eye-slash" );
+        $('#show_hide_password i').addClass( "fa-eye" );
+    }
+});
+$("#show_hide_password1 a").on('click', function(event) {
+    event.preventDefault();
+    if($('#show_hide_password1 input').attr("type") == "text"){
+        $('#show_hide_password1 input').attr('type', 'password');
+        $('#show_hide_password1 i').addClass( "fa-eye-slash" );
+        $('#show_hide_password1 i').removeClass( "fa-eye" );
+    }else if($('#show_hide_password1 input').attr("type") == "password"){
+        $('#show_hide_password1 input').attr('type', 'text');
+        $('#show_hide_password1 i').removeClass( "fa-eye-slash" );
+        $('#show_hide_password1 i').addClass( "fa-eye" );
+    }
+});
+$("#show_hide_password2 a").on('click', function(event) {
+    event.preventDefault();
+    if($('#show_hide_password2 input').attr("type") == "text"){
+        $('#show_hide_password2 input').attr('type', 'password');
+        $('#show_hide_password2 i').addClass( "fa-eye-slash" );
+        $('#show_hide_password2 i').removeClass( "fa-eye" );
+    }else if($('#show_hide_password2 input').attr("type") == "password"){
+        $('#show_hide_password2 input').attr('type', 'text');
+        $('#show_hide_password2 i').removeClass( "fa-eye-slash" );
+        $('#show_hide_password2 i').addClass( "fa-eye" );
+    }
+});
 		// Check if the client is logged in
 		if ( window.localStorage.getItem("wasche-services")) {
 			// handler the client details (get & show them)
@@ -1679,6 +1737,14 @@ function removeRegister(){
 			// 	});
 			// 	return;
 			// }
+			if($('#clientRegisterForm .form-group').eq(4).find('.help-block-pswd').length!=0){
+			$('#clientRegisterForm .form-group').eq(4).find('.help-block-pswd').remove();
+			// console.log('cpswd');
+			}
+			if($('#clientRegisterForm .form-group').eq(2).find('.help-block-email').length!=0){
+			$('#clientRegisterForm .form-group').eq(2).find('.help-block-email').remove();
+			console.log('cpswd');
+			}
 			if($('#colleges').val()!='Select College'){
 			if($('#clientRegisterForm .form-group').eq(8).hasClass('has-error')){
 				
@@ -1687,6 +1753,7 @@ function removeRegister(){
 				console.log('y');
 			}
 		}
+
 			console.log("checking");
 			
 				if( element.is('input[type=checkbox]') || element.is('input[type=radio]') ) {
@@ -1793,7 +1860,7 @@ function removeRegister(){
 				// $('#clientRegisterForm .form-group').eq(3).addClass('has-error');
 				// $('#clientRegisterForm .form-group').eq(3).append("<div id='clientEmail-error' class='help-block'>Password does not match.</div>");
 				$('#clientRegisterForm .form-group').eq(4).addClass('has-error');
-				$('#clientRegisterForm .form-group').eq(4).append("<div class='help-block'>Password does not match.</div>");
+				$('#clientRegisterForm .form-group').eq(4).append("<div class='help-block help-block-pswd'>Password does not match.</div>");
 				
 				crt=true;
 
@@ -1903,7 +1970,7 @@ function removeRegister(){
 							}else{
 								if(resp.inve){
 									$('#clientRegisterForm .form-group').eq(2).addClass('has-error');
-									$('#clientRegisterForm .form-group').eq(2).append("<div class='help-block'>Email is already taken.</div>");
+									$('#clientRegisterForm .form-group').eq(2).append("<div class='help-block help-block-email'>Email is already taken.</div>");
 									var offset = findBootstrapEnvironment() != 'xs' ? menuScrollOffset : menuScrollOffset_mobile;
 									$('html, body').stop().animate({
 										scrollTop: ($('#clientRegisterForm .form-group').eq(1).offset().top - offset)
@@ -1928,6 +1995,10 @@ function removeRegister(){
 										message:"It seems there is an internal error. Please retry after some time. Thank you.",
 										backdrop:true
 									});
+									
+								$clientPasswordForm.hide();
+							// $('#regload').hide();
+							$('#efmsg').show();
 						}
 
 						window.$resp=resp;
@@ -1957,7 +2028,7 @@ function removeRegister(){
 										backdrop:true
 									});
 								$clientPasswordForm.hide();
-							$('#logload').hide();
+							// $('#regload').hide();
 							$('#efmsg').show();
 						}
 						

@@ -129,12 +129,13 @@
                             <li class="moduleMenu active">
                                 <a class="page-unique homepageMenu" href="index.php">Home</a>
                             </li>
+                            
+                            <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8">
+                                <a class="page-unique" onclick="MoveFirstSection(1);" href="#"><span class="txt-container">About</span></a></li>
                             <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1">
-                                <a class="page-unique" onclick="MoveFirstSection(1);" href="#">
+                                <a class="page-unique" onclick="MoveFirstSection(2);" href="#">
                                     <span class="txt-container">Services</span></a>
                             </li>
-                            <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8">
-                                <a class="page-unique" onclick="MoveFirstSection(2);" href="#"><span class="txt-container">About</span></a></li>
                             <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a href="#" class="page-unique" onclick="MoveFirstSection(6);"><span class="txt-container">Contact</span></a></li>
                             <li class="moduleMenu loginbt" data-menu-module-id="5b0a4ba521825"><a class="page-unique" href="index4cd7.php#login">Login</a></li>
                             <li class="moduleMenu signup" data-menu-module-id="5b0a4ba521825" ><a class="page-unique" href="index4cd7.php#register" style="color:white !important;">Sign Up</a></li>
@@ -233,8 +234,8 @@
             <ul class="lm1">
                 <li class="moduleMenu active">
                     <a class="page-unique homepageMenu" href="index.php">Home</a></li>
-                <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" onclick="MoveFirstSection(1);" href="#"><span class="txt-container">Services</span></a></li>
-                <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a href="#" class="page-unique s123-fast-page-load" onclick="MoveFirstSection(2);"><span class="txt-container">About</span></a></li>
+                <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a href="#" class="page-unique s123-fast-page-load" onclick="MoveFirstSection(1);"><span class="txt-container">About</span></a></li>
+                <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" onclick="MoveFirstSection(2);" href="#"><span class="txt-container">Services</span></a></li>
                 <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a href="#" class="page-unique" onclick="MoveFirstSection(6);"><span class="txt-container">Contact</span></a></li>
                 <!-- <li class="moduleMenu" data-menu-module-id="5d985dca46598"><a href="#" class="page-unique" href="tracker.php"><span class="txt-container">Tracker</span></a></li> -->
                 <li class="moduleMenu loginbt" data-menu-module-id="5b0a4ba521825"><a style="margin-right: 7px;font-weight: bold;" class="page-unique" href="#" onclick="setTimeout(function(){document.location.href='index4cd7.php#login';},1500);">Login</a></li>
@@ -258,9 +259,9 @@
                             </div>
                             <div class="homepage_goal space_from_bottom_mainGoal ele_align_left" style="position: relative;max-width: 100%;">
                                 <div class="promoButtons align_left">
-                                    <a id="home_buttonText" onclick="MoveFirstSection(1);" class="btn btn-primary btn-xl "><span class="h-b-container">
+                                    <a id="home_buttonText" onclick="MoveFirstSection(2);" class="btn btn-primary btn-xl "><span class="h-b-container">
 																									<span class="h-b-t">See Why</span></span></a>
-                                    <a id="home_buttonText_1" onclick="MoveFirstSection(1);" class="btn btn-primary btn-xl " style="display:none">
+                                    <a id="home_buttonText_1" onclick="MoveFirstSection(2);" class="btn btn-primary btn-xl " style="display:none">
                                         <span class="h-b-container"><span class="h-b-t"></span></span>
                                     </a>
                                 </div>
@@ -270,6 +271,34 @@
                 </div>
             </section>
             <div id="s123ModulesContainer" class="s123-modules-container">
+                
+            <section id="section-5b0a4ba50e4e8" class="s123-module s123-module-about layout-4 layout-4">
+                    <div data-aos="fade-up" class="container-fluid page_header_style page_header_style_">
+                        <div class="row">
+                            <div class="container">
+                                <div class="row modulesTitle">
+                                    <div class="col-xs-12 text-center">
+                                        <H2 id="section-5b0a4ba50e4e8-title" class="s123-page-header">About</H2>
+                                        <hr class="small">
+                                        <h4 id="section-5b0a4ba50e4e8-slogan"></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" data-aos="fade-up">
+                        <div class="row">
+                            <div class='col-xs-12'>
+                                <div class="responsive-handler fr-view breakable">
+                                    <div class="images">
+                                        <div class="separateImages text-center">
+                                            <img src="./cdn-cms.f-static.com/uploads/2630165/800_5d0a171177656.jpg" class="img-rounded img-responsive" style="max-height:400px;max-width:80%;display:inline-block;" alt="About" />
+                                        </div>
+                                    </div>Still Need to write.<br></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section id="section-5d0a0f53588b1" class="s123-module s123-module-services layout-4 bg-primary">
                     <div data-aos="fade-up" class="container-fluid page_header_style page_header_style_">
                         <div class="row">
@@ -311,33 +340,6 @@
                                         <p>We will pickup and deliver to your place.</p>
                                     </div>
                                 </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="section-5b0a4ba50e4e8" class="s123-module s123-module-about layout-4 layout-4">
-                    <div data-aos="fade-up" class="container-fluid page_header_style page_header_style_">
-                        <div class="row">
-                            <div class="container">
-                                <div class="row modulesTitle">
-                                    <div class="col-xs-12 text-center">
-                                        <H2 id="section-5b0a4ba50e4e8-title" class="s123-page-header">About</H2>
-                                        <hr class="small">
-                                        <h4 id="section-5b0a4ba50e4e8-slogan"></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container" data-aos="fade-up">
-                        <div class="row">
-                            <div class='col-xs-12'>
-                                <div class="responsive-handler fr-view breakable">
-                                    <div class="images">
-                                        <div class="separateImages text-center">
-                                            <img src="./cdn-cms.f-static.com/uploads/2630165/800_5d0a171177656.jpg" class="img-rounded img-responsive" style="max-height:400px;max-width:80%;display:inline-block;" alt="About" />
-                                        </div>
-                                    </div>Still Need to write.<br></div>
                             </div>
                         </div>
                     </div>
@@ -644,19 +646,19 @@
                             </div>
                         </div>
                         <div class="side2 col-xs-12 col-sm-6 col-md-6">
-                            <ul class="navPages nav navbar-nav hidden-xs">
+                            <ul class="navPages nav navbar-nav hidden-xs lf1">
                                 <li class="moduleMenu active">
                                     <a class="page-unique homepageMenu" href="index.php">Home</a>
                                 </li>
-                                <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1">
-                                    <a class="page-unique" href="services.php"><span class="txt-container">Services</span></a>
-                                </li>
                                 <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8">
-                                    <a class="page-unique" href="about.php">
+                                    <a class="page-unique" onclick="MoveFirstSection(1);" href="#">
                                         <span class="txt-container">About</span></a>
                                 </li>
+                                <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1">
+                                    <a class="page-unique" onclick="MoveFirstSection(2);" href="#"><span class="txt-container">Services</span></a>
+                                </li>
                                 <li class="moduleMenu" data-menu-module-id="5b0a4ba521825">
-                                    <a class="page-unique" href="contact.php"><span class="txt-container">Contact</span></a>
+                                    <a class="page-unique" onclick="MoveFirstSection(6);" href="#"><span class="txt-container">Contact</span></a>
                                 </li>
                             </ul>
                             <div class="mailing">
