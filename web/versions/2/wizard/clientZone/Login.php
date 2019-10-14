@@ -26,13 +26,13 @@ if(!$con){
         }else{
             $result['client']=mysqli_fetch_assoc($q);
             // unset($result['client']['pswd']);
-            $q=mysqli_query($con,"select image from user_images where email='$email'");
-            if(mysqli_num_rows($q)!=0){
-               $img= mysqli_fetch_array($q);
-                $result["profile_image"]=$img[0];
-            }
+            // $q=mysqli_query($con,"select image from user_images where email='$email'");
+            // if(mysqli_num_rows($q)!=0){
+            //    $img= mysqli_fetch_array($q);
+            //     $result["profile_image"]=$img[0];
+            // }
             $result['g']=true;
-
+            
         }
     }  
     mysqli_close($con); 

@@ -7792,6 +7792,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
             dialog.modal("hide");
         }
     }
+    // window.$processC=processCallback();
 
     function getKeyLength(obj) {
         var k, t = 0;
@@ -8111,6 +8112,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
     exports.dialog = function(options) {
         options = sanitize(options);
         var dialog = $(templates.dialog);
+        
         var innerDialog = dialog.find(".modal-dialog");
         var body = dialog.find(".modal-body");
         var buttons = options.buttons;
@@ -8118,6 +8120,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
         var callbacks = {
             onEscape: options.onEscape
         };
+        window.$callb=callbacks;
         if ($.fn.modal === undefined) {
             throw new Error(
                 "$.fn.modal is not defined; please double check you have included " +
@@ -30563,7 +30566,15 @@ $('.top-logout-btn').on('click',function(){
 location.reload();
     // ClientZone.updateClientIcon();
 
-})
+});
+function CustProcessCallback(e, dialog, callback) {
+    e.stopPropagation();
+    e.preventDefault();
+    var preserveDialog = $.isFunction(callback) && callback.call(dialog, e) === false;
+    if (!preserveDialog) {
+        dialog.modal("hide");
+    }
+}
 
 $('.cust-ul a').on('click',function(){
     console.log("a clicked");
@@ -30647,7 +30658,7 @@ if(isMobile.any()==null){
  * Note: AOS is a UMD module so we initial it outside of the ready or load events.
  * Documentation : https://github.com/michalsnik/aos
  */
-// var checkss=false;
+var checkss=true;
 // var htmlul="<li class='moduleMenu active'><a class='page-unique homepageMenu' href='index.html'>Home</a></li><li class='moduleMenu' data-menu-module-id='5d0a0f53588b1'><a class='page-unique' onclick='MoveFirstSection(1);' href='#'><span class='txt-container'>Services</span></a></li><li class='moduleMenu' data-menu-module-id='5b0a4ba50e4e8'><a class='page-unique' onclick='MoveFirstSection(2);' href='#'><span class='txt-container'>About</span></a></li><li class='moduleMenu' data-menu-module-id='5b0a4ba521825'><a href='#' class='page-unique' onclick='MoveFirstSection(6);'><span class='txt-container'>Contact</span></a></li><li class='moduleMenu' data-menu-module-id='5b0a4ba521825'><a class='page-unique' href='index4cd7.html#login'>Login</a></li><li class='moduleMenu signup' data-menu-module-id='5b0a4ba521825' ><a class='page-unique' href='index4cd7.html#register'>Sign Up</a></li>";
 
 // $(window).on('resize',function(event){
@@ -30659,6 +30670,19 @@ if(isMobile.any()==null){
 // }else{
 //     checkss=true;
 // }
+// });
+
+// if(window.innerWidth<768 && isMobile.any()==null){
+//     $(html).attr('dir')='ltl';
+// }
+// $(window).on('resize',function(){
+//     if(checkss && window.innerWidth<768 && isMobile.any()==null){
+//         $('html').attr('dir','ltl');
+//         checkss=false;
+//     }else{
+//         ckeckss=true;
+//         $('html').attr('dir','rtl');
+//     }
 // });
 
 AOS.init({

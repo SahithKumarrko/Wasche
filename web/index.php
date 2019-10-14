@@ -117,7 +117,7 @@
 <body id="page-top">
     <div class="body">
         <div id="websiteHeader">
-            <nav id="mainNav" class="hidden-xs navbar-default navbar-fixed-top  opacity-full">
+            <nav id="mainNav" class="hidden-xs navbar-default navbar-fixed-top cust-home opacity-full">
                 <div class="site_container">
                     <div class="navbar-header">
                         <a class="navbar-brand page-unique logo_name  weight700 " href="index.php">

@@ -2,6 +2,10 @@
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 
+if(!filter_var($_POST['to'],FILTER_VALIDATE_EMAIL)){
+   echo "";
+   exit();
+}
 require("./phpmailer/SMTP.php");
 require("./phpmailer/Exception.php");
 require("./phpmailer/PHPMailer.php");
@@ -16,10 +20,9 @@ require("./phpmailer/PHPMailer.php");
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 // print_r($mail);
-
 try {
     //Server settings
-    $mail->SMTPDebug = 4;                      // Enable verbose debug output
+   //  $mail->SMTPDebug = 4;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -31,7 +34,7 @@ try {
 
     //Recipients
     $mail->setFrom('wasche.services@gmail.com');
-    $mail->addAddress("sahithkumarrko@gmail.com");     // Add a recipient
+    $mail->addAddress($_POST['to']);     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
@@ -49,8 +52,8 @@ try {
     if(!$mail->Send()) {
         echo "Mailer Error: " . $mail->ErrorInfo;
      } else {
-        echo "Message has been sent";
+        echo "success";
      }
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: ";
+    echo "Error";
 }

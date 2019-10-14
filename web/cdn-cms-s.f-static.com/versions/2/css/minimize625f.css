@@ -30444,7 +30444,10 @@ html[dir=rtl] #popupCart .cartActionButtons {
             bottom:10px;
             pointer-events: all;
         } */
-        nav#mainNav.affix{
+        nav#mainNav:not(.cust-home){
+            box-shadow:0 6px 20px rgba(0,0,0,0.3);
+        }
+        nav#mainNav.cust-home.affix{
             box-shadow:0 6px 20px rgba(0,0,0,0.3);
         }
         /* .cust-ul li:hover{
@@ -30650,3 +30653,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2115e9",endCo
             align-items:center;
             align-content:center;
         } */
+
+
+        button.bootbox-close-button.close {
+    outline: none;
+}

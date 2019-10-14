@@ -264,18 +264,18 @@
                   <div> <span class="c-z-log-out-email"></span> </div>
                </div>
                <!-- Tabs --> 
-               <select id="clientZone-select-tabs" class="form-control" style="display: none; margin-bottom:20px;">
+               <!-- <select id="clientZone-select-tabs" class="form-control" style="display: none; margin-bottom:20px;">
                   <option value="profile">Profile</option>
                   <option value="addresses">My Addresses</option>
-               </select>
-               <div id="clientZone-menu-tabs" class="hidden-xs" style="display: none;">
+               </select> -->
+               <!-- <div id="clientZone-menu-tabs" class="hidden-xs" style="display: none;">
                   <div data-tab="profile" class="col-xs-12 tab active">
                      <div> <i class="fa fa-user fa-1x"></i> <span>Profile</span> </div>
                   </div>
                   <div data-tab="addresses" class="col-xs-12 tab">
                      <div> <i class="fa fa-address-book fa-1x"></i> <span>My Addresses</span> </div>
                   </div>
-               </div>
+               </div> -->
             </div>
             <div class="col-xs-12 col-sm-8 col-md-9">
                <!-- Clients orders --> 
@@ -998,6 +998,7 @@ Secret Key  : 6LetKrwUAAAAAGVxX7baURxBVM54KZfRypv8JZZR
 		window.$resendPasswordLoading = $('#resendPasswordLoading');
 		window.$resendPasswordEmailSent = $('#resendPasswordEmailSent');
 		window.$coptions="";
+		// window.$resendform=$('#resendform');
 		
 	window.$modtit=$('.modulesTitle .text-center');
 		// $clientPasswordForm.slideUp();
@@ -1154,7 +1155,7 @@ $("#show_hide_password2 a").on('click', function(event) {
 		// Create an Ajax request for the orders
 		$.ajax({
 			type: "POST",
-			url: '/versions/2/wizard/clientZone/retrieveDetails.php',
+			url: './versions/2/wizard/clientZone/retrieveDetails.php',
 
 			data: "email="+tema,
 			success: function( response ) {
@@ -1167,37 +1168,37 @@ $("#show_hide_password2 a").on('click', function(event) {
 				if ( response.c === true ) {
 					console.log('recieved');
 					// on mobile show the tabs after the client login
-					$('#clientZone-select-tabs').addClass('visible-xs');
+					// $('#clientZone-select-tabs').addClass('visible-xs');
 					// on mobile we display select-box to choose tabs
-					if ( $('#clientZone-select-tabs').is(":visible") ) {
-						// in mobile removing the table responsive
-						$('.orders-container').removeClass('table-responsive');
-						// choose the tabs tool
-						$('#clientZone-select-tabs').addClass('clientZoneTabs');
-						// select tab event
-						$('.clientZoneTabs').on('change', function() {
-							// get object
-							var $selectTabs = $(this);
-							var $option = $selectTabs.find('[value="' + $selectTabs.val() + '"]');
-							// display the correct tabs
-							SelectTab($selectTabs.val(),false);
-							// hide all orders tables
-							$('.client-zone-orders-table tbody tr').hide();
-							// display the correct orders table
-							if ( $option.data('moduletypenum') ) {
-								$('.client-zone-orders-table tbody tr[data-moduletypenum="' + $option.data('moduletypenum') + '"]').show();
-							}
-						});
+					// if ( $('#clientZone-select-tabs').is(":visible") ) {
+					// 	// in mobile removing the table responsive
+					// 	$('.orders-container').removeClass('table-responsive');
+					// 	// choose the tabs tool
+					// 	$('#clientZone-select-tabs').addClass('clientZoneTabs');
+					// 	// select tab event
+						// $('.clientZoneTabs').on('change', function() {
+						// 	// get object
+						// 	var $selectTabs = $(this);
+						// 	var $option = $selectTabs.find('[value="' + $selectTabs.val() + '"]');
+						// 	// display the correct tabs
+						// 	SelectTab($selectTabs.val(),false);
+						// 	// hide all orders tables
+						// 	$('.client-zone-orders-table tbody tr').hide();
+						// 	// display the correct orders table
+						// 	if ( $option.data('moduletypenum') ) {
+						// 		$('.client-zone-orders-table tbody tr[data-moduletypenum="' + $option.data('moduletypenum') + '"]').show();
+						// 	}
+						// });
 					// display regular tabs
-					} else {
+					// } else {
 						// choose the tabs tool
-						$('#clientZone-menu-tabs').addClass('clientZoneTabs');
-						// select tab event
-						$('.clientZoneTabs').on('click','.tab',function() {
-							// display the correct tabs
-							SelectTab($(this).data('tab'),false);
-						});
-					}
+						// $('#clientZone-menu-tabs').addClass('clientZoneTabs');
+						// // select tab event
+						// $('.clientZoneTabs').on('click','.tab',function() {
+						// 	// display the correct tabs
+						// 	SelectTab($(this).data('tab'),false);
+						// });
+					// }
 					// generate the user orders
 					// ShowOrders(response);
 					// set the user profile details
@@ -1520,7 +1521,7 @@ function removeRegister(){
 	var resss;
 
 	function ClientLoginHandler() {
-
+		window.$resendform;
 		// Show the login container
 		$('#pgload').hide();
 		$loginFormsContainer.show();
@@ -1780,6 +1781,40 @@ function removeRegister(){
 			
 		});
 
+		// $resendform.validate({
+		// 	errorElement: 'div',
+		// 	errorClass: 'help-block',
+		// 	focusInvalid: true,
+		// 	ignore: "",
+		// 	highlight: function (e) {
+		// 		$(e).closest('.form-group').removeClass('has-info').addClass('has-error');
+		// 	},
+		// 	success: function (e) {
+		// 		$(e).closest('.form-group').removeClass('has-error');
+		// 		$(e).remove();
+		// 	},
+		// 	errorPlacement: function (error, element) {
+		// 		error.addClass('help-block');
+
+			
+		// 		if( element.is('input[type=checkbox]') || element.is('input[type=radio]') ) {
+		// 			var controls = element.closest('div[class*="col-"]');
+		// 			console.log("checking");
+		// 			if( controls.find(':checkbox,:radio').length > 1 ) controls.append(error);
+		// 			else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
+		// 		}
+		// 		else if( element.is('.select2') ) {
+		// 			error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
+		// 		}
+		// 		else if( element.is('.chosen-select') ) {
+		// 			error.insertAfter(element.siblings('[class*="chosen-container"]:eq(0)'));
+		// 		}
+		// 		else {
+		// 			error.appendTo(element.closest('.form-group'));
+		// 		}
+		// 	}
+
+		// });
 
 		/**
 		 * This form is responsible for sending the client
@@ -1821,23 +1856,113 @@ function removeRegister(){
 		// Resend Password Handler
 		$resendPasswordBtn.click(function( event ) {
 			// get objects
-			var $mailServer = $('#mailServer');
+			// var $mailServer = $('#mailServer');
 			// change mail server
-			$mailServer.val(5);
+			// $mailServer.val(5);
 			// hide the resend password button and show a loading icon
 			$resendPasswordBtn.hide();
 			$resendPasswordLoading.show();
-			setTimeout(function(){
-				$resendPasswordLoading.hide();
-				$resendPasswordEmailSent.show();
-				setTimeout(function(){
-					$resendPasswordEmailSent.hide();
+			var diacont="<div class='modal-header'><h4>Password Resend</h4></div>";
+			diacont+="<div class='modal-body'><p>Enter your email : </p><form id='resendform' novalidate='novalidate'><div class='form-group'><input type='email' spellcheck=false placeholder='example@example.com'  required data-msg-required='Please enter your email.' style='max-width:75%' class='form-control' id='rrem'/></div><div class='form-group' style='padding-top:5px;margin-bottom:0;'><button class='btn btn-primary' id='rrok' type='submit'>Submit</button></div></form></div>";
+			// diacont+="<div class='modal-footer' style='padding:0;border-top:0;'><button data-bb-handler='cancel' type='button' class='btn btn-default'>Cancel</button></div>";
+
+			var rrdia=bootbox.dialog({
+				message:diacont,
+				onEscape:function(){
+					$resendPasswordLoading.hide();
 					$resendPasswordBtn.show();
-				},2500);
-			},3000);
+					
+				}
+			});			
+			setTimeout(function(){
+
+			
+			$resendform=$('#resendform');
+			$resendform.submit(function(e) {
+	e.preventDefault();
+	console.log('clicked');
+			$('#rrok').attr('disabled',true);
+			if($resendform.valid()){
+				console.log('submitting');
+				$.ajax({
+					type:"POST",
+					url:"./mail.php",
+					data:"to="+$('#rrem').val(),
+					success:function(response){
+						console.log(response);
+						CustProcessCallback(e,rrdia,$callb);
+					}
+				});
+			}
+			$('#rrok').attr('disabled',false);
+			});
+			$resendform.validate({
+			errorElement: 'div',
+			errorClass: 'help-block',
+			focusInvalid: true,
+			ignore: "",
+			highlight: function (e) {
+				$(e).closest('.form-group').removeClass('has-info').addClass('has-error');
+			},
+			success: function (e) {
+				$(e).closest('.form-group').removeClass('has-error');
+				$(e).remove();
+			},
+			errorPlacement: function (error, element) {
+				error.addClass('help-block');
+
+			// console.log('calling');
+				if( element.is('input[type=checkbox]') || element.is('input[type=radio]') ) {
+					var controls = element.closest('div[class*="col-"]');
+					console.log("checking");
+					if( controls.find(':checkbox,:radio').length > 1 ) controls.append(error);
+					else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
+				}
+				else if( element.is('.select2') ) {
+					error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
+				}
+				else if( element.is('.chosen-select') ) {
+					error.insertAfter(element.siblings('[class*="chosen-container"]:eq(0)'));
+				}
+				else {
+					error.appendTo(element.closest('.form-group'));
+				}
+			}
+
+		});
+
+	},1200);
+
+		// $('#rrok').on('click',function(e){
+		// 	console.log('clicked');
+		// 	$('#rrok').attr('disabled',true);
+		// 	if($resendform.valid()){
+		// 		console.log('submitting');
+		// 		$.ajax({
+		// 			type:"POST",
+		// 			url:"./mail.php",
+		// 			data:"to="+$('#rrem').val(),
+		// 			success:function(response){
+		// 				console.log(response);
+		// 			}
+		// 		});
+				
+		// 	}
+			
+		// 	$('#rrok').attr('disabled',false);
+		// });
+			// setTimeout(function(){
+			// 	$resendPasswordLoading.hide();
+			// 	$resendPasswordEmailSent.show();
+			// 	setTimeout(function(){
+			// 		$resendPasswordEmailSent.hide();
+			// 		$resendPasswordBtn.show();
+			// 	},2500);
+			// },3000);
 			// submit the password again
 			// $clientEmailForm.submit();
 		});
+		
 
 		/**
 		 * This form is responsible for logging in to the
@@ -3024,19 +3149,19 @@ function removeRegister(){
 			html += '<div class="c-z-p-menu-option hidden" data-menu-dismiss="popover">';
 					html += '<a href="#" onclick="return false;"><i class="fa fa-trash"></i>&nbsp&nbsp<span>'+"Delete Profile"+'</span></a>';
 			html += '</div>';
-			html += '<div class="divider"></div>';
-			html += '<div class="c-z-p-menu-option logout-btn">';
-				html += '<a href="#" onclick="return false;">';
-					html += '<i class="fa fa-sign-out"></i>&nbsp&nbsp<span>'+"Logout"+'</span>';
-				html += '</a>';
-			html += '</div>';
+			// html += '<div class="divider"></div>';
+			// html += '<div class="c-z-p-menu-option logout-btn">';
+			// 	html += '<a href="#" onclick="return false;">';
+			// 		html += '<i class="fa fa-sign-out"></i>&nbsp&nbsp<span>'+"Logout"+'</span>';
+			// 	html += '</a>';
+			// html += '</div>';
         html += '</div>';
         // convert to jQuery object
         var $html = $(html);
         // get objects
         var $changeImgBtn = $html.find('.change-img-btn');
         var $removeImgBtn = $html.find('.rmv-img-btn');
-        var $logoutBtn = $html.find('.logout-btn');
+        // var $logoutBtn = $html.find('.logout-btn');
         // add click event for logout button
         
         // add click event to display the S123 uploader tool
@@ -3083,7 +3208,15 @@ function removeRegister(){
             trigger: 'manual',
             template: '<div class="popover client-zone-menu" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>',
             placement: function(popover, input) {
-						return isMobile.any() ? ($('html').attr('dir') === 'rtl' ? 'right' : 'left') : ($('html').attr('dir') === 'rtl' ? 'left' : 'right');
+						var direction= isMobile.any() ? ($('html').attr('dir') === 'rtl' ? 'right' : 'left') : ($('html').attr('dir') === 'rtl' ? 'right' : 'left');
+						// console.log(direction);
+						if(isMobile.any()==null){
+							if(window.innerWidth>768){
+								// console.log('changing dir');
+								direction='right';
+							}
+						}
+						return direction;
 					}
         });
         // show the popover
@@ -3122,6 +3255,28 @@ function removeRegister(){
         }
     }
 
+	function  checkAjaxError(jqXHR, exception) {
+			var msg = '';
+			if (jqXHR.status === 0) {
+				msg = 'Not connect.\n Verify Network.';
+			} else if (jqXHR.status == 404) {
+				msg = 'Requested page not found. [404]';
+			} else if (jqXHR.status == 500) {
+				msg = 'Internal Server Error [500].';
+			} else if (exception === 'parsererror') {
+				msg = 'Requested JSON parse failed.';
+			} else if (exception === 'timeout') {
+				msg = 'Time out error.';
+			} else if (exception === 'abort') {
+				msg = 'Ajax request aborted.';
+			} else {
+				msg = 'Uncaught Error.\n' + jqXHR.responseText;
+			}
+			return msg;
+			
+		// $('#logload').hide();
+		// $('#efmsg').show();
+	}
     // S123 Uploader Handler
 	S123_Uploader = function() {
 		// get object
@@ -3170,10 +3325,12 @@ function removeRegister(){
 				that.$cancelBtn.hide();
 				// display loading icon
 				that.$loadingIcon.show();
+				
+			$('.s123-uploader-form').find('input[name="email"]').attr('value',$('#pemail').val());
 				// send the form via Ajax
 				$.ajax({
 					type: "POST",
-					url: "/versions/2/wizard/clientZone/updateClientProfileImage.php",
+					url: "./versions/2/wizard/clientZone/updateClientProfileImage.php",
 					// next four lines were added for handle with the uploading files.
 					data: new FormData(that.$form.get(0)),
 	                cache: false,
@@ -3190,6 +3347,17 @@ function removeRegister(){
 	        			// fix target element CSS
 						that.$img.css('opacity','1');
 						that.$html.hide();
+					},
+					error:function (jqXHR, exception) {
+						var msg=checkAjaxError(jqXHR,exception);
+						if(msg!=''){
+							
+							bootbox.alert({
+										title:"Error",
+										message:msg+" Please Try again later. Thank you.",
+										backdrop:true
+									});
+						}
 					}
 				});
 			});
@@ -3241,8 +3409,7 @@ function removeRegister(){
 				html += '<div class="form-group">';
 		        	html += '<input type="file" name="upload_profile_image" accept="image/*" class="form-control hidden"/>';
 				html += '</div>';
-				html += '<input type="hidden" name="w" value="">';
-			html += '<input type="hidden" name="websiteID" value="2630165">';
+				html += '<input type="hidden" name="email" value="">';
 			html += '</form>';
 			return $(html);
 		}

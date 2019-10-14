@@ -23,6 +23,7 @@ if(!$con){
     }else{
         $result['client']=mysqli_fetch_assoc($q);
         unset($result['client']['pswd']);
+        
     }
     mysqli_close($con);
 }
