@@ -1,7 +1,7 @@
 <?php
+require('./connection.php');
 // $data=json_decode($_POST['data']);
 $email=$_POST['email'];
-$con=mysqli_connect("localhost","root","19101972","wasche","3306");
 $result=["g"=>false,"c"=>true,'ec'=>false];
 if(!$con){
     $result['c']=false;
@@ -23,7 +23,13 @@ if(!$con){
     }else{
         $result['client']=mysqli_fetch_assoc($q);
         unset($result['client']['pswd']);
-        
+        $q=mysqli_query($con,"select image,type from user_images where email='$email'");
+            if(mysqli_num_rows($q)!=0){
+               $img= mysqli_fetch_array($q);
+               $t=$img[1];
+               $im=$img[0];
+                $result['client']["profile_image"]="data:image/".$t.";base64,".base64_encode($im);
+            }
     }
     mysqli_close($con);
 }

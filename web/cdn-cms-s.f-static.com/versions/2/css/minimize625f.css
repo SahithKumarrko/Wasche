@@ -30658,3 +30658,31 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2115e9",endCo
         button.bootbox-close-button.close {
     outline: none;
 }
+.liquid:before, .liquid:after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-75%);
+}
+        @keyframes animateliquid{
+            0%{
+                transform: translate(-50%,-75%) rotate(0deg);
+            }
+            100%{
+                transform:translate(-50%,-75%) rotate(360deg);
+            }
+        }
+        .liquid:after {
+    border-radius: 40%;
+    background: rgba(20,20,20,0.5);
+    animation: animateliquid 5s linear infinite;
+}
+.liquid:before {
+    border-radius: 45%;
+    background: rgba(20,20,20,0.6);
+    
+    animation: animateliquid 10s linear infinite;
+}

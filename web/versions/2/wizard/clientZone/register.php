@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("localhost","root","19101972","wasche","3306");
+require('./connection.php');
 $result=["g"=>false,"c"=>true,'ee'=>false,"inve"=>false];
 if(!$con){
     $result['c']=false;
@@ -23,12 +23,14 @@ if(!$con){
             $addr=$_POST["address"];
             $gender=$_POST["gender"];
             $col=$_POST["college"];
-            $result['client']=['email'=>$email];
+            $coladd=$_POST['coladdress'];
+            $result['client']=['email'=>$email,"first_name"=>$fn];
+            $uns='on';
             // $result['client']=["email"=>$email,"first_name"=>$fn,"last_name"=>$ln,"phno"=>$phno,"gender"=>$gender,"college"=>$col,"address"=>$addr];
-            mysqli_query($con,"insert into users values('$email','$pswd','$fn','$ln','$phno','$gender','$col','$addr')");
+            mysqli_query($con,"insert into users values('$email','$pswd','$fn','$ln','$phno','$gender','$col','$coladd','$addr','$uns')");
           mysqli_commit($con);
                 $result["g"]=true;
-            
+                mysqli_commit($con);
         }
     }
     mysqli_close($con);

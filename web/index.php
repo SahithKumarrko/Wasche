@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" class="home_page home_page_design s_layout1 isFreePackage ">
+<html dir="ltr" lang="en" class="home_page home_page_design s_layout1 ">
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <!-- /Added by HTTrack -->
@@ -120,8 +120,22 @@
             <nav id="mainNav" class="hidden-xs navbar-default navbar-fixed-top cust-home opacity-full">
                 <div class="site_container">
                     <div class="navbar-header">
-                        <a class="navbar-brand page-unique logo_name  weight700 " href="index.php">
-                            <span class="website-name">Wasche</span>
+                        <a style="width:fit-content;height:fit-content;padding:10px;overflow:hidden;position:relative;border-radius:10px;" class="navbar-brand page-unique logo_name  weight700 " href="index.php">
+                            <span style="color:white;z-index:10;" class="website-name">Wasche</span>
+                            <div class="liquid" style="
+                                                    box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+                                                    padding: 0;
+                                                    margin: 0;
+                                                    width: 0;
+                                                    position: absolute;
+                                                    height: 0;
+                                                    left: 0;
+                                                    top: -90px;
+                                                    width: 200px;
+                                                    height: 200px;
+                                                    background: #4973ff;
+                                                    transition: 0.5s;
+                                                "></div>
                         </a>
                     </div>
                     <div id="top-menu">
@@ -189,8 +203,23 @@
                     <a data-close-location="left" data-menu-color="" data-menu-type="0" data-menu-align="center" data-is-mobile="true" class="mobile-menu-btn actionButton" role="button" data-container="body" data-toggle="menuCallActionIcons"><i class="fa fa-bars"></i></a></div>
             </div>
             <div class="navbar-header">
-                <a class="navbar-brand page-unique logo_name  weight700 " href="index.php">
-                    <span class="website-name">Wasche</span> </a>
+                <a class="navbar-brand page-unique logo_name  weight700 " style="position:relative;border-radius:10px;overflow:hidden;" href="index.php">
+                    <span class="website-name" style="color:white;z-index:10;">Wasche</span> 
+                    <div class="liquid" style="
+                                                    box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+                                                    padding: 0;
+                                                    margin: 0;
+                                                    width: 0;
+                                                    position: absolute;
+                                                    height: 0;
+                                                    left: 0;
+                                                    top: -90px;
+                                                    width: 200px;
+                                                    height: 200px;
+                                                    background: #4973ff;
+                                                    transition: 0.5s;
+                                                "></div>
+                </a>
             </div>
             <div class="navPagesRight">
                 <ul class="navActions nav navbar-nav">
@@ -492,56 +521,113 @@
                         <!-- Categories area -->
                         <!-- Items area -->
                         <div style="display:flex;flex-wrap:wrap;justify-content: center;" class="row text-center team-category" data-categories-filter="s123-g-show-all">
-                            <div style="margin: auto;width:auto;" class="col-md-3 col-sm-6 team-member-wrap col-centered">
+                        <div style="margin: auto;width:auto;/* grid-column: 1/2; */" class="col-md-3 col-sm-6 team-member-wrap col-centered">
                                 <div style="width: 300px;" class="team-member">
-                                    <div class="team-image" style="background-image:url(./cdn-cms-s.f-static.com/versions/2/wizard/clientZone/images/noImage.png);">
+                                    <div class="team-image" style="
+    height: auto;
+    padding: 0;
+    position: relative;
+    height: 100px;
+    width: 100%;
+    border-radius:0;
+    background-color: #5d5b5bf7;
+    box-shadow: inset 6px 8px 137px 12px black;
+">
+    <img src="./cdn-cms-s.f-static.com/versions/2/wizard/clientZone/images/noImage.png" style="
+    width: 40%;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+">
                                     </div>
-                                    <div class="team-details">
+                                    <div class="team-details" style="
+    padding-top: 50px;
+">
                                         <div>
                                             <h4 class="member-name">Abrar</h4>
                                         </div>
                                         <div>
                                             <p class="position">President</p>
                                         </div>
-                                        <div>
-                                            <p>Dont know.</p>
-                                        </div>
+                                        
                                         <ul class="social"></ul>
                                     </div>
                                 </div>
                             </div>
-                            <div style="margin: auto;width:auto;" class="col-md-3 col-sm-6 team-member-wrap col-centered">
+                            <div style="margin: auto;width:auto;/* grid-column: 1/2; */" class="col-md-3 col-sm-6 team-member-wrap col-centered">
                                 <div style="width: 300px;" class="team-member">
-                                    <div class="team-image" style="background-image:url(./cdn-cms.f-static.com/uploads/2031/sahith.jpg);"></div>
-                                    <div class="team-details">
+                                    <div class="team-image" style="
+    height: auto;
+    padding: 0;
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background-color: #5d5b5bf7;
+    box-shadow: inset 6px 8px 137px 12px black;
+    border-radius:0;
+">
+    <img src="./cdn-cms-s.f-static.com/versions/2/wizard/clientZone/images/noImage.png" style="
+    width: 40%;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+">
+                                    </div>
+                                    <div class="team-details" style="
+    padding-top: 50px;
+">
                                         <div>
-                                            <h4 class="member-name">Sahith Kumar</h4>
+                                            <h4 class="member-name">Abrar</h4>
                                         </div>
                                         <div>
-                                            <p class="position">Developer</p>
+                                            <p class="position">President</p>
                                         </div>
-                                        <div>
-                                            <p>Need to add.</p>
-                                        </div>
-                                        <ul class="social">
-
-                                        </ul>
+                                        
+                                        <ul class="social"></ul>
                                     </div>
                                 </div>
                             </div>
-                            <div style="margin: auto;width:auto;" class="col-md-3 col-sm-6 team-member-wrap col-centered">
-                                <div class="team-member" style="width: 300px;">
-                                    <div class="team-image" style="background-image:url(./cdn-cms-s.f-static.com/versions/2/wizard/clientZone/images/noImage.png);"></div>
-                                    <div class="team-details">
+                            <div style="margin: auto;width:auto;/* grid-column: 1/2; */" class="col-md-3 col-sm-6 team-member-wrap col-centered">
+                                <div style="width: 300px;" class="team-member">
+                                    <div class="team-image" style="
+    height: auto;
+    padding: 0;
+    position: relative;
+    height: 100px;
+    width: 100%;
+    border-radius:0;
+    background-color: #5d5b5bf7;
+    box-shadow: inset 6px 8px 137px 12px black;
+">
+    <img src="./cdn-cms-s.f-static.com/versions/2/wizard/clientZone/images/noImage.png" style="
+    width: 40%;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+">
+                                    </div>
+                                    <div class="team-details" style="
+    padding-top: 50px;
+">
                                         <div>
-                                            <h4 class="member-name">Sarvesh Rayter</h4>
+                                            <h4 class="member-name">Abrar</h4>
                                         </div>
                                         <div>
-                                            <p class="position">Office manager</p>
+                                            <p class="position">President</p>
                                         </div>
-                                        <div>
-                                            <p>Dont Know</p>
-                                        </div>
+                                        
                                         <ul class="social"></ul>
                                     </div>
                                 </div>

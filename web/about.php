@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" class=" inside_page inside_page_header_design s_layout1 isFreePackage ">
+<html dir="ltr" lang="en" class=" inside_page inside_page_header_design s_layout1">
 <!-- Mirrored from 5d9844d886969.site123.me/about by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Oct 2019 11:39:03 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
@@ -81,11 +81,13 @@
         --homepage_second_goal_space: 0px;
         --layout_bottom_spacing: 0px;
     } 
-    </style> <!-- Custom CSS --> <!-- Minimize CSS files --><link rel="stylesheet" href="../cdn-cms-s.f-static.com/versions/2/css/minimize625f.css?v=n5670" type="text/css" crossorigin="anonymous"><link rel="stylesheet" href="../cdn-cms-s.f-static.com/versions/2/css/websiteCSS23ab.css?w=&amp;orderScreen=&amp;websiteID=2630165&amp;onlyContent=&amp;tranW=&amp;v=n5670_11928280" class="reloadable-css" type="text/css"> <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent --> <script type="text/javascript">        window.cookieconsent_options = {
+    </style> <!-- Custom CSS --> <!-- Minimize CSS files --><link rel="stylesheet" href="./cdn-cms-s.f-static.com/versions/2/css/minimize625f.css" type="text/css" >
+    <link rel="stylesheet" href="./cdn-cms-s.f-static.com/versions/2/css/websiteCSS23ab.css?w=&amp;orderScreen=&amp;websiteID=2630165&amp;onlyContent=&amp;tranW=&amp;v=n5670_11928280" class="reloadable-css" type="text/css"> <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+     <script type="text/javascript">        window.cookieconsent_options = {
             message: "This website uses cookies to ensure you get the best experience on our website",
             dismiss: "Got it!",
             learnMore: "More info",
-            theme: '//cdn-cms-s.f-static.com/files/frameworks/cookieconsent-master/build/dark-bottom.css?v=n5670'
+            theme: './cdn-cms-s.f-static.com/files/frameworks/cookieconsent-master/build/dark-bottom.css'
         }; 
 	</script> <!-- End Cookie Consent plugin --> <!-- Froala Editor CSS --> 
 	</head><body id="page-top"> 
@@ -94,17 +96,31 @@
 				<nav id="mainNav" class="hidden-xs navbar-default navbar-fixed-top  opacity-full"> 
 					<div class="site_container"> 
 						<div class="navbar-header"> 
-							<a class="navbar-brand page-unique logo_name  weight700 " href="index.html"> 
-								<span class="website-name">Wasche</span> 
+							<a class="navbar-brand page-unique logo_name  weight700 " style="width:fit-content;height:fit-content;padding:10px;overflow:hidden;position:relative;border-radius:10px;" href="index.php"> 
+                        <span class="website-name" style="color:white;z-index:10;">Wasche</span> 
+                        <div class="liquid" style="
+                                                    box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+                                                    padding: 0;
+                                                    margin: 0;
+                                                    width: 0;
+                                                    position: absolute;
+                                                    height: 0;
+                                                    left: 0;
+                                                    top: -90px;
+                                                    width: 200px;
+                                                    height: 200px;
+                                                    background: #4973ff;
+                                                    transition: 0.5s;
+                                                "></div>
 							</a> 
 						</div> 
 						<div id="top-menu"> 
 							 
 						<ul class="navPages nav navbar-nav lt1"> 
-							<li class="moduleMenu active">
+							<li class="moduleMenu">
 								<a class="page-unique homepageMenu" href="index.php">Home</a>
 							</li>
-							<li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8">
+							<li class="moduleMenu active" data-menu-module-id="5b0a4ba50e4e8">
 								<a class="page-unique" href="about.php">
 									<span class="txt-container">About</span>
 								</a>
@@ -170,7 +186,23 @@
    <div class="navPagesLeft">
       <div class="header-menu-wrapper"><a data-close-location="left" data-menu-color="" data-menu-type="0" data-menu-align="center" data-is-mobile="true" class="mobile-menu-btn actionButton" role="button" data-container="body" data-toggle="menuCallActionIcons"><i class="fa fa-bars"></i></a></div>
    </div>
-   <div class="navbar-header"> <a class="navbar-brand page-unique logo_name  weight700 " href="index.html"> <span class="website-name">Wasche</span> </a> </div>
+   <div class="navbar-header"> <a class="navbar-brand page-unique logo_name  weight700 " style="position:relative;border-radius:10px;overflow:hidden;" href="index.php"> 
+      <span class="website-name" style="color:white;z-index:10;">Wasche</span>
+      <div class="liquid" style="
+                                                    box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+                                                    padding: 0;
+                                                    margin: 0;
+                                                    width: 0;
+                                                    position: absolute;
+                                                    height: 0;
+                                                    left: 0;
+                                                    top: -90px;
+                                                    width: 200px;
+                                                    height: 200px;
+                                                    background: #4973ff;
+                                                    transition: 0.5s;
+                                                "></div>
+   </a> </div>
    <div class="navPagesRight">
       <ul class="navActions nav navbar-nav">
           <!-- <li style="display:none;" class="header-phone-wrapper">
@@ -211,8 +243,8 @@
 </nav>
 <div id="top-menu-mobile" style="display:none;">
 <ul class="lm1">
-      <li class="moduleMenu active"><a class="page-unique homepageMenu" href="index.php">Home</a></li>
-      <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8"><a class="page-unique" href="about.php"><span class="txt-container">About</span></a></li>
+      <li class="moduleMenu"><a class="page-unique homepageMenu" href="index.php">Home</a></li>
+      <li class="moduleMenu active" data-menu-module-id="5b0a4ba50e4e8"><a class="page-unique" href="about.php"><span class="txt-container">About</span></a></li>
       <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" href="services.php"><span class="txt-container">Services</span></a></li>
       <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a class="page-unique" href="contact.php"><span class="txt-container">Contact</span></a></li>
       <!-- <li class="moduleMenu" data-menu-module-id="5d985dca46598"><a class="page-unique" href="tracker.php"><span class="txt-container">Tracker</span></a></li> -->
@@ -224,9 +256,9 @@
 <div id="s123PjaxMainContainer">
    <div id="s123ModulesContainer" class="s123-content-area s123-modules-container">
       <section id="section-5b0a4ba50e4e8" class="s123-module s123-module-about layout-4 layout-4 bg-primary">
-         <div class="breadcrumb-wrap">
-            <ol class="breadcrumb container">
-               <li><a class="homepageMenu" href="index.html">Home</a></li>
+         <div class="breadcrumb-wrap" >
+            <ol class="breadcrumb container" style="padding-top:20px;">
+               <li><a class="homepageMenu" href="index.php">Home</a></li>
                <li class="active">About</li>
             </ol>
          </div>
@@ -264,12 +296,12 @@
                <div> <span class="footer_name website-name-preview-helper">Wasche</span> </div>
                <div>                                Copyright © 2019 All rights reserved
                </div>
-               <div style="margin:5px 0;"><a href="terms.html" class="">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacy.html" class="">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+               <div style="margin:5px 0;"><a href="terms.php" class="">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacy.php" class="">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
                </div>
             <div class="side2 col-xs-12 col-sm-6 col-md-6">
                <ul class="navPages nav navbar-nav hidden-xs lf1">
-               <li class="moduleMenu active"><a class="page-unique homepageMenu" href="index.php">Home</a></li>
-                  <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8"><a class="page-unique" href="about.php"><span class="txt-container">About</span></a></li>
+               <li class="moduleMenu"><a class="page-unique homepageMenu" href="index.php">Home</a></li>
+                  <li class="moduleMenu active" data-menu-module-id="5b0a4ba50e4e8"><a class="page-unique" href="about.php"><span class="txt-container">About</span></a></li>
                   <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" href="services.php"><span class="txt-container">Services</span></a></li>
                   <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a class="page-unique" href="contact.php"><span class="txt-container">Contact</span></a></li>
                </ul>
@@ -309,10 +341,10 @@
       <div class="popover_icons">
          <div class="social-icons">
             <ul class="list-inline">
-               <li><a href="https://maps.google.com/?q=Hyderabad%2C+Telangana%2C+India" target="_blank"><img src="../cdn-cms-s.f-static.com/files/images/google_map_white_small625f.png?v=n5670" style="width: 40px;height: auto;padding-bottom: 7px;"></a></li>
-               <li><a href="https://waze.com/ul?ll=17.385044,78.486671&amp;navigate=yes" target="_blank"><img src="../cdn-cms-s.f-static.com/files/images/waze_white_small625f.png?v=n5670" style="width: 40px;height: auto;padding-bottom: 7px;"></a></li>
-               <li class="visible-xs-inline-block"><a href="moovit://directions?dest_lat=17.385044&dest_lon=78.486671" target="_blank"><img src="../cdn-cms-s.f-static.com/files/images/moovit_white_small625f.png?v=n5670" style="width: 40px;height: auto;padding-bottom: 7px;"></a></li>
-               <li class="visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><a href="https://moovit.com/?to=Hyderabad%2C+Telangana%2C+India&amp;tll=17.385044_78.486671&amp;metroId=1" target="_blank"><img src="../cdn-cms-s.f-static.com/files/images/moovit_white_small625f.png?v=n5670" style="width: 40px;height: auto;padding-bottom: 7px;"></a></li>
+               <li><a href="https://maps.google.com/?q=Hyderabad%2C+Telangana%2C+India" target="_blank"><img src="./cdn-cms-s.f-static.com/files/images/google_map_white_small625f.png?v=n5670" style="width: 40px;height: auto;padding-bottom: 7px;"></a></li>
+               <li><a href="https://waze.com/ul?ll=17.385044,78.486671&amp;navigate=yes" target="_blank"><img src="./cdn-cms-s.f-static.com/files/images/waze_white_small625f.png?v=n5670" style="width: 40px;height: auto;padding-bottom: 7px;"></a></li>
+               <li class="visible-xs-inline-block"><a href="moovit://directions?dest_lat=17.385044&dest_lon=78.486671" target="_blank"><img src="./cdn-cms-s.f-static.com/files/images/moovit_white_small625f.png" style="width: 40px;height: auto;padding-bottom: 7px;"></a></li>
+               <li class="visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><a href="https://moovit.com/?to=Hyderabad%2C+Telangana%2C+India&amp;tll=17.385044_78.486671&amp;metroId=1" target="_blank"><img src="./cdn-cms-s.f-static.com/files/images/moovit_white_small625f.png" style="width: 40px;height: auto;padding-bottom: 7px;"></a></li>
             </ul>
          </div>
       </div>
@@ -326,29 +358,7 @@
 <input type="hidden" id="hasPlugins" value="0"> 
 <input type="hidden" id="pjaxSupported" value="1"> 
 <input type="hidden" id="moduleTypeNUM" class="s123-js-pjax" name="moduleTypeNUM" value="16">
-<script>        
-var menuScrollOffset = 70;
-        var packageNUM = 1;
-        var subDomainUrl = 'site123.html';
-        var domain = '5d9844d886969';
-        var languageCode = 'en';
-        var multiLanCode = '';
-        var globalLanguageChildLan          = '';
-        var websiteLanguageCode             = '';
-        var websiteLanguageCountryCode      = '';
-        var websiteLanguageCountryFullCode  = '';
-
-        var $GLOBALS = {
-            'cdn-user-files' : '//cdn-cms.f-static.com',
-            'maps-display-domain' : 'https://maps.site123.com'
-        };
-        var modulesList = "[{\"id\":\"257914184\",\"moduleID\":\"5d0a0f53588b1\",\"moduleTypeNUM\":\"3\",\"title\":\"Services\",\"settings\":\"{\\\"styleContent\\\":2,\\\"hideFrontModule\\\":0}\",\"url\":\"services\",\"style\":\"4\",\"modulesArrID\":\"26001\",\"slogan\":\"\",\"showInMenu\":\"1\",\"showInFooter\":\"1\",\"mp_showInMenu\":\"1\",\"mp_showInHome\":\"1\",\"parentId\":\"\"},{\"id\":\"257914178\",\"moduleID\":\"5b0a4ba50e4e8\",\"moduleTypeNUM\":\"16\",\"title\":\"About\",\"settings\":\"\",\"url\":\"about\",\"style\":\"4\",\"modulesArrID\":\"89\",\"slogan\":\"\",\"showInMenu\":\"1\",\"showInFooter\":\"1\",\"mp_showInMenu\":\"1\",\"mp_showInHome\":\"1\",\"parentId\":\"\"},{\"id\":\"257914185\",\"moduleID\":\"5d98551546595\",\"moduleTypeNUM\":\"10\",\"title\":\"Pricing Table\",\"settings\":\"{\\\"styleContent\\\":1,\\\"hideFrontModule\\\":0}\",\"url\":\"pricing-table\",\"style\":\"1\",\"modulesArrID\":\"10\",\"slogan\":\"\",\"showInMenu\":\"1\",\"showInFooter\":\"0\",\"mp_showInMenu\":\"0\",\"mp_showInHome\":\"1\",\"parentId\":\"\"},{\"id\":\"257914186\",\"moduleID\":\"5d985d7c46596\",\"moduleTypeNUM\":\"5\",\"title\":\"Testimonials\",\"settings\":\"{\\\"styleContent\\\":1,\\\"hideFrontModule\\\":0}\",\"url\":\"testimonials\",\"style\":\"1\",\"modulesArrID\":\"5\",\"slogan\":\"\",\"showInMenu\":\"0\",\"showInFooter\":\"0\",\"mp_showInMenu\":\"0\",\"mp_showInHome\":\"1\",\"parentId\":\"\"},{\"id\":\"257914187\",\"moduleID\":\"5d985d9a46597\",\"moduleTypeNUM\":\"4\",\"title\":\"Team\",\"settings\":\"{\\\"styleContent\\\":1,\\\"hideFrontModule\\\":0}\",\"url\":\"team\",\"style\":\"2\",\"modulesArrID\":\"51\",\"slogan\":\"\",\"showInMenu\":\"1\",\"showInFooter\":\"0\",\"mp_showInMenu\":\"0\",\"mp_showInHome\":\"1\",\"parentId\":\"\"},{\"id\":\"257914180\",\"moduleID\":\"5b0a4ba521825\",\"moduleTypeNUM\":\"7\",\"title\":\"Contact\",\"settings\":\"\",\"url\":\"contact\",\"style\":\"4\",\"modulesArrID\":\"31\",\"slogan\":\"\",\"showInMenu\":\"1\",\"showInFooter\":\"1\",\"mp_showInMenu\":\"1\",\"mp_showInHome\":\"1\",\"parentId\":\"\"},{\"id\":\"257914188\",\"moduleID\":\"5d985dca46598\",\"moduleTypeNUM\":\"41\",\"title\":\"Tracker\",\"settings\":\"{\\\"styleContent\\\":1,\\\"hideFrontModule\\\":0}\",\"url\":\"tracker\",\"style\":\"1\",\"modulesArrID\":\"41\",\"slogan\":\"\",\"showInMenu\":\"0\",\"showInFooter\":\"0\",\"mp_showInMenu\":\"1\",\"mp_showInHome\":\"0\",\"parentId\":\"\"}]";
-        var longFreeCustomer = false;
-                // set progressive web applications settings object for published websites only
-        var pwaSettings = {
-            enableMessage: false,
-        };
-            </script> <!-- JavaScript Translations Object --><script>var translations = {
+ <!-- JavaScript Translations Object --><script>var translations = {
 	"sent"	  		   : "Sent!",
 	"enterYourQuery" 	   : "Enter your query",
 	"loading"		   : "Loading...",
@@ -465,6 +475,8 @@ var menuScrollOffset = 70;
 	"reviewRegular": "regular",
 	"reviewGood": "good",
 	"reviewGorgeous": "gorgeous",
-	"popupButtonSelected": "Select"	};</script><!-- JavaScript Translations Object --> <!-- Minimize JS files --> <script src="../cdn-cms-s.f-static.com/versions/2/js/minimize625f.js?v=n5670" crossorigin="anonymous"></script> <!-- Website Statistics --> <script type="text/javascript" src="../cdn-cms-s.f-static.com/versions/2/wizard/statistics/js/generateStats625f.js?v=n5670" crossorigin="anonymous"></script> <!-- Pjax Helper --><div class="s123-front-last-element hidden"></div></body>
+   "popupButtonSelected": "Select"	};</script><!-- JavaScript Translations Object --> <!-- Minimize JS files --> <script src="./cdn-cms-s.f-static.com/versions/2/js/minimize625f.js"></script> <!-- Website Statistics --> 
+   <!-- <script type="text/javascript" src="../cdn-cms-s.f-static.com/versions/2/wizard/statistics/js/generateStats625f.js" crossorigin="anonymous"></script>  -->
+   <!-- Pjax Helper --><div class="s123-front-last-element hidden"></div></body>
 <!-- Mirrored from 5d9844d886969.site123.me/about by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Oct 2019 11:39:03 GMT -->
 </html>

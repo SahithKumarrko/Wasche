@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("localhost","root","19101972","wasche","3306");
+require('./connection.php');
 $result=["c"=>true,"s"=>true];
 if(!$con){
     $result['c']=false;
@@ -8,9 +8,10 @@ if(!$con){
     if(!$q){
         $result["s"]=false;
     }else{
-        $res=array();
+        $res=["name"=>array(),"address"=>array()];
         while($row=mysqli_fetch_assoc($q)){
-            $res[]=$row["name"];
+            $res["name"][]=$row["name"];
+            $res["address"][]=$row["address"];
         }
         $result["res"]=$res;
     }

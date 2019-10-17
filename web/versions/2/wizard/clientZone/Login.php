@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("localhost","root","19101972","wasche","3306");
+require('./connection.php');
 $result=["g"=>false,"c"=>true,'ee'=>false];
 if(!$con){
     $result['c']=false;
@@ -30,6 +30,13 @@ if(!$con){
             // if(mysqli_num_rows($q)!=0){
             //    $img= mysqli_fetch_array($q);
             //     $result["profile_image"]=$img[0];
+            // }
+            // $q=mysqli_query($con,"select image,type from user_images where email='$email'");
+            // if(mysqli_num_rows($q)!=0){
+            //    $img= mysqli_fetch_array($q);
+            //    $t=$img[1];
+            //    $im=$img[0];
+            //     $result['client']["profile_image"]="data:image/".$t.";base64,".base64_encode($im);
             // }
             $result['g']=true;
             

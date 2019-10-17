@@ -29992,28 +29992,44 @@ function MailingModuleInitialize() {
                         $form.find('button:submit').prop('disabled', true);
                         $.ajax({
                             type: 'POST',
-                            url: '/versions/' + $('#versionNUM').val() + '/include/subscribe.php',
+                            url: './subscribe.php',
                             data: $form.serialize(),
                             success: function(respondedMessage) {
-                                var respondedMessage = tryParseJSON(respondedMessage);
-                                if (!respondedMessage) {
-                                    $form.find('button:submit').prop('disabled', false);
-                                    return;
-                                }
+                                // var respondedMessage = tryParseJSON(respondedMessage);
+                                // if (!respondedMessage) {
+                                //     $form.find('button:submit').prop('disabled', false);
+                                //     return;
+                                // }
+                                if(respondedMessage=='success'){
                                 var outPutHTML = "Your Subcription is confirmed. We are excited to see how you use the services.";
                                 $form.trigger("reset");
                                 bootbox.alert({
                                     title: translations.sent,
                                     message: outPutHTML,
                                     className: 'contactUsConfirm',
-                                    backdrop: true
-                                        // buttons: {
-                                        //     ok: {
-                                        //         label: 'Update',
-                                        //         className: 'btn-primary'
-                                        //     }
-                                        // }
+                                    backdrop: true,
+                                        buttons: {
+                                            ok: {
+                                                label: 'OK',
+                                                className: 'btn-primary'
+                                            }
+                                        }
                                 });
+                            }else{
+                                // $form.trigger("reset");
+                                bootbox.alert({
+                                    title: "<b>Error!</b>",
+                                    message: "<h3>There was an error while creation a subscription for you.</h3>Please try again by reloading the page or check your email correctly.",
+                                    className: 'contactUsConfirm',
+                                    backdrop: true,
+                                        buttons: {
+                                            ok: {
+                                                label: 'OK',
+                                                className: 'btn-primary'
+                                            }
+                                        }
+                                });
+                            }
                             }
                         });
                     }
@@ -32545,7 +32561,7 @@ var ClientZone = function() {
          * jQuery Cookie - Get the client details
          * https://github.com/carhartl/jquery-cookie
          */
-        if(window.localStorage!=undefined){
+        if(window.localStorage!=undefined && $('.resend-page-lay').length==0){
         var $client = tryParseJSON(window.localStorage.getItem("wasche-services"));
         console.log("!");
         if (!$client) return;
@@ -32553,10 +32569,11 @@ var ClientZone = function() {
         console.log($client);
         $clientZoneLink.removeAttr('data-image');
         $clientZoneLink.removeAttr('data-letters');
-        if ($client.client.profile_image) {
-            $clientZoneLink.attr('data-image', 'true');
-            $clientZoneLink.css('background-image', 'url(' + getImageWR(100, $client.profile_image) + ')');
-        } else if ($client.client.first_name) {
+        // if ($client.client.profile_image) {
+        //     $clientZoneLink.attr('data-image', 'true');
+        //     $clientZoneLink.css('background-image', $client.client.profile_image);
+        // } else
+         if ($client.client.first_name) {
             $clientZoneLink.attr('data-letters', $client.client.first_name[0]);
             $clientZoneLink.css('background-image', '');
         } else if ($client.client.email) {
@@ -32565,6 +32582,7 @@ var ClientZone = function() {
         }
         if ($client.client.first_name !== 0) $clientZoneLink.attr('title', $client.client.first_name);
 console.log("completed adding icon");
+$('.mailing').hide();
 $('.header-client-zone-wrapper').eq(0).css("display","inline-block");
 var custmodulem=$('.lt1 .moduleMenu .txt-container');
 custmodulem.eq(0).html('Dashboard');

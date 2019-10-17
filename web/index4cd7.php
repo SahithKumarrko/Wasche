@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" class="inside_page inside_page_header_design s_layout1 isFreePackage ">
+<html dir="ltr" lang="en" class="inside_page inside_page_header_design s_layout1 ">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head> 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -112,8 +112,22 @@
 			<nav id="mainNav" class="hidden-xs navbar-default navbar-fixed-top  opacity-full"> 
 				<div class="site_container"> 
 					<div class="navbar-header"> 
-						<a class="navbar-brand page-unique logo_name  weight700 " href="index.php"> 
-							<span class="website-name">Wasche</span> 
+						<a style="width:fit-content;height:fit-content;padding:10px;overflow:hidden;position:relative;border-radius:10px;" class="navbar-brand page-unique logo_name  weight700 " href="index.php"> 
+							<span class="website-name" style="color:white;z-index:10;">Wasche</span> 
+							<div class="liquid" style="
+                                                    box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+                                                    padding: 0;
+                                                    margin: 0;
+                                                    width: 0;
+                                                    position: absolute;
+                                                    height: 0;
+                                                    left: 0;
+                                                    top: -90px;
+                                                    width: 200px;
+                                                    height: 200px;
+                                                    background: #4973ff;
+                                                    transition: 0.5s;
+                                                "></div>
 						</a> 
 					</div> 
 					<div id="top-menu"> 
@@ -189,7 +203,22 @@
    <div class="navPagesLeft">
       <div class="header-menu-wrapper"><a data-close-location="left" data-menu-color="" data-menu-type="0" data-menu-align="center" data-is-mobile="true" class="mobile-menu-btn actionButton" role="button" data-container="body" data-toggle="menuCallActionIcons"><i class="fa fa-bars"></i></a></div>
    </div>
-   <div class="navbar-header"> <a class="navbar-brand page-unique logo_name  weight700 " href="index.php"> <span class="website-name">Wasche</span> </a> </div>
+   <div class="navbar-header"> <a class="navbar-brand page-unique logo_name  weight700 "style="position:relative;border-radius:10px;overflow:hidden;" href="index.php"> <span class="website-name" style="color:white;z-index:10;">Wasche</span>
+   <div class="liquid" style="
+							box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+							padding: 0;
+							margin: 0;
+							width: 0;
+							position: absolute;
+							height: 0;
+							left: 0;
+							top: -90px;
+							width: 200px;
+							height: 200px;
+							background: #4973ff;
+							transition: 0.5s;
+						"></div>
+</a> </div>
    <div class="navPagesRight">
       <ul class="navActions nav navbar-nav">
          <li style="display:none;" class="header-phone-wrapper"><a data-close-location="right" class="actionButton" role="button" data-container="body" data-toggle="phone_menuCallActionIcons"><i class="fa fa-phone"></i></a></li>
@@ -289,7 +318,7 @@
                         <div class="row">
                            <div class="col-xs-12 col-md-5">
 							<!-- email --> 
-							<div class="form-group forum-property"> <label for="email">Email</label> <input type="email" id="pemail" name="email" class="form-control" placeholder="Nickname"/> </div>
+							<div class="form-group forum-property"> <label for="email">Email</label> <input type="email" readonly id="pemail" name="email" class="form-control" placeholder="Nickname"/> </div>
                               	  
 						   <!-- First name --> 
                               <div class="form-group"> <label for="first_name">First Name</label> <input type="text" id="pfirst_name" name="first_name" class="form-control" placeholder="First Name"/> </div>
@@ -297,24 +326,41 @@
                               <div class="form-group"> <label for="last_name">Last Name</label> <input type="text" id="plast_name" name="last_name" class="form-control"  placeholder="Last Name"/> </div>
                               <!-- Phone --> 
 							  <div class="form-group"> <label for="phone">Phone</label> 
-								<input type="text" id="pphno" name="phno" class="form-control" placeholder="Phone Number"/> 
+								<input type="text" id="pphno" name="phno" readonly class="form-control" placeholder="Phone Number"/> 
 							</div>
 							<div class="form-group">
 							<label for="country">Gender</label>
-                                 <select id="pgender" name="gender" class="form-control">
+							<input type="text" id="pgender" name="gender" readonly class="form-control" placeholder="Gender"/> 
+							
+                                 <!-- <select id="pgender" name="gender" class="form-control">
 									 <option value="Male">Male</option>
 									 <option value="Female">Female</option>
-                                 </select>
+                                 </select> -->
 							</div>
 							
-							<div class="form-group"> <label for="address">Address</label> 
-								<input type="text" id="paddress" name="address" class="form-control" placeholder="Address"/> 
+							<div class="form-group" > <label for="address">Address</label>								
+							<input type="text" id="paddress" name="address" class="form-control" placeholder="Address"/> 
 							</div>
-							<div class="form-group">
+							
+						   
+							<div class="form-group" style="position:relative;">
 							<label for="country">College</label>
-                                 <select id="pcollege" name="college" class="form-control">
-                                 </select>
+							<!-- <div style="padding:15px;position:absolute;top:-50%;background:white;transform:rotateX(90deg);z-index:1000;border:1px solid #c5c5c5;box-shadow:0 -4px 20px rgba(0,0,0,0.3);transition:all 500ms;pointer-events:none;" class="hcol-div">
+							<p style="margin:0;" id="hcollege">adasdsdasdsdsdsadsad</p>
+						</div> -->
+
+							<input type="text" id="pcollege" name="college" readonly class="form-control" placeholder="College"/> 
+							
+                                 <!-- <select id="pcollege" name="college" class="form-control">
+                                 </select> -->
 							</div>
+
+							
+					<div class="form-group">
+					<label for="address">Address</label>
+					<input type="hidden" id='inpcadd' name="coladdress" value=''/>
+							<p type="text" id='pcoladdress'  value="" class="form-control" placeholder="College Address" style="max-width:100%;margin: 0 auto;margin-top:10px;user-select:none;--webkit-user-select:none;" required data-msg-required="Please fill this field.">Please Select a college to view its address.</p> 
+						</div>
                               <!-- Country --> 
                               <!-- <div class="form-group">
                                  <label for="country">Country</label> 
@@ -727,9 +773,16 @@
 							
 						</select>
 					</div>
-
+					
+					<div class="form-group">
+						<h3 class="formh3">Colleg Address</h3>
+						<hr class="form3hr">
+						<input type='hidden' name="coladdress" value='' id='rinpcadd'/>
+							<p type="text" id='rcoladdress'  value="" class="form-control" placeholder="College Address" style="max-width:100%;margin: 0 auto;margin-top:10px;user-select:none;--webkit-user-select:none;" required data-msg-required="Please fill this field.">Please Select a college to view its address.</p> 
+						</div>
+						   
 					 <div class="form-group">
-						 <div class="checkbox"> <label> <input type="checkbox" id="agreeToTerms" name="agreeToTerms" checked> I agree to the <a href="terms.php"" target="_blank">Terms of Service</a>.                            </label> </div>
+						 <div class="checkbox"> <label> <input type="checkbox" id="agreeToTerms" name="agreeToTerms" checked> I agree to the <a href="terms.php" target="_blank">Terms of Service</a>.                            </label> </div>
 						 </div>
 					<div class="form-group"> 
 						<button type="submit" class="btn btn-primary">Register</button>
@@ -998,6 +1051,7 @@ Secret Key  : 6LetKrwUAAAAAGVxX7baURxBVM54KZfRypv8JZZR
 		window.$resendPasswordLoading = $('#resendPasswordLoading');
 		window.$resendPasswordEmailSent = $('#resendPasswordEmailSent');
 		window.$coptions="";
+		window.$colNameAdd;
 		// window.$resendform=$('#resendform');
 		
 	window.$modtit=$('.modulesTitle .text-center');
@@ -1048,6 +1102,8 @@ $("#show_hide_password2 a").on('click', function(event) {
 			// handler the client login
 			ClientLoginHandler();
 		}
+
+
 // $('.client-zone-link').on('click',function(){
 
 // 		if($clientPasswordForm.css('display')=='block'){
@@ -1081,7 +1137,7 @@ $("#show_hide_password2 a").on('click', function(event) {
 			// Update the client details 
 			$.ajax({
 				type: "POST",
-				url: '/versions/2/wizard/clientZone/updateClientInfo.php',
+				url: './versions/2/wizard/clientZone/updateClientInfo.php',
 				// the next 4 lines were added for handle with the uploading files
 				data: new FormData($form.get(0)),
 				cache: false,
@@ -1089,19 +1145,28 @@ $("#show_hide_password2 a").on('click', function(event) {
                 processData: false,
 			}).done(function( client ) {
 				// convert from string to JSON
-				client = JSON.parse(client);
+				// client = JSON.parse(client);
 				// check if the response is valid
-				if ( typeof client === "object" ) {
+				// if ( typeof client === "object" ) {
 					// set the user profile image
-					if ( client.profile_image ) {
-						$('#profileImagePreview').attr('src',client.profile_image.replace('normal_','400_'));
-						$('#profileImagePreview').data('src',client.profile_image.replace('normal_','400_'));
-						$('#profile_image').val(client.profile_image);
-					}
+					// if ( client.profile_image ) {
+					// 	$('#profileImagePreview').attr('src',client.profile_image.replace('normal_','400_'));
+					// 	$('#profileImagePreview').data('src',client.profile_image.replace('normal_','400_'));
+					// 	$('#profile_image').val(client.profile_image);
+					// }
+					if(client=="success"){
 					// alert the user about successfully updated profile
 					alertTheUser("Your profile has been updated successfully.");
+					
+	 	$('.c-z-log-out-email').html($form.find('#pfirst_name').val()+" "+$form.find('#plast_name').val());
 					// update the client icon related to the client settings
-					ClientZone.updateClientIcon();
+					// ClientZone.updateClientIcon();
+				}else{
+					bootbox.alert({
+								title:"Error",
+								message:"It seems there is an internal error. Please retry after some time. Thank you.",
+								backdrop:true
+							});
 				}
 				// Enable the submit button to prevent multiple submit
 				$form.find('button:submit').prop('disabled',false);
@@ -1111,7 +1176,7 @@ $("#show_hide_password2 a").on('click', function(event) {
 		});
 
 		// Browser History Handler
-		BrowserHistoryHandler();
+		// BrowserHistoryHandler();
 
 		$('#profileBtn').click(function(){
 			profileMenu({
@@ -1203,89 +1268,92 @@ $("#show_hide_password2 a").on('click', function(event) {
 					// ShowOrders(response);
 					// set the user profile details
 					if(!response.ec){
-					if($coptions==''){
-						// getCollegeOptions();
-						
-						$.ajax({
-					type: "POST",
-					url: './versions/2/wizard/clientZone/colleges.php',
-					success: function( response ) {
-						var resp=$.parseJSON(response);
-						console.log('coll');
-						if(resp.c){
-							if(!resp.s){
-								bootbox.alert({
-										title:"Error",
-										message:"Could not able to load data. Please retry after some time. Thank you.",
-										backdrop:true
-									});
-								// $('#logload').hide();
-								// $('#efmsg').show();
-							}else{
-								var cres=resp.res,
-								ostr="<option value='Select College'>Select College</option>";
-								for(var i=0;i<cres.length;i++){
-									ostr=ostr+"<option value='"+cres[i]+"'>"+cres[i]+"</option>";
-								}
-								$coptions=ostr;
-								$('#pcollege').html($coptions);
-								$('#pcollege option').eq(0).remove();
-								console.log(response2.client);
-								SetProfile(response2.client);
-								// $('#colleges').html($(ostr));
-								// $('#logload').hide();
-								// $clientPasswordForm.fadeIn();
-							}
-						}else{
-							bootbox.alert({
-										title:"Error",
-										message:"It seems there is an internal error. Please retry after some time. Thank you.",
-										backdrop:true
-									});
-							// $('#logload').hide();
-							// $('#efmsg').show();
-						}
-
-						// window.$resp=resp;
-						// $('#regload').hide();
-					},
-					error:function (jqXHR, exception) {
-								var msg = '';
-								if (jqXHR.status === 0) {
-									msg = 'Not connect.\n Verify Network.';
-								} else if (jqXHR.status == 404) {
-									msg = 'Requested page not found. [404]';
-								} else if (jqXHR.status == 500) {
-									msg = 'Internal Server Error [500].';
-								} else if (exception === 'parsererror') {
-									msg = 'Requested JSON parse failed.';
-								} else if (exception === 'timeout') {
-									msg = 'Time out error.';
-								} else if (exception === 'abort') {
-									msg = 'Ajax request aborted.';
-								} else {
-									msg = 'Uncaught Error.\n' + jqXHR.responseText;
-								}
-								
-							bootbox.alert({
-										title:"Error",
-										message:msg+" Please Try again later. Thank you.",
-										backdrop:true
-									});
-								
-							// $('#logload').hide();
-							// $('#efmsg').show();
-						}
-				});
-		
-					}else{
-						
-						$('#pcollege').html($coptions);
-						$('#pcollege option').eq(0).remove();
 						SetProfile(response.client);
-					}
+				// 	if($coptions==''){
+				// 		// getCollegeOptions();
+						
+				// 		$.ajax({
+				// 	type: "POST",
+				// 	url: './versions/2/wizard/clientZone/colleges.php',
+				// 	success: function( response ) {
+				// 		var resp=$.parseJSON(response);
+				// 		console.log('coll');
+				// 		if(resp.c){
+				// 			if(!resp.s){
+				// 				bootbox.alert({
+				// 						title:"Error",
+				// 						message:"Could not able to load data. Please retry after some time. Thank you.",
+				// 						backdrop:true
+				// 					});
+				// 				// $('#logload').hide();
+				// 				// $('#efmsg').show();
+				// 			}else{
+				// 				var cres=resp.res,
+				// 				ostr="<option value='Select College'>Select College</option>";
+				// 				for(var i=0;i<cres.length;i++){
+				// 					ostr=ostr+"<option value='"+cres[i]+"'>"+cres[i]+"</option>";
+				// 				}
+				// 				$coptions=ostr;
+				// 				$('#pcollege').html($coptions);
+				// 				$('#pcollege option').eq(0).remove();
+				// 				console.log(response2.client);
+				// 				SetProfile(response2.client);
+				// 				// $('#colleges').html($(ostr));
+				// 				// $('#logload').hide();
+				// 				// $clientPasswordForm.fadeIn();
+				// 			}
+				// 		}else{
+				// 			bootbox.alert({
+				// 						title:"Error",
+				// 						message:"It seems there is an internal error. Please retry after some time. Thank you.",
+				// 						backdrop:true
+				// 					});
+				// 			// $('#logload').hide();
+				// 			// $('#efmsg').show();
+				// 		}
+
+				// 		// window.$resp=resp;
+				// 		// $('#regload').hide();
+				// 	},
+				// 	error:function (jqXHR, exception) {
+				// 				var msg = '';
+				// 				if (jqXHR.status === 0) {
+				// 					msg = 'Not connect.\n Verify Network.';
+				// 				} else if (jqXHR.status == 404) {
+				// 					msg = 'Requested page not found. [404]';
+				// 				} else if (jqXHR.status == 500) {
+				// 					msg = 'Internal Server Error [500].';
+				// 				} else if (exception === 'parsererror') {
+				// 					msg = 'Requested JSON parse failed.';
+				// 				} else if (exception === 'timeout') {
+				// 					msg = 'Time out error.';
+				// 				} else if (exception === 'abort') {
+				// 					msg = 'Ajax request aborted.';
+				// 				} else {
+				// 					msg = 'Uncaught Error.\n' + jqXHR.responseText;
+				// 				}
+								
+				// 			bootbox.alert({
+				// 						title:"Error",
+				// 						message:msg+" Please Try again later. Thank you.",
+				// 						backdrop:true
+				// 					});
+								
+				// 			// $('#logload').hide();
+				// 			// $('#efmsg').show();
+				// 		}
+				// });
+		
+				// 	}else{
+						
+				// 		$('#pcollege').html($coptions);
+				// 		$('#pcollege option').eq(0).remove();
+				// 		SetProfile(response.client);
+				// 	}
 				}else{
 					console.log("could not found email");
+					// window.localStorage.clear();
+					// location.reload();
 				}
 					// $.ajax({
 					// 	type: "POST",
@@ -1417,7 +1485,8 @@ function removeRegister(){
 								$('#logload').hide();
 								$('#efmsg').show();
 							}else{
-								var cres=resp.res,
+								$colNameAdd=resp.res;
+								var cres=resp.res.name,
 								ostr="<option value='Select College'>Select College</option>";
 								for(var i=0;i<cres.length;i++){
 									ostr=ostr+"<option value='"+cres[i]+"'>"+cres[i]+"</option>";
@@ -1523,6 +1592,17 @@ function removeRegister(){
 	function ClientLoginHandler() {
 		window.$resendform;
 		// Show the login container
+		$('#colleges').on('change',function(){
+			console.log('change');
+			if($('#colleges').val()=='Select College'){
+				console.log()
+				$('#rcoladdress').html('Please Select a college to view its address.');
+			}else{
+				var ind=$colNameAdd.name.indexOf($('#colleges').val());
+				$('#rcoladdress').html($colNameAdd.address[ind]);
+				$('#rinpcadd').attr('value',$colNameAdd.address[ind]);
+			}
+		});
 		$('#pgload').hide();
 		$loginFormsContainer.show();
 		
@@ -1532,7 +1612,7 @@ function removeRegister(){
 		// Show the password step if the user browse to the URL with it
 		if ( window.location.hash === '#register' ) {
 			$clientEmailForm.hide();
-			
+			getCollegeOptions();
 			$sectiontit.html('Register');
 			$modtit.show();
 			// $clientsignUpForm.hide();
@@ -1837,7 +1917,7 @@ function removeRegister(){
 			// create an Ajax request for sending the email with the password
 			$.ajax({
 				type: "POST",
-				url: '/versions/2/wizard/clientZone/register.php',
+				url: './versions/2/wizard/clientZone/register.php',
 				data: $(this).serialize(),
 				success: function( response ) {
 					// get response
@@ -1863,9 +1943,9 @@ function removeRegister(){
 			$resendPasswordBtn.hide();
 			$resendPasswordLoading.show();
 			var diacont="<div class='modal-header'><h4>Password Resend</h4></div>";
-			diacont+="<div class='modal-body'><p>Enter your email : </p><form id='resendform' novalidate='novalidate'><div class='form-group'><input type='email' spellcheck=false placeholder='example@example.com'  required data-msg-required='Please enter your email.' style='max-width:75%' class='form-control' id='rrem'/></div><div class='form-group' style='padding-top:5px;margin-bottom:0;'><button class='btn btn-primary' id='rrok' type='submit'>Submit</button></div></form></div>";
+			diacont+="<div class='modal-body'><div id='resend-msg' style='display:none;padding:10px;position:absolute;background:#f3cb73;box-shadow:0 6px 18px rgba(0,0,0,0.2);top:0;left:50%;transform:translateX(-50%);padding-top:5px;padding-bottom:5px;'></div><form id='resendform' novalidate='novalidate'><p>Enter your email : </p><div class='form-group'><input type='email' spellcheck=false placeholder='example@example.com'  required data-msg-required='Please enter your email.' style='max-width:75%' class='form-control' id='rrem'/></div><div class='form-group' style='padding-top:5px;margin-bottom:0;'><button type='submit' class='btn btn-primary' style='min-width: 120px;'><span style='display: inline;'>Send</span><i class='ace-icon fa fa-spinner fa-spin' style='display: none;'></i></button></div></form><button class='btn btn-primary' id='close-resend' onclick='return false;' style='min-width: 120px;margin-left: calc(20px + 25%);margin-top:-11.8%;'>Close</button></div>";
 			// diacont+="<div class='modal-footer' style='padding:0;border-top:0;'><button data-bb-handler='cancel' type='button' class='btn btn-default'>Cancel</button></div>";
-
+var dcont2="<div style='display:none;' id='success-resend'><i style='cursor:pointer;' onclick='resendback(evt);' class='fa fa-arrow-left'></i><h3>An email has been sent to your email </h3><div style='padding-top:10px'><button class='btn btn-primary' onclick='resendEmail(evt);' style='min-width:120px;'>Resend</button><button class='btn btn-primary' onclick='closeResend(evt);' style='min-width: 120px;margin-left: 20px;'>Close</button></div></div>";
 			var rrdia=bootbox.dialog({
 				message:diacont,
 				onEscape:function(){
@@ -1874,15 +1954,33 @@ function removeRegister(){
 					
 				}
 			});			
+			// function closeResend(evt){
+				
+			// }
+
 			setTimeout(function(){
 
-			
+			$('#close-resend').on('click',function(evt){
+
+				evt.preventDefault();
+				CustProcessCallback(evt,rrdia,$callb);
+				$resendPasswordLoading.hide();
+					$resendPasswordBtn.show();
+			});
 			$resendform=$('#resendform');
 			$resendform.submit(function(e) {
+				// $form=resend;
 	e.preventDefault();
 	console.log('clicked');
-			$('#rrok').attr('disabled',true);
-			if($resendform.valid()){
+	if(!$resendform.valid()){
+		return;
+	}
+			// $('#rrok').attr('disabled',true);
+			$('#resend-msg').slideUp(200);
+			$resendform.find('button:submit').prop('disabled',true);
+			$resendform.find('button:submit').find('span').hide();
+			$resendform.find('button:submit').find('i').show();
+			
 				console.log('submitting');
 				$.ajax({
 					type:"POST",
@@ -1890,11 +1988,40 @@ function removeRegister(){
 					data:"to="+$('#rrem').val(),
 					success:function(response){
 						console.log(response);
-						CustProcessCallback(e,rrdia,$callb);
+						// console.log("sadd");
+						if(response=='success'){
+						$resendform.find('button:submit').prop('disabled',false);
+			$resendform.find('button:submit').find('span').show();
+			$resendform.find('button:submit').find('i').hide();
+					$resendPasswordLoading.hide();
+					$resendPasswordBtn.show();
+				$('#resend-msg').html('Success').slideDown(200,function(){
+					setTimeout(function(){
+						$('#resend-msg').slideUp(200);
+					},8000);
+				});	
+						}else{
+							
+						$resendform.find('button:submit').prop('disabled',false);
+			$resendform.find('button:submit').find('span').show();
+			$resendform.find('button:submit').find('i').hide();
+							$('#resend-msg').html('Error sending message').slideDown(200,function(){
+					setTimeout(function(){
+						$('#resend-msg').slideUp(200);
+					},20000);
+				});
+						}
+					},error:function(jqXHR,exception){
+						$resendform.find('button:submit').prop('disabled',false);
+			$resendform.find('button:submit').find('span').show();
+			$resendform.find('button:submit').find('i').hide();
 					}
 				});
-			}
-			$('#rrok').attr('disabled',false);
+			
+			
+
+			// $('#rrok').attr('disabled',false);
+
 			});
 			$resendform.validate({
 			errorElement: 'div',
@@ -1912,6 +2039,10 @@ function removeRegister(){
 				error.addClass('help-block');
 
 			// console.log('calling');
+			
+			// $resendform.find('button:submit').prop('disabled',false);
+			// $resendform.find('button:submit').find('span').show();
+			// $resendform.find('button:submit').find('i').hide();
 				if( element.is('input[type=checkbox]') || element.is('input[type=radio]') ) {
 					var controls = element.closest('div[class*="col-"]');
 					console.log("checking");
@@ -2079,7 +2210,7 @@ function removeRegister(){
 			// create an Ajax request for the login and show the orders
 			$.ajax({
 				type: "POST",
-				url: '/versions/2/wizard/clientZone/register.php',
+				url: './versions/2/wizard/clientZone/register.php',
 				data: $(this).serialize(),
 				success: function( response ) {
 					// convert from string to JSON
@@ -2097,7 +2228,7 @@ function removeRegister(){
 									$('#clientRegisterForm .form-group').eq(2).addClass('has-error');
 									$('#clientRegisterForm .form-group').eq(2).append("<div class='help-block help-block-email'>Email is already taken.</div>");
 									var offset = findBootstrapEnvironment() != 'xs' ? menuScrollOffset : menuScrollOffset_mobile;
-									$('html, body').stop().animate({
+									$('html body').stop().animate({
 										scrollTop: ($('#clientRegisterForm .form-group').eq(1).offset().top - offset)
 									}, 1250, 'easeInOutExpo');
 								}else{
@@ -2177,14 +2308,16 @@ function removeRegister(){
 		 // set values
 		 console.log("camr");
 	 	if ( client.profile_image ) {
-	 		$('#profileImagePreview').attr('src',client.profile_image.replace('normal_','400_'));
-	 		$('#profileImagePreview').data('src',client.profile_image.replace('normal_','400_'));
+	 		$('#profileImagePreview').attr('src',client.profile_image);
+	 		$('#profileImagePreview').data('src',client.profile_image);
 	 		$('#profile_image').val(client.profile_image);
 	 	}
 	 	$('#pfirst_name').val(client.first_name);
 	 	$('#plast_name').val(client.lastName);
 	 	$('#pphno').val(client.phno);
-	 	$('#paddress').val(client.address);
+		 $('#paddress').val(client.address);
+		 $('#pcoladdress').html(client.collegeaddress);
+		//  $('#inpcadd').attr('value',)
 	 	// if ( $('#country option[value="'+client.country+'"]').length !== 0 ) {
 			 $('#pcollege').val(client.college);
 			 $('#pgender').val(client.gender);
@@ -2192,7 +2325,7 @@ function removeRegister(){
 		 $('#pemail').val(client.email);
 		 
 	 	$('#unsubscribe').prop('checked',client.unsubscribe != '1');
-	 	$('.c-z-log-out-email').html(client.email);
+	 	$('.c-z-log-out-email').html(client.first_name+" "+client.lastName);
 		 $('#nickname').val(client.nickname);
 		 $('.page-loading-icon').hide();
 		 $('.profile').show();
@@ -3173,14 +3306,12 @@ function removeRegister(){
         // add click event to remove client profile image
         $removeImgBtn.click(function() {
         	// get object
-        	var defaultPreviewImage = "#\/\/cdn-cms-s.f-static.com\/versions\/2\/wizard\/clientZone\/images\/noImage.png";
+        	var defaultPreviewImage = "./cdn-cms-s.f-static.com/versions/2/wizard/clientZone/images/noImage.png";
         	// remove client profile image via AJAX
 			$.ajax({
 				type: "POST",
-				url: "/versions/2/wizard/clientZone/removeClientProfileImage.php",
-				data: { 
-					websiteID : "2630165",
-					w : ""				},
+				url: "./versions/2/wizard/clientZone/removeClientProfileImage.php",
+				data: "email="+$('#pemail').val(),
 				success: function( data ) {
 					if ( data == 'success' ) {
 						// reset the file input
@@ -3191,7 +3322,7 @@ function removeRegister(){
 						$('#profileImagePreview').attr('src',defaultPreviewImage);
 						$('#profileImagePreview').data('src',defaultPreviewImage);
 						// update the client icon related to the client settings
-						ClientZone.updateClientIcon();
+						// ClientZone.updateClientIcon();
 					} 
 				}
 			});
@@ -3340,10 +3471,15 @@ function removeRegister(){
 						// parse the JSON response
 	        			var dataObj = jQuery.parseJSON(data);
 						// update the new image URL
-	        			that.$img.attr('src',dataObj.profile_image.replace('normal_','400_'));
-	        			that.$img.data('src',dataObj.profile_image.replace('normal_','400_'));
+	        			that.$img.attr('src',dataObj.client.profile_image);
+	        			that.$img.data('src',dataObj.client.profile_image);
 	        			// update the client icon related to the client settings
 						ClientZone.updateClientIcon();
+						// var wli=window.localStorage.getItem('wasche-services');
+						// wli=$.parseJSON(wli);
+						// console.log(wli);
+						// wli["profile_image"]=dataObj.profile_image;
+						// window.localStorage.setItem('wasche-services',JSON.stringify(wli));
 	        			// fix target element CSS
 						that.$img.css('opacity','1');
 						that.$html.hide();
