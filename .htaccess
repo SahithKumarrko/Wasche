@@ -1,10 +1,14 @@
+Options +FollowSymLinks -MultiViews
 
 RewriteEngine On
+
 DirectoryIndex index.php index.html
+ 
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php [NC,L]
+RewriteRule ^([0-9A-Za-z_-]+) $1.php [NC,L]
+
 ErrorDocument 400 https://wasche-services.herokuapp.com/errors/400.php
 ErrorDocument 401 https://wasche-services.herokuapp.com/errors/401.php
 ErrorDocument 403 https://wasche-services.herokuapp.com/errors/403.php
