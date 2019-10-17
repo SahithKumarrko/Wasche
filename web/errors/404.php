@@ -591,7 +591,7 @@ function repeatReverse(text, n) {
 
 $('#pgload').hide();
 
-showEror("The requested is not found...","Please visit the home page...Wasche");
+showEror("The requested file is not found...","Please visit the home page...Wasche");
 		
 });
     // S123 Uploader Handler
