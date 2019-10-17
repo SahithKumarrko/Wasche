@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" class="inside_page inside_page_header_design s_layout1 ">
+<html dir="ltr" lang="en" class="inside_page inside_page_header_design s_layout1 resend-page-lay">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head> 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
