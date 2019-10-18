@@ -30,7 +30,7 @@ if(isset($_POST['i'])){
         }else{
             $result['g']=true;
             $result["e"]=$res["email"];
-            mysqli_query($con,"delete from resendPassword where hash='$hash'");
+            // mysqli_query($con,"delete from resendPassword where hash='$hash'");
         }
     }
     mysqli_commit($con);

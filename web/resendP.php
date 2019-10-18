@@ -652,6 +652,7 @@ function repeatReverse(text, n) {
 							if(response.g){
                                 $('#section--slogan').html('Password reset for : '+response.e);
                                 
+                        $('.modulesTitle .text-center').show();
                         $('#loginFormsContainer').show();
 
                         $('#clientLoginForm').show();
@@ -744,20 +745,74 @@ $("#show_hide_password2 a").on('click', function(event) {
         $('#show_hide_password2 i').addClass( "fa-eye" );
     }
 });
+
+// $('#reclientPassword').on('keypress',function(e){
+//     console.log("C");
+//     var cc=0;
+    
+//     $('#clientLoginForm .form-group').eq(1).removeClass('has-error');
+//         $('#clientLoginForm .form-group').eq(1).find('.help-block').remove();
+//     if($('#clientPassword').val()!=''){
+//         cc=1;
+//         if($('#reclientPassword').val()!=$('#clientPassword').val()){
+//             cc=2;
+//         if(!($('#clientLoginForm .form-group').eq(1).hasClass('has-error'))){
+//             $('#clientLoginForm .form-group').eq(1).addClass('has-error');
+// 			$('#clientLoginForm .form-group').eq(1).append("<div id='clientPassword-error' class='help-block'>Password does not match.</div>");
+//             $('#clientLoginForm .form-group').eq(1).addClass('has-error');            
+//             cc=2;
+//         }
+//     }else if($('#reclientPassword').val()==''){
+//         cc=3;
+//         $('#clientLoginForm .form-group').eq(1).removeClass('has-error');
+//         $('#clientLoginForm .form-group').eq(1).find('.help-block').remove();
+//         $('#clientLoginForm .form-group').eq(1).addClass('has-error');
+// 		$('#clientLoginForm .form-group').eq(1).append("<div id='clientPassword-error' class='help-block'>This field is required.</div>");
+//     }
+//     else{
+//         cc=4;
+//         $('#clientLoginForm .form-group').eq(1).removeClass('has-error');
+//         $('#clientLoginForm .form-group').eq(1).find('.help-block').remove();
+//     }
+//     }
+// console.log(cc);
+// });
+
 		$clientEmailForm.validate({
 			errorElement: 'div',
 			errorClass: 'help-block',
 			focusInvalid: true,
 			ignore: "",
 			highlight: function (e) {
-				$(e).closest('.form-group').removeClass('has-info').addClass('has-error');
+                $(e).closest('.form-group').removeClass('has-info').addClass('has-error');
+                console.log('cc');
 			},
 			success: function (e) {
 				$(e).closest('.form-group').removeClass('has-error');
 				$(e).remove();
 			},
 			errorPlacement: function (error, element) {
-				error.addClass('help-block');
+                error.addClass('help-block');
+                
+                // $('#clientLoginForm .form-group').eq(1).removeClass('has-error');
+                //     $('#clientLoginForm .form-group').eq(1).find('.help-block').remove();
+                // cc=0;
+                if($('#clientLoginForm .form-group').eq(1).hasClass('has-error')){
+                    $('#clientLoginForm .form-group').eq(1).removeClass('has-error');
+                    $('#clientLoginForm .form-group').eq(1).find('.help-block').remove();
+                    console.log('removing');
+                }
+                // if(element.is('#reclientPassword') && $('#clientPassword').val()!='' && $('#reclientPassword').val()!='' && cc==0 && $('#clientPassword').val()!=$('#reclientPassword').val() ){
+                //     // cc=1;
+                //     console.log('2');
+                //     $('#clientLoginForm .form-group').eq(1).addClass('has-error');
+				// 		$('#clientLoginForm .form-group').eq(1).append("<div id='clientPassword-error' class='help-block'>Password does not match.</div>");
+							
+                // }
+                console.log('checking');
+                // if(element.is('input[name=reclientPassword]') && ){
+				// 	error.appendTo(element.closest('.form-group'));
+                // }
 				if( element.is('input[type=checkbox]') || element.is('input[type=radio]') ) {
 					var controls = element.closest('div[class*="col-"]');
 					if( controls.find(':checkbox,:radio').length > 1 ) controls.append(error);
@@ -775,41 +830,47 @@ $("#show_hide_password2 a").on('click', function(event) {
 			},
 			submitHandler: function( form ) {
 				var $form = $(form);
-				$('#clientLoginForm .page-loading-icon').show();
+                $('#clientLoginForm .page-loading-icon').show();
+                
+                $('#clientLoginForm .form-group').eq(1).removeClass('has-error');
+                    $('#clientLoginForm .form-group').eq(1).find('.help-block').remove();
+                if($('#reclientPassword').val()!=$('#clientPassword').val()){
+                    console.log('c');
+                    
+                $('#clientLoginForm .page-loading-icon').hide();
+                    $('#clientLoginForm .form-group').eq(1).addClass('has-error');
+					$('#clientLoginForm .form-group').eq(1).append("<div id='clientPassword-error' class='help-block'>Password does not match.</div>");
+						return;
+                }
 				event.preventDefault();
 				$clientEmailForm.find('button:submit').prop('disabled',true);
 				$.ajax({
 					type: "POST",
-					url: './versions/2/wizard/clientZone/resendPassword.php',
+					url: './versions/2/wizard/clientZone/resetPassword.php',
 					data: $form.serialize(),
 					success: function( response ) {
 						var res2=response;
 						var response = $.parseJSON(response);
 						if(response.c){
-							if(response.ee){
-								$('#clientLoginForm .form-group').eq(0).addClass('has-error');
-								$('#clientLoginForm .form-group').eq(0).append("<div id='clientEmail-error' class='help-block'>Email format is not valid.</div>");
-							}else{
+							
 								if(response.g){
 									bootbox.alert({
 										title:"Success!",
-										message:"Successfully logged in. Redirecting you...",
+										message:"Your password has been changed successfully. Taking you to login form ...",
+										backdrop:true
+                                    });
+                                document.location.href='index4cd7.php';
+                                setTimeout(function(){
+                                    location.reload();
+                                },1500);
+                                
+                                }else{
+                                    bootbox.alert({
+										title:"Error!",
+										message:"We are facing some issues in changing your password. Please try again.",
 										backdrop:true
 									});
-								window.localStorage.setItem('wasche-services',res2);
-								setTimeout(function(){
-									location.reload();
-								},1500);
-								}else{
-									if(response.ie){
-								$('#clientLoginForm .form-group').eq(0).addClass('has-error');
-								$('#clientLoginForm .form-group').eq(0).append("<div id='clientEmail-error' class='help-block'>Invalid Email.</div>");
-									}else{
-								$('#clientLoginForm .form-group').eq(1).addClass('has-error');
-								$('#clientLoginForm .form-group').eq(1).append("<div id='clientPassword-error' class='help-block'>Invalid Password.</div>");
-									}
-								}
-							}
+                                }
 						}else{
 							bootbox.alert({
 										title:"Error",
