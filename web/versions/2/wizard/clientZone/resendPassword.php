@@ -1,6 +1,6 @@
 <?php
 
-use function PHPSTORM_META\type;
+// use function PHPSTORM_META\type;
 
 require('./connection.php');
 $result=["c"=>true,"g"=>false,"e"=>""];
@@ -19,7 +19,7 @@ if(isset($_POST['i'])){
         // $cur=new DateTime(date('H:i:s'));
         // $interval = $sent->diff($cur);
         $sent=strtotime($res['dateSent']);
-        $cur=strtotime(date('H:i:s'));
+        $cur=strtotime(date('m/d/Y h:i:s a', time()));
         $inter=abs($sent-$cur);
         // $inter=($interval->h)*60 + ($interval->s);
         // $result['in']=type($inter);
@@ -27,6 +27,7 @@ if(isset($_POST['i'])){
         // $result['inn']=$inter;
         if($inter>(30*60)){
             $result['g']=false;
+            mysqli_query($con,"delete from resendPassword where hash='$hash'");
         }else{
             $result['g']=true;
             $result["e"]=$res["email"];

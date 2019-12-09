@@ -1,6 +1,7 @@
 create table if not exists users(email varchar(40) PRIMARY KEY,pswd varchar(40),first_name varchar(20),lastName varchar(20),phno varchar(15),gender varchar(7),college varchar(100),collegeaddress varchar(100),address varchar(90) Default 'None',unsubscribe varchar(5) Default 'on');
 create table user_images(email varchar(40),image longblob,type varchar(6));
 create table colleges(name varchar(100) primary key,address varchar(100));
-create table resendPAssword(id int auto_increment primary key,hash varchar(40),email varchar(40),dateSent varchar(15));
+create table resendPassword(id int auto_increment primary key,hash varchar(40),email varchar(40),dateSent varchar(25));
 date_default_timezone_set("Asia/Calcutta");
 create table subscribers(email varchar(40));
+create table contact(name varchar(40),email varchar(60),subject varchar(150),msg varchar(1000),date_sent varchar(25));

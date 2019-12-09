@@ -1484,6 +1484,7 @@ function removeRegister(){
 									});
 								$('#logload').hide();
 								$('#efmsg').show();
+								$clientPasswordForm.hide();
 							}else{
 								$colNameAdd=resp.res;
 								var cres=resp.res.name,
@@ -1503,6 +1504,7 @@ function removeRegister(){
 									});
 							$('#logload').hide();
 							$('#efmsg').show();
+							$clientPasswordForm.hide();
 						}
 
 						// window.$resp=resp;
@@ -1534,6 +1536,7 @@ function removeRegister(){
 								
 							$('#logload').hide();
 							$('#efmsg').show();
+							$clientPasswordForm.hide();
 						}
 				});
 				
@@ -2253,7 +2256,7 @@ var dcont2="<div style='display:none;' id='success-resend'><i style='cursor:poin
 									});
 									
 								$clientPasswordForm.hide();
-							// $('#regload').hide();
+							$('#regload').hide();
 							$('#efmsg').show();
 						}
 

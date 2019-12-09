@@ -29990,6 +29990,9 @@ function MailingModuleInitialize() {
                         var websiteID = $form.find('input[name="websiteID"]').val();
                         var w = $form.find('input[name="w"]').val();
                         $form.find('button:submit').prop('disabled', true);
+                        
+                        $form.find('button:submit').find('span').hide();
+                        $form.find('button:submit').find('i').fadeIn();
                         $.ajax({
                             type: 'POST',
                             url: './subscribe.php',
@@ -30003,36 +30006,82 @@ function MailingModuleInitialize() {
                                 if(respondedMessage=='success'){
                                 var outPutHTML = "Your Subcription is confirmed. We are excited to see how you use the services.";
                                 $form.trigger("reset");
-                                bootbox.alert({
-                                    title: translations.sent,
-                                    message: outPutHTML,
-                                    className: 'contactUsConfirm',
-                                    backdrop: true,
-                                        buttons: {
-                                            ok: {
-                                                label: 'OK',
-                                                className: 'btn-primary'
-                                            }
-                                        }
-                                });
+                                // bootbox.alert({
+                                //     title: translations.sent,
+                                //     message: outPutHTML,
+                                //     className: 'contactUsConfirm',
+                                //     backdrop: true,
+                                //         buttons: {
+                                //             ok: {
+                                //                 label: 'OK',
+                                //                 className: 'btn-primary'
+                                //             }
+                                //         }
+                                // });
+
+                                // $('#cf-submit').remove();
+                                // $form.find('button:submit').find('span').fadeIn();
+                                // $form.find('button:submit').find('i').hide();
+                                $form.find('.form-group').remove();
+					//and show the mail success div with fadeIn
+					$('#mail-success2').fadeIn(500);
                             }else{
                                 // $form.trigger("reset");
-                                bootbox.alert({
-                                    title: "<b>Error!</b>",
-                                    message: "<h3>There was an error while creation a subscription for you.</h3>Please try again by reloading the page or check your email correctly.",
-                                    className: 'contactUsConfirm',
-                                    backdrop: true,
-                                        buttons: {
-                                            ok: {
-                                                label: 'OK',
-                                                className: 'btn-primary'
-                                            }
-                                        }
-                                });
+                                // bootbox.alert({
+                                //     title: "<b>Error!</b>",
+                                //     message: "<h3>There was an error while creation a subscription for you.</h3>Please try again by reloading the page or check your email correctly.",
+                                //     className: 'contactUsConfirm',
+                                //     backdrop: true,
+                                //         buttons: {
+                                //             ok: {
+                                //                 label: 'OK',
+                                //                 className: 'btn-primary'
+                                //             }
+                                //         }
+                                // });
+                                $form.find('button:submit').attr('value','Try again');
+                                $form.find('button:submit').html('Try again');
+                                
+                                $form.find('button:submit').find('span').fadeIn();
+                                $form.find('button:submit').find('i').hide();
+                                //and show the mail success div with fadeIn
+                                $('#mail-fail2').fadeIn(500);
                             }
-                            }
+                            
+
+                        $form.find('button:submit').prop('disabled', false);
+                            },
+                            error:function (jqXHR, exception) {
+                                var msg = '';
+                                if (jqXHR.status === 0) {
+                                    msg = 'Not connect.\n Verify Network.';
+                                } else if (jqXHR.status == 404) {
+                                    msg = 'Requested page not found. [404]';
+                                } else if (jqXHR.status == 500) {
+                                    msg = 'Internal Server Error [500].';
+                                } else if (exception === 'parsererror') {
+                                    msg = 'Requested JSON parse failed.';
+                                } else if (exception === 'timeout') {
+                                    msg = 'Time out error.';
+                                } else if (exception === 'abort') {
+                                    msg = 'Ajax request aborted.';
+                                } else {
+                                    msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                                }
+                                
+                                $form.find('button:submit').attr('value','Try again');
+                                $form.find('button:submit').html('Try again');
+                                //and show the mail success div with fadeIn
+                                $('#mail-fail2').fadeIn(500);
+                                
+                                $form.find('button:submit').find('span').fadeIn();
+                                $form.find('button:submit').find('i').hide();
+                        $form.find('button:submit').prop('disabled', false);
+                        }
                         });
                     }
+                    
+            
                 });
             });
         }
@@ -30304,7 +30353,7 @@ function GetMenuPosition() {
  * he click on the first button in the homepage.
  */
 function MoveFirstSection(sectionNUM) {
-    var $pages = $('#s123ModulesContainer > section');
+    var $pages = $('section');
     if ($pages.length === 0) return;
     if (!sectionNUM) sectionNUM = 1;
     /**
@@ -30335,7 +30384,7 @@ function MoveFirstSection(sectionNUM) {
 }
 
 function MoveFirstSectionOrRedirect(url) {
-    var $pages = $('#s123ModulesContainer > section');
+    var $pages = $('section');
     /**
      * Scroll Offset - Some layouts has some padding that we need to scroll up
      * to it, and on mobile it will be always 60 because we have the same layout.
@@ -30452,6 +30501,7 @@ function activeDropDownMenusAction_open(e, $this) {
  * trigger the `s123.page.ready` event.
  *
  */
+
 function RemoveScriptsResidues() {
     $('body > .tooltip').remove();
 }
@@ -30583,6 +30633,15 @@ location.reload();
     // ClientZone.updateClientIcon();
 
 });
+
+$('li.nav-item a').on('click',function(){ 
+$('li.nav-item a.isactive').removeClass('isactive'); 
+$(this).addClass('isactive'); 
+id = $(this).attr('data-cust-id');
+$('.slides').scrollTo("#"+id); 
+return false;
+});
+
 function CustProcessCallback(e, dialog, callback) {
     e.stopPropagation();
     e.preventDefault();

@@ -378,7 +378,8 @@
 								</div>
 						</div>
 						<!-- <input type="password" id="clientPassword" name="clientPassword" value="" class="form-control" placeholder="*************" style="max-width:310px;margin: 0 auto;margin-top:10px;" required data-msg-required="Please enter your password"/>  -->
-					 </div>
+                     </div>
+                     <input type='hidden' value="" id='email' name='email' />
                <!-- Submit --> 
                <div style="margin-top:10px;"class="form-group"> 
 				   <button type="submit" class="btn btn-primary">
@@ -656,6 +657,7 @@ function repeatReverse(text, n) {
                         $('#loginFormsContainer').show();
 
                         $('#clientLoginForm').show();
+                        $('#email').val(response.e);
                         
 							}else{
                                 $('#section--slogan').html('This link is expired please visit the login page and try again. Thank you.');
@@ -859,10 +861,11 @@ $("#show_hide_password2 a").on('click', function(event) {
 										message:"Your password has been changed successfully. Taking you to login form ...",
 										backdrop:true
                                     });
-                                document.location.href='index4cd7.php';
                                 setTimeout(function(){
-                                    location.reload();
-                                },1500);
+                                    console.log('ccc');
+                                document.location.href='index4cd7.php';
+                                // location.reload();
+                                },3500);
                                 
                                 }else{
                                     bootbox.alert({
@@ -874,7 +877,7 @@ $("#show_hide_password2 a").on('click', function(event) {
 						}else{
 							bootbox.alert({
 										title:"Error",
-										message:"It seems there is an internal error. Please login after some time. Thank you.",
+										message:"It seems there is an internal error. Please try after some time. Thank you.",
 										backdrop:true
 									});
 						}

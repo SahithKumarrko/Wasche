@@ -19,6 +19,17 @@
     <!-- 167px icon -->
     <link rel="apple-touch-icon" sizes="167x167" href="./cdn-cms.f-static.com/ready_uploads/pwaScreenLogo/167_167_000000_ffffff_W-v22.png?width=167&amp;height=167&amp;resizeType=pwaIcon&amp;w=&amp;orderScreen=&amp;websiteID=2630165&amp;tranW=&amp;v=n5670_11928280">
     <!-- Mobile Browser Address Bar Color -->
+    <link rel="stylesheet" href="./plugins/themefisher-font/style.css">
+		<!-- bootstrap.min css -->
+        <!-- <link rel="stylesheet" href="./plugins/bootstrap/dist/css/bootstrap.min.css"> -->
+		<!-- Animate.css -->
+        <link rel="stylesheet" href="./plugins/animate-css/animate.css">
+        <!-- Magnific popup css -->
+        <link rel="stylesheet" href="./plugins/magnific-popup/dist/magnific-popup.css">
+		<!-- Slick Carousel -->
+        <link rel="stylesheet" href="./plugins/slick-carousel/slick/slick.css">
+        <link rel="stylesheet" href="./plugins/slick-carousel/slick/slick-theme.css">
+	
     <meta name="theme-color" content="#019875">
     <!-- Regular Meta Info -->
     <title class="s123-js-pjax">Wasche</title>
@@ -477,6 +488,26 @@
 	"reviewGorgeous": "gorgeous",
    "popupButtonSelected": "Select"	};</script><!-- JavaScript Translations Object --> <!-- Minimize JS files --> <script src="./cdn-cms-s.f-static.com/versions/2/js/minimize625f.js"></script> <!-- Website Statistics --> 
    <!-- <script type="text/javascript" src="../cdn-cms-s.f-static.com/versions/2/wizard/statistics/js/generateStats625f.js" crossorigin="anonymous"></script>  -->
-   <!-- Pjax Helper --><div class="s123-front-last-element hidden"></div></body>
+   <!-- Pjax Helper --><div class="s123-front-last-element hidden"></div>
+   <script type="text/javascript" src="./plugins/slick-carousel/slick/slick.min.js"></script>
+		<!-- Portfolio Filtering -->
+		<script type="text/javascript" src="./plugins/mixitup/dist/mixitup.min.js"></script>
+		<!-- Smooth Scroll -->
+		<script type="text/javascript" src="./plugins/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+		<!-- Magnific popup -->
+		<script type="text/javascript" src="./plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+		<!-- Google Map API -->
+		<!-- <script type="text/javascript"  src="./http://maps.google.com/maps/api/js?sensor=false"></script> -->
+		<!-- Sticky Nav -->
+		<script type="text/javascript" src="./plugins/Sticky/jquery.sticky.js"></script>
+		<!-- Number Counter Script -->
+		<script type="text/javascript" src="./plugins/count-to/jquery.countTo.js"></script>
+		<!-- wow.min Script -->
+		<script type="text/javascript" src="./plugins/wow/dist/wow.min.js"></script>
+		<!-- Custom js -->
+		<script type="text/javascript" src="./js/script.js"></script>
+		
+
+</body>
 <!-- Mirrored from 5d9844d886969.site123.me/about by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Oct 2019 11:39:03 GMT -->
 </html>

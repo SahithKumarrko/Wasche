@@ -25,6 +25,7 @@ if(!$con){
             }
         }else{
             $result['client']=mysqli_fetch_assoc($q);
+            mysqli_query($con,"delete from resendPassword where email='$email'");
             // unset($result['client']['pswd']);
             // $q=mysqli_query($con,"select image from user_images where email='$email'");
             // if(mysqli_num_rows($q)!=0){

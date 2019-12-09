@@ -1,0 +1,2 @@
+pinkish : #e91e63
+blueish : #2196f3

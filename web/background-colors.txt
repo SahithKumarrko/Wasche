@@ -1,0 +1,6 @@
+backgrounds linear gradient
+
+
+pinkish : 45deg #3503ad #f7308c
+greenish : 45deg #ccff00 #09afff
+orangish : 45deg #e91e63 #ffeb3b
