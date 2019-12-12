@@ -71,7 +71,7 @@ try {
    //  $em2=urlencode("https://wasche-services.herokuapp.com/resendP#".$em);
    //  echo $em;
    //  echo "href=".$em;
-    $btn="<div style='display:block;width:fit-content;margin-top:20px;'><a href='#' onclick='console.log(\"Sdsad\");' style='cursor:pointer;padding:10px;text-transform:uppercase;font-size:14px;color:white;background:#019875;outline:none;border-radius:5px;border:1px solid #019875;text-decoration:none;'><span>Reset Password</sapn></a></p></div>";
+    $btn="<div style='display:block;width:fit-content;margin-top:20px;'><a href='#' onclick='console.log(\"Sdsad\");' style='cursor:pointer;padding:10px;text-transform:uppercase;font-size:14px;color:white;background:#019875;outline:none;border-radius:5px;border:1px solid #019875;text-decoration:none;'><span>Contact Information.</sapn></a></p></div>";
     $msg="<style>@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');</style>";       
     $msg=$msg."<div style=\"font-family:'Open Sans',Arial,sans-serif;\"><div style='min-height:4rem;width:100%;display:block;border-bottom:1px solid #c5c5c5;margin-bottom:10px;'><div style='width:fit-content;height:fit-content;margin:auto;display:flex;justify-content:center;align-content:center;'><a href='https://wasche-services.herokuapp.com' style='color:black;font-size:1.6rem;text-decoration:none;text-transform:uppercase;letter-spacing:2px;font-weight:bold;padding:0;margin:0;text-shadow:1px 1px 1px rgba(0,0,0,0.1);'>Wasche</a></div></div>";
     $msg=$msg."<h3 style='margin-bottom:5px;padding:5px;'>Thank you for contacting us.</h3><h5> We will be in touch with you shortly.<br>In the mean time explore our services.<br><br>Thank you.</div>";                      // Set email format to HTML

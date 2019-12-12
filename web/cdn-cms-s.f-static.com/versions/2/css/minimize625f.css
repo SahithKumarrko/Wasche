@@ -32675,4 +32675,32 @@ article.wow:hover span:nth-child(3){
   }
   
   /*# sourceMappingURL=maps/style.css.map */
-  
+
+
+  #mob-fname{
+    margin-top:8px;
+}
+.mob-menu-ul{
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    border-radius:5px;
+}
+
+.mob-menu-ul li{
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.mob-menu-ul li a{
+    /* font-size: 18px !important; */
+    padding:4px 0 !important;
+}
+.c2l:before{
+    background:transparent !important;
+    right: 0px;
+    border:0;
+    top: -12px;
+    transform: rotate(0deg);
+    width: 30px;
+    height: 12px;
+    /* width:0 !important; */
+    /* height :0 !important; */
+}

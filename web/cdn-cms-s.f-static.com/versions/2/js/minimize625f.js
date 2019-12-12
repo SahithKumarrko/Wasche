@@ -32597,6 +32597,11 @@ function homepageRandomTextAction(t, hasStop) {
     }
 }
 
+if(window.localStorage.getItem('wasche-services')){
+    if($('title').html().includes('About') || $('title').html().includes('Services')){
+    $('.moduleMenu.active').removeClass('active');
+    }
+}
 /**
  * Client Zone Class.
  */
@@ -32628,13 +32633,34 @@ var ClientZone = function() {
         console.log($client);
         $clientZoneLink.removeAttr('data-image');
         $clientZoneLink.removeAttr('data-letters');
-        // if ($client.client.profile_image) {
-        //     $clientZoneLink.attr('data-image', 'true');
-        //     $clientZoneLink.css('background-image', $client.client.profile_image);
-        // } else
+        var alink=$('.male-avatar').parent();
+        $(alink).find('img').remove();
+        $('.male-avatar').css('display','none');
+        $('.female-avatar').css('display','none');
+        if ($client.profile_image!='') {
+            
+            $(alink).append('<img></img>');
+            $(alink).find('img').attr('src',$client.profile_image);
+            $(alink).find('img').css('width','70px');
+            $(alink).find('img').css('height','70px');
+            $(alink).find('img').css('border-radius','100%');
+            $(alink).find('img').css('position','relative');
+        }
+        else{
+            if($client.client.gender=='Male' || $client.client.gender=='male'){
+                $('.male-avatar').show();
+            }
+            else{
+                $('.female-avatar').show();
+            }
+        }
+        if($client.client.email){
+            $('#mob-email').html($client.client.email);
+        }
          if ($client.client.first_name) {
             $clientZoneLink.attr('data-letters', $client.client.first_name[0]);
             $clientZoneLink.css('background-image', '');
+            $('#mob-fname').html($client.client.first_name);
         } else if ($client.client.email) {
             $clientZoneLink.attr('data-letters', $client.client.email[0]);
             $clientZoneLink.css('background-image', '');
