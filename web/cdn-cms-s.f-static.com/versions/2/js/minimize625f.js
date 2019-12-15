@@ -30589,7 +30589,7 @@ jQuery(function($) {
     ActiveLanguageButton();
     PageScrollByClick();
     RefreshScrollSpy();
-    s123MobileMenu.init();
+    // s123MobileMenu.init();
     RefreshParallaxImages();
     RefreshAOS();
     MutationObserverHandler();
@@ -30619,7 +30619,9 @@ jQuery(function($) {
 $(window).load(function() {
     TriggerS123PageLoad();
 });
-
+	
+$('.mobile-menu-btn').on('click',function(){$('.mobile-nav-cust').removeClass('collapse');$('.mobile-nav-cust').addClass('show');});
+$('#mobile-nav-close').on('click',function(){ $('.mobile-nav-cust').addClass('hide'); setTimeout(function(){ $('.mobile-nav-cust').removeClass('hide') ; $('.mobile-nav-cust').removeClass('show'); $('.mobile-nav-cust').addClass('collapse');},1000); });
 $('.top-logout-btn').on('click',function(){
     window.localStorage.removeItem('wasche-services');
     window.localStorage.clear();
@@ -32601,7 +32603,119 @@ if(window.localStorage.getItem('wasche-services')){
     if($('title').html().includes('About') || $('title').html().includes('Services')){
     $('.moduleMenu.active').removeClass('active');
     }
+}else{
+    $('.client-zone-link').remove();
 }
+
+
+// var Navbar = function() {
+//         var a = $(".navbar-nav, .navbar-nav .nav"),
+//             t = $(".navbar .collapse"),
+//             e = $(".navbar .dropdown");
+//         t.on({
+//             "show.bs.collapse": function() {
+//                 ! function(e) {
+//                     e.closest(a).find(t).not(e).collapse("hide")
+//                 }($(this))
+//             }
+//         }), e.on({
+//             "hide.bs.dropdown": function() {
+//                 ! function(e) {
+//                     var a = e.find(".dropdown-menu");
+//                     a.addClass("close"), setTimeout(function() {
+//                         a.removeClass("close")
+//                     }, 200)
+//                 }($(this))
+//             }
+//         })
+//     }(),
+//     NavbarCollapse = function() {
+//         $(".navbar-nav");
+//         var e = $(".navbar .collapse");
+//         e.length && (e.on({
+//             "hide.bs.collapse": function() {
+//                 ! function(e) {
+//                     e.addClass("collapsing-out")
+//                 }(e)
+//             }
+//         }), e.on({
+//             "hidden.bs.collapse": function() {
+//                 ! function(e) {
+//                     e.removeClass("collapsing-out")
+//                 }(e)
+//             }
+//         }))
+//     }(),
+//     noUiSlider = function() {
+//         if ($(".input-slider-container")[0] && $(".input-slider-container").each(function() {
+//                 var e = $(this).find(".input-slider"),
+//                     a = e.attr("id"),
+//                     t = e.data("range-value-min"),
+//                     o = e.data("range-value-max"),
+//                     n = $(this).find(".range-slider-value"),
+//                     r = n.attr("id"),
+//                     l = n.data("range-value-low"),
+//                     i = document.getElementById(a),
+//                     s = document.getElementById(r);
+//                 noUiSlider.create(i, {
+//                     start: [parseInt(l)],
+//                     connect: [!0, !1],
+//                     range: {
+//                         min: [parseInt(t)],
+//                         max: [parseInt(o)]
+//                     }
+//                 }), i.noUiSlider.on("update", function(e, a) {
+//                     s.textContent = e[a]
+//                 })
+//             }), $("#input-slider-range")[0]) {
+//             var e = document.getElementById("input-slider-range"),
+//                 a = document.getElementById("input-slider-range-value-low"),
+//                 t = document.getElementById("input-slider-range-value-high"),
+//                 o = [a, t];
+//             noUiSlider.create(e, {
+//                 start: [parseInt(a.getAttribute("data-range-value-low")), parseInt(t.getAttribute("data-range-value-high"))],
+//                 connect: !0,
+//                 range: {
+//                     min: parseInt(e.getAttribute("data-range-value-min")),
+//                     max: parseInt(e.getAttribute("data-range-value-max"))
+//                 }
+//             }), e.noUiSlider.on("update", function(e, a) {
+//                 o[a].textContent = e[a]
+//             })
+//         }
+//     }(),
+//     Popover = function() {
+//         var e = $('[data-toggle="popover"]'),
+//             t = "";
+//         e.length && e.each(function() {
+//             ! function(e) {
+//                 e.data("color") && (t = "popover-" + e.data("color"));
+//                 var a = {
+//                     trigger: "focus",
+//                     template: '<div class="popover ' + t + '" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+//                 };
+//                 e.popover(a)
+//             }($(this))
+//         })
+//     }(),
+//     ScrollTo = function() {
+//         var e = $(".scroll-me, [data-scroll-to], .toc-entry a");
+//         e.length && e.on("click", function() {
+//             ! function(e) {
+//                 var a = e.attr("href"),
+//                     t = e.data("scroll-to-offset") ? e.data("scroll-to-offset") : 0,
+//                     o = {
+//                         scrollTop: $(a).offset().top - t
+//                     };
+//                 $("html, body").stop(!0, !0).animate(o, 600), event.preventDefault()
+//             }($(this))
+//         })
+//     }(),
+//     Tooltip = function() {
+//         var e = $('[data-toggle="tooltip"]');
+//         e.length && e.tooltip()
+//     }();
+
 /**
  * Client Zone Class.
  */
@@ -32861,10 +32975,10 @@ S123.Pjax = function() {
      * a custom support for that issue: https://github.com/MoOx/pjax/issues/22
      */
     that.handleHashInUrl = function() {
-        if (window.location.hash.length === 0) return;
-        var $hash_element = $(window.location.hash);
-        if ($hash_element.length === 0) return;
-        $('html, body').scrollTop($(window.location.hash).offset().top - $('#mainNavMobile').outerHeight());
+        // if (window.location.hash.length === 0) return;
+        // var $hash_element = $(window.location.hash);
+        // if ($hash_element.length === 0) return;
+        // $('html, body').scrollTop($(window.location.hash).offset().top - $('#mainNavMobile').outerHeight());
     };
     /**
      * The function Trigger the pjax complete event.
@@ -33074,440 +33188,440 @@ $.fn.containerTextWidth_site123 = function(fontSize) {
 /**
  * Mobile Categories Object
  */
-var s123MobileMenu = new function() {
-    var that = this;
-    /**
-     * Initialize Method
-     */
-    that.init = function(settings) {
-        $(document).on('s123.page.ready', function(event) {
-            that.isRtl = $('html').attr('dir') === 'rtl' ? true : false;
-            that.poupID = 'popupFloatDivMenu';
-            that.animation = 400;
-            that.isOpened = false;
-            $('.header-menu-wrapper .mobile-menu-btn').off('click').click(function() {
-                var $this = $(this);
-                that.$source = $('#top-menu-mobile > ul').clone();
-                that.closeLocation = $this.data('closeLocation');
-                that.menuType = $this.data('menu-type');
-                that.isMobile = $this.data('is-mobile');
-                /* This attribute is deciding what is the menu color and because it is also changing in live
-                from the wizard we need to use this method instead of `$this.data('menu-color')` because this method
-                is not effecting the iframe elements */
-                that.menuColor = $this.attr('data-menu-color');
-                if (!that.$source) return;
-                openMenu();
-                that.$container = $('#popupFloatDivMenu');
-                that.$page = that.$container.find('.page');
-                that.$ul = that.$container.find('.navPagesPopup');
-                that.$navPagesPopupActionButtons = that.$container.find('.navPagesPopupActionButtons');
-                that.$categories = that.$container.find('.moduleMenu.dropdown-submenu > a');
-                that.$container.addClass(that.menuColor);
-                /* When the website is a single page clicking on the category will
-                also scroll the user to the category and we don't want that so we remove the class that
-                is responsible for that */
-                that.$categories.removeClass('page-scroll');
-                dropdownClickFlag = 1;
-                that.createCategoryOnClick();
-                addPajaxSupport();
-                addPopupCustomEvents();
-            });
-        });
-    };
-    /**
-     *
-     * @param {string}
-     */
-    function addPajaxSupport() {
-        that.$ul.find('a').each(function() {
-            var $this = $(this);
-            if ($this.parent().hasClass('dropdown-submenu')) return;
-            if ($this.attr('target') == '_blank') return;
-            $this.addClass('s123-fast-page-load');
-        });
-        S123.Pjax.refresh();
-    }
-    /**
-     * The function is responsible for opening the mobile menu popup.
-     */
-    function addPopupCustomEvents() {
-        /**
-         * We make sure the pages enter inside a DIV with the right height so the user could scroll
-         * Max = the max height of the screen
-         * Min = the height of the menu
-         */
-        setTimeout(function() {
-            /* set the right height of the menu pages and add another 100px so the
-            menu will be more taller to make some space and to make some space when the user have categories */
-            var navHeight = $('#popupFloatDivMenu .navPagesPopup').outerHeight(true) + 100;
-            var actionHeight = $('.navPagesPopupActionButtons').outerHeight(true);
-            var screenHeight = $('#popupFloatDivMenu .page').outerHeight(true);
-            if (navHeight + actionHeight > screenHeight) {
-                $('#popupFloatDivMenu .navPagesPopup').height(screenHeight - actionHeight - 15);
-            } else {
-                $('#popupFloatDivMenu .navPagesPopup').height(navHeight - 15);
-            }
-            $('#popupFloatDivMenu .navPagesPopup .site-dropdown-menu').css('opacity', '1');
-        }, 150);
-        activeDropDownMenusAction();
-        $('#popupFloatDivMenu .navPagesPopup li').not('.dropdown-submenu').find('a').click(function() {
-            buildPopup_CloseAction('popupFloatDivMenu');
-        });
-        $('#popupFloatDivMenu .navPagesPopupActionButtons_part2 a').click(function() {
-            buildPopup_CloseAction('popupFloatDivMenu');
-        });
-        ActivePopupActionButtonsInPage();
-        $(document).trigger('s123.page.ready.pageScrollByClick');
-        ActiveLanguageButton();
-    }
-    /**
-     * The method is adding a click event to the categories
-     */
-    that.createCategoryOnClick = function() {
-        that.$categories.each(function() {
-            var $this = $(this);
-            if ($this.parent().children('.site-dropdown-menu').length === 0) return;
-            $this.off('click.mobile_categories').on('click.mobile_categories', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                that.contentOffset = $(window).width();
-                if (!$this.hasClass('active-cat')) {
-                    /* get the sizes of the original menu because we need to animate the category and
-                    it need to be the same size */
-                    that.menuHeight = that.$ul.outerHeight();
-                    that.menuTop = that.$ul.offset().top - $(window).scrollTop();
-                    var menuModuleId = $this.parent().data('menu-module-id');
-                    that.$selectedCat = $this.closest('.navPagesPopup').clone();
-                    that.$selectedCat.children().each(function(index, page) {
-                        if ($(page).data('menu-module-id') != menuModuleId) {
-                            $(page).remove();
-                            /* mark the category content as demo because we are replacing it with
-                            the original category content*/
-                        } else {
-                            $(page).find('.site-dropdown-menu').addClass('demo-ul');
-                        }
-                    });
-                    replaceDemoContentWithOriginal(menuModuleId);
-                    /* remove the vertical scrolling from the clone because we want only in the opened category
-                    vertical scrolling */
-                    that.$selectedCat.css('overflow', 'hidden');
-                    openCategory();
-                    animate('show');
-                    screenResizeHandler();
-                }
-            });
-        });
-    };
-    /**
-     * The function is replacing the demo category content with the original category content
-     * because the original content has different event and we need to use them when the user
-     * is clicking on the page.
-     *
-     * @param {string} menuModuleId - Selected category moduleID
-     */
-    function replaceDemoContentWithOriginal(menuModuleId) {
-        var $selectedCategory = that.$selectedCat.children().first();
-        var $categoryPages = null;
-        var $category = $selectedCategory.children('a');
-        $category.addClass('active-cat');
-        $category.prepend('<span class="close-cat fa fa-caret-' + (that.isRtl ? 'right' : 'left') + '">&nbsp</span>');
-        $category.children('span').last().remove();
-        that.$categoryPagesParent = that.$ul.find('li[data-menu-module-id="' + menuModuleId + '"].dropdown-submenu');
-        $selectedCategory.find('.demo-ul').replaceWith(that.$categoryPagesParent.children('.site-dropdown-menu'));
-        $categoryPages = $selectedCategory.find('.site-dropdown-menu');
-        $categoryPages.addClass('fancy-scrollbar');
-        $categoryPages.addClass('active-cat-content');
-        $categoryPages.css('max-height', that.menuHeight - 50 + 'px');
-    }
-    /**
-     * The function is responsible for the animation style of the categories
-     *
-     * @param {string} action - show / hide of the categories
-     * @param {function} callBack - Callback function
-     */
-    function animate(action, callBack) {
-        var animation = {
-            ul: {},
-            openedCat: {}
-        };
-        var $categoryPages = that.$selectedCat.find('.active-cat-content');
-        that.contentOffset = $(window).width();
-        addRemoveAnimationClass('add', [
-            $categoryPages,
-            that.$container,
-            that.$page,
-            that.$ul,
-            that.$selectedCat
-        ]);
-        if (action == 'show') {
-            that.$tmpDiv = $('<div style="width:100%;height:' + that.$ul.height() + 'px; margin-bottom:10px;"></div>');
-            that.$ul.parent().prepend(that.$tmpDiv);
-            if (that.isRtl) {
-                that.$selectedCat.css({
-                    position: 'absolute',
-                    top: that.menuTop,
-                    right: that.contentOffset,
-                    height: that.menuHeight
-                });
-                animation.openedCat.right = ($(window).width() - (that.$page.offset().left + that.$page.outerWidth())) + 5;
-                that.$ul.css({
-                    position: 'absolute',
-                    top: that.menuTop,
-                    right: ($(window).width() - (that.$page.offset().left + that.$page.outerWidth())) + 5,
-                    fontFamily: 'auto',
-                    height: that.menuHeight,
-                    zIndex: 1 // edge bug fix - element is disappears without z-index
-                });
-                animation.ul.right = that.contentOffset * -1;
-            } else {
-                that.$selectedCat.css({
-                    position: 'absolute',
-                    top: that.menuTop,
-                    left: that.contentOffset,
-                    height: that.menuHeight
-                });
-                animation.openedCat.left = that.$page.offset().left + 5;
-                that.$ul.css({
-                    position: 'absolute',
-                    top: that.menuTop,
-                    left: that.$page.offset().left + 5,
-                    fontFamily: 'auto',
-                    height: that.menuHeight,
-                    zIndex: 1 // edge bug fix - element is disappears without z-index
-                });
-                animation.ul.left = that.contentOffset * -1;
-            }
-            that.$ul.parent().prepend(that.$selectedCat);
-            that.$selectedCat.stop().animate(animation.openedCat, that.animation, function() {
-                that.$selectedCat.css({
-                    position: ''
-                });
-                addRemoveAnimationClass('remove', [
-                    $categoryPages,
-                    that.$selectedCat,
-                    that.$container,
-                    that.$page
-                ]);
-                that.$tmpDiv.remove();
-                that.$ul.css({
-                    fontFamily: ''
-                });
-            });
-            that.$ul.stop().animate(animation.ul, that.animation);
-            that.isOpened = true;
-        } else if (action == 'hide') {
-            if (that.isRtl) {
-                animation.ul.right = ($(window).width() - (that.$page.offset().left + that.$page.outerWidth())) + 5;
-                animation.openedCat.right = that.contentOffset;
-            } else {
-                animation.ul.left = that.$page.offset().left + 5;
-                animation.openedCat.left = that.contentOffset;
-            }
-            addRemoveAnimationClass('add', [
-                $categoryPages
-            ]);
-            that.$selectedCat.css({
-                position: 'absolute'
-            });
-            that.$tmpDiv = $('<div style="height:' + that.$selectedCat.height() + 'px; margin-bottom:10px;"></div>');
-            that.$ul.parent().prepend(that.$tmpDiv);
-            that.$selectedCat.stop().animate(animation.openedCat, that.animation, function() {
-                $categoryPages.removeClass();
-                $categoryPages.addClass('site-dropdown-menu');
-                $categoryPages.appendTo(that.$categoryPagesParent);
-                that.$selectedCat.remove();
-            });
-            that.$ul.stop().animate(animation.ul, that.animation, function() {
-                that.$ul.css({
-                    position: '',
-                    height: that.menuHeight
-                });
-                if (callBack) callBack.call(this);
-                addRemoveAnimationClass('remove', [
-                    that.$container,
-                    that.$page,
-                    that.$ul
-                ]);
-            });
-            that.isOpened = false;
-        }
-    }
-    /**
-     * The function is showing the selected category children in the sliding animation.
-     *
-     * @param {jquery object} $category - Selected category
-     */
-    function openCategory() {
-        var $category = that.$selectedCat.find('.active-cat');
-        var $subCat = that.$selectedCat.find('.site-dropdown-menu');
-        /* save the user current position in the categories list because when he is closing the categories
-        we need to return him back to the current sate */
-        that.ulPrevState = that.$ul.scrollTop();
-        $category.closest('li').addClass('active').addClass('open');
-        resetBackButtonEvent($category);
-        $category.closest('li').siblings().hide();
-    }
-    /**
-     * The function is resetting the back button to return to the previews menu.
-     *
-     * @param {jquery object} $category - Selected category
-     */
-    function resetBackButtonEvent($category) {
-        that.$selectedCat.find('.active-cat').on('click.mobile_categories_back', function(event) {
-            event.preventDefault();
-            animate('hide', function() {
-                hideCategory($category);
-            });
-        });
-    }
-    /**
-     * The function is showing all the the items in the menu and hiding the new categories design
-     *
-     * @param {jquery object} $category - Clicked category
-     */
-    function hideCategory($category) {
-        $category.parent('.dropdown-submenu').removeClass('active').removeClass('open');
-        that.$selectedCat.find('.active-cat').off('click.mobile_categories_back');
-        $category.parent().siblings().show();
-        that.$tmpDiv.remove();
-        that.$ul.scrollTop(that.ulPrevState);
-    }
-    /**
-     * The function is generating the popup menu content html
-     */
-    function generateHTML() {
-        /* because we need to change the menu icon to point to the side instead of down related to the website
-        language direction we are replacing the old class `fa-caret-down` with `fa-caret-` left or right */
-        that.$source.find('.dropdown-submenu a > span:not(.txt-container)').removeClass('fa-caret-down')
-            .addClass('fa-caret-' + (that.isRtl ? 'left' : 'right'));
-        var html = '<ul class="navPagesPopup fancy-scrollbar">' + that.$source.html() + '</ul>';
-        html += '<div class="navPagesPopupActionButtons">';
-        html += '<div class="navPagesPopupActionButtons_part1">';
-        if ($('.header-phone-wrapper').length > 0) {
-            html += $('.header-phone-wrapper').clone().html();
-        }
-        if ($('.header-address-wrapper').length > 0) {
-            html += $('.header-address-wrapper').clone().html();
-        }
-        if ($('.header-social-wrapper').length > 0 && $('.header-social-wrapper.hidden').length == 0) {
-            html += $('.header-social-wrapper').clone().html();
-        }
-        if ($('.header-search-wrapper').length > 0) {
-            html += $('.header-search-wrapper').clone().html();
-        }
-        if ($('.website-languages-menu a').length > 0) {
-            html += $('.website-languages-menu').clone().html();
-        }
-        // if ($('.header-client-zone-wrapper a').length > 0) {
-        //     html += $('.header-client-zone-wrapper').clone().html();
-        // }
-        html += '</div>';
-        if ($('.action-button-wrapper').length > 0) {
-            html += '<div class="navPagesPopupActionButtons_part2">';
-            $('.action-button-wrapper').each(function() {
-                var $this = $(this);
-                html += $this.clone().html();
-            });
-            html += '</div>';
-        }
-        html += '</div>';
-        return html;
-    }
-    /**
-     * The function is opening the mobile menu using our global `buildPopup` function.
-     *
-     * Note: The closing action of the menu is called from `buildPopup_CloseAction` and not from this plugin.
-     */
-    function openMenu() {
-        var customClass = '';
-        var addCustomCover = false;
-        switch (that.menuType) {
-            case 0:
-                customClass = '';
-                break;
-            case 1:
-                customClass = 'side-menu';
-                addCustomCover = true;
-                break;
-            case 2:
-                customClass = 'side-menu half-width';
-                addCustomCover = true;
-                break;
-        }
-        if (that.isMobile) {
-            customClass += ' is-mobile';
-        }
-        buildPopup(that.poupID, '', generateHTML(), '', true, true, true, that.closeLocation, customClass);
-        if (addCustomCover) {
-            var $customCover = $('#' + that.poupID).find('.cover').clone(true, false);
-            $customCover.removeClass('cover');
-            $customCover.addClass('custom-menu-cover');
-            $('#' + that.poupID).append($customCover);
-        }
-    }
-    /**
-     * The function is responsible for repositioning the elements on screen resize
-     */
-    function screenResizeHandler() {
-        /**
-         * On resize of the window we need to reset the offset so the animation will know from what offset
-         * to start
-         */
-        $(window).off('resize.mobile_menu').on('resize.mobile_menu', function() {
-            that.contentOffset = $(window).width();
-            that.menuHeight = that.$page.height() - that.$navPagesPopupActionButtons.outerHeight() - 10;
-            /* get the top 0 relative to window scrolling - we subtract `$(window).scrollTop()`
-            because when the user is scrolling down the `top` of the `ul` is relative to
-            the window scroll and this way we are creating a starting point of 0 */
-            that.menuTop = that.$ul.offset().top - $(window).scrollTop();
-            that.$ul.css({
-                height: that.menuHeight
-            });
-            if (that.isOpened) {
-                that.menuTop = that.$selectedCat.offset().top - $(window).scrollTop();
-                that.$ul.css({
-                    top: that.menuTop,
-                    height: that.menuHeight
-                });
-                that.$selectedCat.css({
-                    top: that.menuTop,
-                    height: that.menuHeight
-                });
-                that.$selectedCat.find('.active-cat-content').css({
-                    maxHeight: that.menuHeight
-                });
-                if (that.isRtl) {
-                    that.$ul.css({
-                        right: that.contentOffset * -1
-                    });
-                } else {
-                    that.$ul.css({
-                        left: that.contentOffset * -1
-                    });
-                }
-            }
-        });
-    }
-    /**
-     * The function is responsible for adding a class to the elements that is
-     * changing some attributes such as width and offset for smoother animation
-     */
-    function addRemoveAnimationClass(action, elements) {
-        switch (action) {
-            case 'add':
-                for (var i = 0; i < elements.length; i++) {
-                    elements[i].addClass('m-m-progress');
-                }
-                break;
-            case 'remove':
-                for (var i = 0; i < elements.length; i++) {
-                    elements[i].removeClass('m-m-progress');
-                }
-                break;
-        }
-    }
-    return that;
-}();
+// var s123MobileMenu = new function() {
+//     var that = this;
+//     /**
+//      * Initialize Method
+//      */
+//     that.init = function(settings) {
+//         $(document).on('s123.page.ready', function(event) {
+//             that.isRtl = $('html').attr('dir') === 'rtl' ? true : false;
+//             that.poupID = 'popupFloatDivMenu';
+//             that.animation = 400;
+//             that.isOpened = false;
+//             $('.header-menu-wrapper .mobile-menu-btn').off('click').click(function() {
+//                 var $this = $(this);
+//                 that.$source = $('#top-menu-mobile > ul').clone();
+//                 that.closeLocation = $this.data('closeLocation');
+//                 that.menuType = $this.data('menu-type');
+//                 that.isMobile = $this.data('is-mobile');
+//                 /* This attribute is deciding what is the menu color and because it is also changing in live
+//                 from the wizard we need to use this method instead of `$this.data('menu-color')` because this method
+//                 is not effecting the iframe elements */
+//                 that.menuColor = $this.attr('data-menu-color');
+//                 if (!that.$source) return;
+//                 openMenu();
+//                 that.$container = $('#popupFloatDivMenu');
+//                 that.$page = that.$container.find('.page');
+//                 that.$ul = that.$container.find('.navPagesPopup');
+//                 that.$navPagesPopupActionButtons = that.$container.find('.navPagesPopupActionButtons');
+//                 that.$categories = that.$container.find('.moduleMenu.dropdown-submenu > a');
+//                 that.$container.addClass(that.menuColor);
+//                 /* When the website is a single page clicking on the category will
+//                 also scroll the user to the category and we don't want that so we remove the class that
+//                 is responsible for that */
+//                 that.$categories.removeClass('page-scroll');
+//                 dropdownClickFlag = 1;
+//                 that.createCategoryOnClick();
+//                 addPajaxSupport();
+//                 addPopupCustomEvents();
+//             });
+//         });
+//     };
+//     /**
+//      *
+//      * @param {string}
+//      */
+//     function addPajaxSupport() {
+//         that.$ul.find('a').each(function() {
+//             var $this = $(this);
+//             if ($this.parent().hasClass('dropdown-submenu')) return;
+//             if ($this.attr('target') == '_blank') return;
+//             $this.addClass('s123-fast-page-load');
+//         });
+//         S123.Pjax.refresh();
+//     }
+//     /**
+//      * The function is responsible for opening the mobile menu popup.
+//      */
+//     function addPopupCustomEvents() {
+//         /**
+//          * We make sure the pages enter inside a DIV with the right height so the user could scroll
+//          * Max = the max height of the screen
+//          * Min = the height of the menu
+//          */
+//         setTimeout(function() {
+//             /* set the right height of the menu pages and add another 100px so the
+//             menu will be more taller to make some space and to make some space when the user have categories */
+//             var navHeight = $('#popupFloatDivMenu .navPagesPopup').outerHeight(true) + 100;
+//             var actionHeight = $('.navPagesPopupActionButtons').outerHeight(true);
+//             var screenHeight = $('#popupFloatDivMenu .page').outerHeight(true);
+//             if (navHeight + actionHeight > screenHeight) {
+//                 $('#popupFloatDivMenu .navPagesPopup').height(screenHeight - actionHeight - 15);
+//             } else {
+//                 $('#popupFloatDivMenu .navPagesPopup').height(navHeight - 15);
+//             }
+//             $('#popupFloatDivMenu .navPagesPopup .site-dropdown-menu').css('opacity', '1');
+//         }, 150);
+//         activeDropDownMenusAction();
+//         $('#popupFloatDivMenu .navPagesPopup li').not('.dropdown-submenu').find('a').click(function() {
+//             buildPopup_CloseAction('popupFloatDivMenu');
+//         });
+//         $('#popupFloatDivMenu .navPagesPopupActionButtons_part2 a').click(function() {
+//             buildPopup_CloseAction('popupFloatDivMenu');
+//         });
+//         ActivePopupActionButtonsInPage();
+//         $(document).trigger('s123.page.ready.pageScrollByClick');
+//         ActiveLanguageButton();
+//     }
+//     /**
+//      * The method is adding a click event to the categories
+//      */
+//     that.createCategoryOnClick = function() {
+//         that.$categories.each(function() {
+//             var $this = $(this);
+//             if ($this.parent().children('.site-dropdown-menu').length === 0) return;
+//             $this.off('click.mobile_categories').on('click.mobile_categories', function(e) {
+//                 e.preventDefault();
+//                 e.stopPropagation();
+//                 that.contentOffset = $(window).width();
+//                 if (!$this.hasClass('active-cat')) {
+//                     /* get the sizes of the original menu because we need to animate the category and
+//                     it need to be the same size */
+//                     that.menuHeight = that.$ul.outerHeight();
+//                     that.menuTop = that.$ul.offset().top - $(window).scrollTop();
+//                     var menuModuleId = $this.parent().data('menu-module-id');
+//                     that.$selectedCat = $this.closest('.navPagesPopup').clone();
+//                     that.$selectedCat.children().each(function(index, page) {
+//                         if ($(page).data('menu-module-id') != menuModuleId) {
+//                             $(page).remove();
+//                             /* mark the category content as demo because we are replacing it with
+//                             the original category content*/
+//                         } else {
+//                             $(page).find('.site-dropdown-menu').addClass('demo-ul');
+//                         }
+//                     });
+//                     replaceDemoContentWithOriginal(menuModuleId);
+//                     /* remove the vertical scrolling from the clone because we want only in the opened category
+//                     vertical scrolling */
+//                     that.$selectedCat.css('overflow', 'hidden');
+//                     openCategory();
+//                     animate('show');
+//                     screenResizeHandler();
+//                 }
+//             });
+//         });
+//     };
+//     /**
+//      * The function is replacing the demo category content with the original category content
+//      * because the original content has different event and we need to use them when the user
+//      * is clicking on the page.
+//      *
+//      * @param {string} menuModuleId - Selected category moduleID
+//      */
+//     function replaceDemoContentWithOriginal(menuModuleId) {
+//         var $selectedCategory = that.$selectedCat.children().first();
+//         var $categoryPages = null;
+//         var $category = $selectedCategory.children('a');
+//         $category.addClass('active-cat');
+//         $category.prepend('<span class="close-cat fa fa-caret-' + (that.isRtl ? 'right' : 'left') + '">&nbsp</span>');
+//         $category.children('span').last().remove();
+//         that.$categoryPagesParent = that.$ul.find('li[data-menu-module-id="' + menuModuleId + '"].dropdown-submenu');
+//         $selectedCategory.find('.demo-ul').replaceWith(that.$categoryPagesParent.children('.site-dropdown-menu'));
+//         $categoryPages = $selectedCategory.find('.site-dropdown-menu');
+//         $categoryPages.addClass('fancy-scrollbar');
+//         $categoryPages.addClass('active-cat-content');
+//         $categoryPages.css('max-height', that.menuHeight - 50 + 'px');
+//     }
+//     /**
+//      * The function is responsible for the animation style of the categories
+//      *
+//      * @param {string} action - show / hide of the categories
+//      * @param {function} callBack - Callback function
+//      */
+//     function animate(action, callBack) {
+//         var animation = {
+//             ul: {},
+//             openedCat: {}
+//         };
+//         var $categoryPages = that.$selectedCat.find('.active-cat-content');
+//         that.contentOffset = $(window).width();
+//         addRemoveAnimationClass('add', [
+//             $categoryPages,
+//             that.$container,
+//             that.$page,
+//             that.$ul,
+//             that.$selectedCat
+//         ]);
+//         if (action == 'show') {
+//             that.$tmpDiv = $('<div style="width:100%;height:' + that.$ul.height() + 'px; margin-bottom:10px;"></div>');
+//             that.$ul.parent().prepend(that.$tmpDiv);
+//             if (that.isRtl) {
+//                 that.$selectedCat.css({
+//                     position: 'absolute',
+//                     top: that.menuTop,
+//                     right: that.contentOffset,
+//                     height: that.menuHeight
+//                 });
+//                 animation.openedCat.right = ($(window).width() - (that.$page.offset().left + that.$page.outerWidth())) + 5;
+//                 that.$ul.css({
+//                     position: 'absolute',
+//                     top: that.menuTop,
+//                     right: ($(window).width() - (that.$page.offset().left + that.$page.outerWidth())) + 5,
+//                     fontFamily: 'auto',
+//                     height: that.menuHeight,
+//                     zIndex: 1 // edge bug fix - element is disappears without z-index
+//                 });
+//                 animation.ul.right = that.contentOffset * -1;
+//             } else {
+//                 that.$selectedCat.css({
+//                     position: 'absolute',
+//                     top: that.menuTop,
+//                     left: that.contentOffset,
+//                     height: that.menuHeight
+//                 });
+//                 animation.openedCat.left = that.$page.offset().left + 5;
+//                 that.$ul.css({
+//                     position: 'absolute',
+//                     top: that.menuTop,
+//                     left: that.$page.offset().left + 5,
+//                     fontFamily: 'auto',
+//                     height: that.menuHeight,
+//                     zIndex: 1 // edge bug fix - element is disappears without z-index
+//                 });
+//                 animation.ul.left = that.contentOffset * -1;
+//             }
+//             that.$ul.parent().prepend(that.$selectedCat);
+//             that.$selectedCat.stop().animate(animation.openedCat, that.animation, function() {
+//                 that.$selectedCat.css({
+//                     position: ''
+//                 });
+//                 addRemoveAnimationClass('remove', [
+//                     $categoryPages,
+//                     that.$selectedCat,
+//                     that.$container,
+//                     that.$page
+//                 ]);
+//                 that.$tmpDiv.remove();
+//                 that.$ul.css({
+//                     fontFamily: ''
+//                 });
+//             });
+//             that.$ul.stop().animate(animation.ul, that.animation);
+//             that.isOpened = true;
+//         } else if (action == 'hide') {
+//             if (that.isRtl) {
+//                 animation.ul.right = ($(window).width() - (that.$page.offset().left + that.$page.outerWidth())) + 5;
+//                 animation.openedCat.right = that.contentOffset;
+//             } else {
+//                 animation.ul.left = that.$page.offset().left + 5;
+//                 animation.openedCat.left = that.contentOffset;
+//             }
+//             addRemoveAnimationClass('add', [
+//                 $categoryPages
+//             ]);
+//             that.$selectedCat.css({
+//                 position: 'absolute'
+//             });
+//             that.$tmpDiv = $('<div style="height:' + that.$selectedCat.height() + 'px; margin-bottom:10px;"></div>');
+//             that.$ul.parent().prepend(that.$tmpDiv);
+//             that.$selectedCat.stop().animate(animation.openedCat, that.animation, function() {
+//                 $categoryPages.removeClass();
+//                 $categoryPages.addClass('site-dropdown-menu');
+//                 $categoryPages.appendTo(that.$categoryPagesParent);
+//                 that.$selectedCat.remove();
+//             });
+//             that.$ul.stop().animate(animation.ul, that.animation, function() {
+//                 that.$ul.css({
+//                     position: '',
+//                     height: that.menuHeight
+//                 });
+//                 if (callBack) callBack.call(this);
+//                 addRemoveAnimationClass('remove', [
+//                     that.$container,
+//                     that.$page,
+//                     that.$ul
+//                 ]);
+//             });
+//             that.isOpened = false;
+//         }
+//     }
+//     /**
+//      * The function is showing the selected category children in the sliding animation.
+//      *
+//      * @param {jquery object} $category - Selected category
+//      */
+//     function openCategory() {
+//         var $category = that.$selectedCat.find('.active-cat');
+//         var $subCat = that.$selectedCat.find('.site-dropdown-menu');
+//         /* save the user current position in the categories list because when he is closing the categories
+//         we need to return him back to the current sate */
+//         that.ulPrevState = that.$ul.scrollTop();
+//         $category.closest('li').addClass('active').addClass('open');
+//         resetBackButtonEvent($category);
+//         $category.closest('li').siblings().hide();
+//     }
+//     /**
+//      * The function is resetting the back button to return to the previews menu.
+//      *
+//      * @param {jquery object} $category - Selected category
+//      */
+//     function resetBackButtonEvent($category) {
+//         that.$selectedCat.find('.active-cat').on('click.mobile_categories_back', function(event) {
+//             event.preventDefault();
+//             animate('hide', function() {
+//                 hideCategory($category);
+//             });
+//         });
+//     }
+//     /**
+//      * The function is showing all the the items in the menu and hiding the new categories design
+//      *
+//      * @param {jquery object} $category - Clicked category
+//      */
+//     function hideCategory($category) {
+//         $category.parent('.dropdown-submenu').removeClass('active').removeClass('open');
+//         that.$selectedCat.find('.active-cat').off('click.mobile_categories_back');
+//         $category.parent().siblings().show();
+//         that.$tmpDiv.remove();
+//         that.$ul.scrollTop(that.ulPrevState);
+//     }
+//     /**
+//      * The function is generating the popup menu content html
+//      */
+//     function generateHTML() {
+//         /* because we need to change the menu icon to point to the side instead of down related to the website
+//         language direction we are replacing the old class `fa-caret-down` with `fa-caret-` left or right */
+//         that.$source.find('.dropdown-submenu a > span:not(.txt-container)').removeClass('fa-caret-down')
+//             .addClass('fa-caret-' + (that.isRtl ? 'left' : 'right'));
+//         var html = '<ul class="navPagesPopup fancy-scrollbar">' + that.$source.html() + '</ul>';
+//         html += '<div class="navPagesPopupActionButtons">';
+//         html += '<div class="navPagesPopupActionButtons_part1">';
+//         if ($('.header-phone-wrapper').length > 0) {
+//             html += $('.header-phone-wrapper').clone().html();
+//         }
+//         if ($('.header-address-wrapper').length > 0) {
+//             html += $('.header-address-wrapper').clone().html();
+//         }
+//         if ($('.header-social-wrapper').length > 0 && $('.header-social-wrapper.hidden').length == 0) {
+//             html += $('.header-social-wrapper').clone().html();
+//         }
+//         if ($('.header-search-wrapper').length > 0) {
+//             html += $('.header-search-wrapper').clone().html();
+//         }
+//         if ($('.website-languages-menu a').length > 0) {
+//             html += $('.website-languages-menu').clone().html();
+//         }
+//         // if ($('.header-client-zone-wrapper a').length > 0) {
+//         //     html += $('.header-client-zone-wrapper').clone().html();
+//         // }
+//         html += '</div>';
+//         if ($('.action-button-wrapper').length > 0) {
+//             html += '<div class="navPagesPopupActionButtons_part2">';
+//             $('.action-button-wrapper').each(function() {
+//                 var $this = $(this);
+//                 html += $this.clone().html();
+//             });
+//             html += '</div>';
+//         }
+//         html += '</div>';
+//         return html;
+//     }
+//     /**
+//      * The function is opening the mobile menu using our global `buildPopup` function.
+//      *
+//      * Note: The closing action of the menu is called from `buildPopup_CloseAction` and not from this plugin.
+//      */
+//     function openMenu() {
+//         var customClass = '';
+//         var addCustomCover = false;
+//         switch (that.menuType) {
+//             case 0:
+//                 customClass = '';
+//                 break;
+//             case 1:
+//                 customClass = 'side-menu';
+//                 addCustomCover = true;
+//                 break;
+//             case 2:
+//                 customClass = 'side-menu half-width';
+//                 addCustomCover = true;
+//                 break;
+//         }
+//         if (that.isMobile) {
+//             customClass += ' is-mobile';
+//         }
+//         buildPopup(that.poupID, '', generateHTML(), '', true, true, true, that.closeLocation, customClass);
+//         if (addCustomCover) {
+//             var $customCover = $('#' + that.poupID).find('.cover').clone(true, false);
+//             $customCover.removeClass('cover');
+//             $customCover.addClass('custom-menu-cover');
+//             $('#' + that.poupID).append($customCover);
+//         }
+//     }
+//     /**
+//      * The function is responsible for repositioning the elements on screen resize
+//      */
+//     function screenResizeHandler() {
+//         /**
+//          * On resize of the window we need to reset the offset so the animation will know from what offset
+//          * to start
+//          */
+//         $(window).off('resize.mobile_menu').on('resize.mobile_menu', function() {
+//             that.contentOffset = $(window).width();
+//             that.menuHeight = that.$page.height() - that.$navPagesPopupActionButtons.outerHeight() - 10;
+//             /* get the top 0 relative to window scrolling - we subtract `$(window).scrollTop()`
+//             because when the user is scrolling down the `top` of the `ul` is relative to
+//             the window scroll and this way we are creating a starting point of 0 */
+//             that.menuTop = that.$ul.offset().top - $(window).scrollTop();
+//             that.$ul.css({
+//                 height: that.menuHeight
+//             });
+//             if (that.isOpened) {
+//                 that.menuTop = that.$selectedCat.offset().top - $(window).scrollTop();
+//                 that.$ul.css({
+//                     top: that.menuTop,
+//                     height: that.menuHeight
+//                 });
+//                 that.$selectedCat.css({
+//                     top: that.menuTop,
+//                     height: that.menuHeight
+//                 });
+//                 that.$selectedCat.find('.active-cat-content').css({
+//                     maxHeight: that.menuHeight
+//                 });
+//                 if (that.isRtl) {
+//                     that.$ul.css({
+//                         right: that.contentOffset * -1
+//                     });
+//                 } else {
+//                     that.$ul.css({
+//                         left: that.contentOffset * -1
+//                     });
+//                 }
+//             }
+//         });
+//     }
+//     /**
+//      * The function is responsible for adding a class to the elements that is
+//      * changing some attributes such as width and offset for smoother animation
+//      */
+//     function addRemoveAnimationClass(action, elements) {
+//         switch (action) {
+//             case 'add':
+//                 for (var i = 0; i < elements.length; i++) {
+//                     elements[i].addClass('m-m-progress');
+//                 }
+//                 break;
+//             case 'remove':
+//                 for (var i = 0; i < elements.length; i++) {
+//                     elements[i].removeClass('m-m-progress');
+//                 }
+//                 break;
+//         }
+//     }
+//     return that;
+// }();
 /**
  * The function is adding divs on the sides of the categories for shadow effect
  */
@@ -33539,6 +33653,7 @@ function moduleLayoutCategories_shadow() {
         });
     });
 }
+
 /**
  * Web Progressive App Installer - In order to convert the website to PWA APP we must install:
  *

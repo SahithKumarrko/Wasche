@@ -274,7 +274,9 @@
         <nav id="mainNavMobile" class="navbar-fixed-top">
             <div class="navPagesLeft">
                 <div class="header-menu-wrapper">
-                    <a data-close-location="left" data-menu-color="" data-menu-type="0" data-menu-align="center" data-is-mobile="true" class="mobile-menu-btn actionButton" role="button" data-container="body" data-toggle="menuCallActionIcons"><i class="fa fa-bars"></i></a></div>
+                    <a data-close-location="left" data-menu-color="" data-menu-type="0" data-menu-align="center" data-is-mobile="true" class="mobile-menu-btn actionButton" role="button" data-container="body" data-toggle="menuCallActionIcons">
+						<!-- <i class="fa fa-bars"></i> -->
+					</a></div>
             </div>
             <div class="navbar-header">
                 <a class="navbar-brand page-unique logo_name  weight700 " style="position:relative;border-radius:10px;overflow:hidden;" href="index.php">
@@ -370,20 +372,45 @@
                     </li>
                 </ul>
             </div>
-        </nav>
-        <div id="top-menu-mobile" style="display:none;">
+		</nav>
+		<div class="mobile-nav-cust collapse">
+    <div id="mobile-nav-head">
+        <a href="#">Wasche</a>
+        <div id="mobile-nav-close">
+        <span></span>
+        <span></span>
+        </div>
+        
+	</div>
+
+<div id="top-menu-mobile">
+   <ul class="lm1">
+   <li class="moduleMenu active">
+                    <a class="page-unique homepageMenu" href="index.php">Home</a></li>
+                <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a href="#" class="page-unique s123-fast-page-load" onclick="MoveFirstSection(2);"><span class="txt-container">About</span></a></li>
+                <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" onclick="MoveFirstSection(4);" href="#"><span class="txt-container">Services</span></a></li>
+                <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a href="#" class="page-unique" onclick="MoveFirstSection(11);"><span class="txt-container">Contact</span></a></li>
+                <!-- <li class="moduleMenu" data-menu-module-id="5d985dca46598"><a class="page-unique" href="tracker.php"><span class="txt-container">Tracker</span></a></li> -->
+	 <div> 
+	 <li class="moduleMenu loginbt" data-menu-module-id="5b0a4ba521825"><a style="margin-right: 7px;font-weight: bold;" class="page-unique" href="#" onclick="setTimeout(function(){document.location.href='index4cd7.php#login';},1500);">Login</a></li>
+                <li class="moduleMenu signup" data-menu-module-id="5b0a4ba521825" style=""><a style="color:white !important;" class="page-unique" onclick="document.location.href='index4cd7.php#register'" href="#">Sign Up</a></li>
+               </div>
+	</ul>
+</div>
+</div>
+        <!-- <div id="top-menu-mobile" style="display:none;">
             <ul class="lm1">
                 <li class="moduleMenu active">
                     <a class="page-unique homepageMenu" href="index.php">Home</a></li>
                 <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a href="#" class="page-unique s123-fast-page-load" onclick="MoveFirstSection(2);"><span class="txt-container">About</span></a></li>
                 <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" onclick="MoveFirstSection(4);" href="#"><span class="txt-container">Services</span></a></li>
                 <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a href="#" class="page-unique" onclick="MoveFirstSection(11);"><span class="txt-container">Contact</span></a></li>
-                <!-- <li class="moduleMenu" data-menu-module-id="5d985dca46598"><a href="#" class="page-unique" href="tracker.php"><span class="txt-container">Tracker</span></a></li> -->
+                <li class="moduleMenu" data-menu-module-id="5d985dca46598"><a href="#" class="page-unique" href="tracker.php"><span class="txt-container">Tracker</span></a></li>
                 <li class="moduleMenu loginbt" data-menu-module-id="5b0a4ba521825"><a style="margin-right: 7px;font-weight: bold;" class="page-unique" href="#" onclick="setTimeout(function(){document.location.href='index4cd7.php#login';},1500);">Login</a></li>
                 <li class="moduleMenu signup" data-menu-module-id="5b0a4ba521825" style="padding:6px !important;padding-top:4px !important;padding-bottom:4px !important;width:50%;margin:auto;"><a style="color:white !important;" class="page-unique" onclick="document.location.href='index4cd7.php#register'" href="#">Sign Up</a></li>
                     
             </ul>
-        </div>
+        </div> -->
         <div id="s123PjaxMainContainer">
             <section id="top-section" class="homepage_style_1 top_magic_homepage_kind_1  parallax-on old_homepage_layout_log10002 old_homepage_layout_structure_log100">
                 <div class="home_background_wrapper parallax-on">

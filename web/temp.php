@@ -1094,7 +1094,9 @@ input:-webkit-autofill {
 <!-- Menu Action Buttons --> </ul> </div> </div> </nav> </div> 
 <nav id="mainNavMobile" class="navbar-fixed-top">
    <div class="navPagesLeft">
-      <div class="header-menu-wrapper"><a data-close-location="left" data-menu-color="" data-menu-type="0" data-menu-align="center" data-is-mobile="true" class="mobile-menu-btn actionButton" role="button" data-container="body" data-toggle="menuCallActionIcons"><i class="fa fa-bars"></i></a></div>
+      <div class="header-menu-wrapper"><a data-close-location="left" data-menu-color="" data-menu-type="0" data-menu-align="center" data-is-mobile="true" class="mobile-menu-btn actionButton" role="button" data-container="body" data-toggle="menuCallActionIcons">
+		  <!-- <i class="fa fa-bars"></i> -->
+		</a></div>
    </div>
    <div class="navbar-header"> <a class="navbar-brand page-unique logo_name  weight700 "style="position:relative;border-radius:10px;overflow:hidden;" href="index.php"> <span class="website-name" style="color:white;z-index:10;">Wasche</span>
    <div class="liquid" style="
@@ -1186,19 +1188,43 @@ input:-webkit-autofill {
       </ul>
    </div>
 </nav>
-<div id="top-menu-mobile"  style="display:none;">
+<div class="mobile-nav-cust collapse">
+    <div id="mobile-nav-head">
+        <a href="#">Wasche</a>
+        <div id="mobile-nav-close">
+        <span></span>
+        <span></span>
+        </div>
+        
+	</div>
+
+<div id="top-menu-mobile">
+   <ul class="lm1">
+   	  <li class="moduleMenu active"><a class="page-unique homepageMenu" href="index.php">Home</a></li>
+      <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8"><a class="page-unique" href="about.php"><span class="txt-container">About</span></a></li>
+      <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" href="services.php"><span class="txt-container">Services</span></a></li>
+      <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a class="page-unique" href="contact.php"><span class="txt-container">Contact</span></a></li>
+      <!-- <li class="moduleMenu" data-menu-module-id="5d985dca46598"><a class="page-unique" href="tracker.php"><span class="txt-container">Tracker</span></a></li> -->
+	 <div> 
+	 <li class="moduleMenu loginbt" data-menu-module-id="5b0a4ba521825"><a style="margin-right: 7px;font-weight: bold;" class="page-unique gotoLogin" href="#" onclick="gotoL(event);">Login</a></li>
+	  <li class="moduleMenu signup" data-menu-module-id="5b0a4ba521825" style=""><a style="color:white !important;" class="page-unique gotoRegister" onclick="gotoRe(event);" href="#">Sign Up</a></li>
+	</div>
+	</ul>
+</div>
+</div>
+<!-- <div id="top-menu-mobile"  style="display:none;">
    <ul class="lm1">
       <li class="moduleMenu active"><a class="page-unique homepageMenu" href="index.php">Home</a></li>
       <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8"><a class="page-unique" href="about.php"><span class="txt-container">About</span></a></li>
       <li class="moduleMenu" data-menu-module-id="5d0a0f53588b1"><a class="page-unique" href="services.php"><span class="txt-container">Services</span></a></li>
       <li class="moduleMenu" data-menu-module-id="5b0a4ba521825"><a class="page-unique" href="contact.php"><span class="txt-container">Contact</span></a></li>
-      <!-- <li class="moduleMenu" data-menu-module-id="5d985dca46598"><a class="page-unique" href="tracker.php"><span class="txt-container">Tracker</span></a></li> -->
+      <li class="moduleMenu" data-menu-module-id="5d985dca46598"><a class="page-unique" href="tracker.php"><span class="txt-container">Tracker</span></a></li>
 	  <li class="moduleMenu loginbt" data-menu-module-id="5b0a4ba521825"><a style="margin-right: 7px;font-weight: bold;" class="page-unique gotoLogin" href="#" onclick="gotoL(event);">Login</a></li>
 	  <li class="moduleMenu signup" data-menu-module-id="5b0a4ba521825" style="padding:6px !important;padding-top:4px !important;padding-bottom:4px !important;width:50%;margin:auto;"><a style="color:white !important;" class="page-unique gotoRegister" onclick="gotoRe(event);" href="#">Sign Up</a></li>
 	  
 	</ul>
 	
-</div>
+</div> -->
 <div id="s123PjaxMainContainer">
    <div class="s123-client-zone-page s123-content-area bg-primary">
       <div  class="container-fluid page_header_style page_header_style_">
